@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { ArrowRight, ChevronDown } from 'lucide-react';
+import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import AnimatedSection from '@/components/ui/animated-section';
 
@@ -131,11 +132,14 @@ const AreasJuridicas = () => {
                   className="relative group cursor-pointer overflow-hidden"
                   onClick={() => toggleArea(area.id)}
                 >
-                  <div className="aspect-[4/3] sm:aspect-[3/2] lg:aspect-[4/3] overflow-hidden">
-                    <img
+                  <div className="aspect-[4/3] sm:aspect-[3/2] lg:aspect-[4/3] overflow-hidden relative">
+                    <Image
                       src={area.image}
                       alt={area.title}
-                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                      fill
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      quality={80}
+                      className="object-cover transition-transform duration-300 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-black/60"></div>
                   </div>

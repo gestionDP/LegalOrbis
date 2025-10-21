@@ -12,14 +12,10 @@ const VideoBanner = () => {
           muted
           loop
           playsInline
+          preload="none"
           className="w-full h-full object-cover"
         >
           <source src="/videos/banner.mp4" type="video/mp4" />
-          <img
-            src="/images/jpg/hero-carousel-1.jpg"
-            alt="Equipo Legal Orbis"
-            className="w-full h-full object-cover"
-          />
         </video>
         <div className="absolute inset-0 bg-black/40"></div>
       </div>

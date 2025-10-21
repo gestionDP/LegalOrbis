@@ -2,6 +2,7 @@
 
 import { ArrowRight } from 'lucide-react';
 import { useState } from 'react';
+import Image from 'next/image';
 import AnimatedSection from '@/components/ui/animated-section';
 
 const QuienesSomos = () => {
@@ -83,11 +84,14 @@ const QuienesSomos = () => {
           <AnimatedSection animation="fadeInRight" delay={0.2} duration={0.5}>
             <div>
               <div className="relative">
-                <div className="aspect-[4/5] overflow-hidden">
-                  <img
+                <div className="aspect-[4/5] overflow-hidden relative">
+                  <Image
                     src={valores[valorActivo].imagen}
                     alt={valores[valorActivo].titulo}
-                    className="w-full h-full object-cover"
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 33vw"
+                    quality={80}
+                    className="object-cover"
                   />
                 </div>
 

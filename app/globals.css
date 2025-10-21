@@ -124,6 +124,17 @@
   html {
     scroll-behavior: smooth;
   }
+
+  img,
+  video,
+  iframe {
+    @apply will-change-auto;
+  }
+
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 }
 
 /* Estilos personalizados para Legal Orbis */

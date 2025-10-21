@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import Image from 'next/image';
 import AnimatedSection from '@/components/ui/animated-section';
 
 const HeroCarousel = () => {
@@ -64,12 +65,16 @@ const HeroCarousel = () => {
               index === currentSlide ? 'opacity-100' : 'opacity-0'
             }`}
           >
-            <div
-              className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-              style={{
-                backgroundImage: `url(${slide.image})`,
-              }}
-            >
+            <div className="absolute inset-0">
+              <Image
+                src={slide.image}
+                alt={slide.title}
+                fill
+                priority={index === 0}
+                quality={85}
+                sizes="100vw"
+                className="object-cover"
+              />
               <div className="absolute inset-0 bg-black/40" />
             </div>
 
