@@ -138,7 +138,7 @@ function BottomSheetContent({
       <DialogPrimitive.Content
         data-slot="bottom-sheet-content"
         className={cn(
-          'bg-background fixed top-[50%] left-[50%] z-50 grid w-full max-w-[calc(100%-2rem)] translate-x-[-50%] translate-y-[-50%] gap-4 border rounded-md p-10 shadow-lg duration-200 sm:max-w-xl',
+          'bg-white fixed top-[50%] left-[50%] z-50 grid w-full max-w-[calc(100%-2rem)] translate-x-[-50%] translate-y-[-50%] gap-4 border rounded-md p-10 shadow-lg duration-200 sm:max-w-xl',
 
           className
         )}
@@ -152,7 +152,7 @@ function BottomSheetContent({
       {showCloseButton && (
         <DialogPrimitive.Close
           data-slot="bottom-sheet-close-desktop"
-          className="fixed right-8 top-8 z-[70] flex size-12 cursor-pointer items-center justify-center bg-[#1a5f5f] rounded-full shadow-lg transition-all duration-200 hover:bg-[#1a5f5f]/90 hover:scale-110"
+          className="fixed right-8 top-8 z-70 flex size-12 cursor-pointer items-center justify-center bg-[#1a5f5f] rounded-full shadow-lg transition-all duration-200 hover:bg-[#1a5f5f]/90 hover:scale-110"
           style={{ pointerEvents: 'auto' }}
         >
           <svg

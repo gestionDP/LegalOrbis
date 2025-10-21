@@ -4,6 +4,7 @@ import { ArrowRight } from 'lucide-react';
 import { useState } from 'react';
 import Image from 'next/image';
 import AnimatedSection from '@/components/ui/animated-section';
+import ValorDialog from '@/components/ui/valor-dialog';
 
 const QuienesSomos = () => {
   const [valorActivo, setValorActivo] = useState(0);
@@ -84,7 +85,7 @@ const QuienesSomos = () => {
           <AnimatedSection animation="fadeInRight" delay={0.2} duration={0.5}>
             <div>
               <div className="relative">
-                <div className="aspect-[4/5] overflow-hidden relative">
+                <div className="aspect-4/5 overflow-hidden relative">
                   <Image
                     src={valores[valorActivo].imagen}
                     alt={valores[valorActivo].titulo}
@@ -95,16 +96,21 @@ const QuienesSomos = () => {
                   />
                 </div>
 
-                <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-sm  p-6">
-                  <div className="flex items-start justify-between mb-4">
-                    <h4 className="text-xl font-semibold text-black">
-                      {valores[valorActivo].titulo}
-                    </h4>
+                <ValorDialog valor={valores[valorActivo]}>
+                  <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-sm p-6 cursor-pointer hover:bg-white transition-colors duration-200">
+                    <div className="flex items-start justify-between mb-4">
+                      <h4 className="text-xl font-semibold text-black">
+                        {valores[valorActivo].titulo}
+                      </h4>
+                    </div>
+                    <p className="text-gray-700 leading-relaxed line-clamp-4">
+                      {valores[valorActivo].descripcion}
+                    </p>
+                    <div className="mt-3 text-[#1a5f5f] text-sm font-medium">
+                      Haz clic para leer más...
+                    </div>
                   </div>
-                  <p className="text-gray-700 leading-relaxed">
-                    {valores[valorActivo].descripcion}
-                  </p>
-                </div>
+                </ValorDialog>
               </div>
             </div>
           </AnimatedSection>
