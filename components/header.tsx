@@ -74,10 +74,15 @@ const Header = () => {
               className="flex items-center"
             >
               <Image
-                src="/images/png/LegalOrbis.png"
+                src={
+                  isScrolled
+                    ? '/images/png/LegalOrbis.png'
+                    : '/images/png/LegalOrbisWhite.png'
+                }
                 alt="Legal Orbis Abogados"
                 width={220}
                 height={40}
+                priority
                 className="w-24 sm:w-32 lg:w-[220px] h-auto"
               />
             </Link>
