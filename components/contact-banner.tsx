@@ -73,7 +73,7 @@ const ContactBanner = () => {
       <section id="contacto" className="relative h-auto overflow-hidden py-32">
         <div className="absolute inset-0">
           <img
-            src="/images/jpg/hero-carousel-2.jpg"
+            src="/images/jpg/Legal_01-3.jpg"
             alt="Contacto Legal Orbis"
             className="w-full h-full object-cover"
           />

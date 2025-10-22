@@ -11,7 +11,7 @@ const HeroCarousel = () => {
   const slides = [
     {
       id: 1,
-      image: '/images/jpg/hero-carousel-1.jpg',
+      image: '/images/jpg/Legal_01-27.jpg',
       title: 'Un equipo a la vanguardia del Derecho',
       subtitle: 'Experiencia, profesionalidad y compromiso',
       description:
@@ -19,7 +19,7 @@ const HeroCarousel = () => {
     },
     {
       id: 2,
-      image: '/images/jpg/hero-carousel-2.jpg',
+      image: '/images/jpg/Legal_01-32.jpg',
       title: 'Defensa integral y rigurosa',
       subtitle: 'Abordamos cada caso con estrategia personalizada',
       description:
@@ -27,7 +27,7 @@ const HeroCarousel = () => {
     },
     {
       id: 3,
-      image: '/images/jpg/hero-carousel-3.jpg',
+      image: '/images/jpg/Legal_01-117.jpg',
       title: 'Transparencia y confianza mutua',
       subtitle: 'La base de nuestro trabajo',
       description:

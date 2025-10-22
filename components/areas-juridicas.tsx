@@ -16,7 +16,7 @@ const AreasJuridicas = () => {
       number: '01',
       description:
         'Defensa especializada en delitos de todo tipo. Ofrecemos asesoramiento integral y representación legal en procesos penales.',
-      image: '/images/jpg/hero-carousel-1.jpg',
+      image: '/images/jpg/Legal_01-62.jpg',
       services: [
         'Delitos contra la vida',
         'Delitos contra la libertad sexual',
@@ -36,7 +36,7 @@ const AreasJuridicas = () => {
       number: '02',
       description:
         'Asesoramiento en relaciones jurídicas privadas. Herencias, matrimonial, reclamaciones de cantidad y más.',
-      image: '/images/jpg/hero-carousel-2.jpg',
+      image: '/images/jpg/Legal_01-41.jpg',
       services: [
         'Herencias y sucesiones',
         'Derecho matrimonial y familiar',
@@ -56,7 +56,7 @@ const AreasJuridicas = () => {
       number: '03',
       description:
         'Protección de derechos laborales. Despidos, reclamaciones de cantidad, derechos de conciliación y clasificación profesional.',
-      image: '/images/jpg/hero-carousel-3.jpg',
+      image: '/images/jpg/Legal_01-48.jpg',
       services: [
         'Despidos y extinciones',
         'Reclamaciones de cantidad',
@@ -76,7 +76,7 @@ const AreasJuridicas = () => {
       number: '04',
       description:
         'Contamos con experiencia en expedientes penitenciarios sustanciados en la Audiencia Nacional (Bárcenas, etc).',
-      image: '/images/jpg/hero-carousel-1.jpg',
+      image: '/images/jpg/Legal_01-111.jpg',
       services: [
         'Expedientes penitenciarios sustanciados en la Audiencia Nacional',
         'Recursos de amparo penitenciario',
