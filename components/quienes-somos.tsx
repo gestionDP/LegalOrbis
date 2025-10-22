@@ -15,22 +15,22 @@ const QuienesSomos = () => {
       titulo: 'Transparencia',
       descripcion:
         'Somos un despacho formado por un equipo multidisciplinar de abogados especializados en las principales ramas del Derecho —Penal, Penitenciario, Civil, Laboral y Mercantil—, lo que nos permite ofrecer una respuesta integral y rigurosa ante cualquier situación jurídica.',
-      imagen: '/images/jpg/hero-carousel-1.jpg',
+      imagen: '/images/jpg/Legal_01-64.jpg',
     },
     {
       palabra: 'Profesionalidad',
       titulo: 'Profesionalidad',
       descripcion:
         'Nuestro equipo aborda cada caso desde una estrategia personalizada, combinando experiencia, profesionalidad y compromiso, junto con una constante actualización en los nuevos recursos que ofrece el mundo jurídico moderno.',
-      imagen: '/images/jpg/hero-carousel-2.jpg',
-    },
+        imagen: '/images/jpg/Legal_01-66.jpg',
+      },
     {
       palabra: 'Compromiso',
       titulo: 'Compromiso',
       descripcion:
         'La transparencia y la confianza mutua con nuestros defendidos son la base de nuestro trabajo y lo que nos ha permitido consolidar relaciones duraderas y crecer junto a nuestros clientes. Cada abogado de Legal Orbis cuenta con unos conocimientos técnico-jurídicos concretos, lo que nos permite ofrecer una opinión plural y complementaria de cada asunto, de modo que en cada reunión intervienen varios especialistas para garantizar un análisis completo y una estrategia adaptada a las particularidades de cada caso.',
-      imagen: '/images/jpg/hero-carousel-3.jpg',
-    },
+        imagen: '/images/jpg/Legal_01-13.jpg',
+      },
   ];
 
   return (
