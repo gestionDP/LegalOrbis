@@ -7,6 +7,20 @@ export const areasData = {
     subtitle: 'DEFENSA PENAL ESPECIALIZADA',
     description:
       'Defensa especializada en delitos de todo tipo. Ofrecemos asesoramiento integral y representación legal en procesos penales.',
+    metaTitle:
+      'Abogados Penalistas en Madrid | Legal Orbis - Defensa Penal Especializada',
+    metaDescription:
+      'Abogados penalistas especializados en Madrid. Defensa en delitos contra la vida, patrimonio, violencia de género y delitos económicos. Consulta gratuita.',
+    metaKeywords: [
+      'abogados penalistas Madrid',
+      'defensa penal Madrid',
+      'abogados delitos Madrid',
+      'defensa criminal Madrid',
+      'abogados violencia género Madrid',
+      'delitos económicos Madrid',
+      'abogados delitos informáticos Madrid',
+      'defensa penal especializada Madrid',
+    ],
     image: '/images/jpg/Legal_01-62.jpg',
     services: [
       'Delitos contra la vida',
@@ -28,6 +42,20 @@ export const areasData = {
     subtitle: 'DERECHO CIVIL INTEGRAL',
     description:
       'Asesoramiento en relaciones jurídicas privadas. Herencias, matrimonial, reclamaciones de cantidad y más.',
+    metaTitle:
+      'Abogados Civiles en Madrid | Legal Orbis - Derecho Civil Integral',
+    metaDescription:
+      'Abogados especialistas en derecho civil en Madrid. Herencias, divorcios, derecho inmobiliario, responsabilidad civil y contratos. Asesoramiento legal experto.',
+    metaKeywords: [
+      'abogados civiles Madrid',
+      'derecho civil Madrid',
+      'abogados herencias Madrid',
+      'abogados divorcios Madrid',
+      'derecho inmobiliario Madrid',
+      'responsabilidad civil Madrid',
+      'abogados contratos Madrid',
+      'derecho familiar Madrid',
+    ],
     image: '/images/jpg/Legal_01-41.jpg',
     services: [
       'Herencias y sucesiones',
@@ -49,6 +77,20 @@ export const areasData = {
     subtitle: 'DERECHO LABORAL ESPECIALIZADO',
     description:
       'Protección de derechos laborales. Despidos, reclamaciones de cantidad, derechos de conciliación y clasificación profesional.',
+    metaTitle:
+      'Abogados Laboralistas en Madrid | Legal Orbis - Derecho Laboral Especializado',
+    metaDescription:
+      'Abogados laboralistas en Madrid especializados en despidos, reclamaciones laborales, conciliación familiar y seguridad social. Defensa de derechos del trabajador.',
+    metaKeywords: [
+      'abogados laboralistas Madrid',
+      'derecho laboral Madrid',
+      'abogados despidos Madrid',
+      'reclamaciones laborales Madrid',
+      'conciliación familiar Madrid',
+      'seguridad social Madrid',
+      'abogados accidentes trabajo Madrid',
+      'derecho sindical Madrid',
+    ],
     image: '/images/jpg/Legal_01-48.jpg',
     services: [
       'Despidos y extinciones',
@@ -70,6 +112,20 @@ export const areasData = {
     subtitle: 'DERECHO PENITENCIARIO EXPERTO',
     description:
       'Contamos con experiencia en expedientes penitenciarios sustanciados en la Audiencia Nacional (Bárcenas, etc).',
+    metaTitle:
+      'Abogados Penitenciarios en Madrid | Legal Orbis - Derecho Penitenciario Experto',
+    metaDescription:
+      'Abogados especialistas en derecho penitenciario en Madrid. Experiencia en Audiencia Nacional, libertad condicional, recursos penitenciarios y asistencia jurídica.',
+    metaKeywords: [
+      'abogados penitenciarios Madrid',
+      'derecho penitenciario Madrid',
+      'libertad condicional Madrid',
+      'recursos penitenciarios Madrid',
+      'audiencia nacional Madrid',
+      'asistencia jurídica penitenciaria Madrid',
+      'expedientes penitenciarios Madrid',
+      'clasificación penitenciaria Madrid',
+    ],
     image: '/images/jpg/Legal_01-111.jpg',
     services: [
       'Expedientes penitenciarios sustanciados en la Audiencia Nacional',
@@ -91,6 +147,9 @@ export interface AreaData {
   number: string;
   subtitle: string;
   description: string;
+  metaTitle: string;
+  metaDescription: string;
+  metaKeywords: string[];
   image: string;
   services: string[];
 }
