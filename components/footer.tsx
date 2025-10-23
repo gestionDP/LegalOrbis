@@ -21,7 +21,7 @@ const Footer = () => {
     <footer className="bg-white text-black relative overflow-hidden">
       <div className="relative z-10">
         <div className="container-max px-4 sm:px-6 lg:px-8">
-          <div className="py-12 lg:py-16">
+          <div>
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
               <div className="lg:col-span-2 text-left">
                 <div>
@@ -41,23 +41,6 @@ const Footer = () => {
                 </p>
               </div>
 
-              <div className="lg:col-span-1 text-left">
-                <h4 className="text-lg font-semibold mb-6 text-[#1a5f5f]">
-                  Enlaces Rápidos
-                </h4>
-                <ul className="space-y-3">
-                  {quickLinks.map((link) => (
-                    <li key={link.name}>
-                      <button
-                        onClick={() => scrollToSection(link.href)}
-                        className="text-[#1a5f5f] hover:text-white transition-colors duration-200"
-                      >
-                        {link.name}
-                      </button>
-                    </li>
-                  ))}
-                </ul>
-              </div>
             </div>
           </div>
 
