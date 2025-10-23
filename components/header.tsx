@@ -19,7 +19,6 @@ const Header = () => {
         'hero',
         'quienes-somos',
         'areas-juridicas',
-        'experiencia',
         'contacto',
       ];
       const scrollPosition = window.scrollY + 100;
@@ -54,7 +53,6 @@ const Header = () => {
   const navigationItems = [
     { name: 'Quienes somos', href: 'quienes-somos' },
     { name: 'Áreas Jurídicas', href: 'areas-juridicas' },
-    { name: 'Experiencia', href: 'experiencia' },
   ];
 
   return (
@@ -69,7 +67,7 @@ const Header = () => {
         <div className="flex items-center h-16 lg:h-20">
           <div className="flex items-center">
             <Link
-              href="#hero"
+              href="/"
               onClick={() => scrollToSection('hero')}
               className="flex items-center"
             >
