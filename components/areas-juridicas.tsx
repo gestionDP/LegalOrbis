@@ -3,95 +3,23 @@
 import { useState } from 'react';
 import { ArrowRight, ChevronDown } from 'lucide-react';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import AnimatedSection from '@/components/ui/animated-section';
+import { areasData } from '@/lib/data/areas-juridicas';
 
 const AreasJuridicas = () => {
   const [openArea, setOpenArea] = useState<string | null>(null);
+  const router = useRouter();
 
-  const areas = [
-    {
-      id: 'penal',
-      title: 'Derecho Penal',
-      number: '01',
-      description:
-        'Defensa especializada en delitos de todo tipo. Ofrecemos asesoramiento integral y representación legal en procesos penales.',
-      image: '/images/jpg/Legal_01-62.jpg',
-      services: [
-        'Delitos contra la vida',
-        'Delitos contra la libertad sexual',
-        'Delitos contra el patrimonio',
-        'Delitos contra la salud pública',
-        'Delitos económicos y societarios',
-        'Delitos contra la administración pública',
-        'Delitos informáticos',
-        'Violencia de género',
-        'Delitos contra la seguridad vial',
-        'Delitos contra el medio ambiente',
-      ],
-    },
-    {
-      id: 'civil',
-      title: 'Derecho Civil',
-      number: '02',
-      description:
-        'Asesoramiento en relaciones jurídicas privadas. Herencias, matrimonial, reclamaciones de cantidad y más.',
-      image: '/images/jpg/Legal_01-41.jpg',
-      services: [
-        'Herencias y sucesiones',
-        'Derecho matrimonial y familiar',
-        'Reclamaciones de cantidad',
-        'Responsabilidad civil',
-        'Derecho inmobiliario',
-        'Contratos civiles',
-        'Derecho de daños',
-        'Derecho de consumo',
-        'Derecho de personas',
-        'Derecho de obligaciones',
-      ],
-    },
-    {
-      id: 'laboral',
-      title: 'Derecho Laboral',
-      number: '03',
-      description:
-        'Protección de derechos laborales. Despidos, reclamaciones de cantidad, derechos de conciliación y clasificación profesional.',
-      image: '/images/jpg/Legal_01-48.jpg',
-      services: [
-        'Despidos y extinciones',
-        'Reclamaciones de cantidad',
-        'Derechos de conciliación de vida laboral y personal',
-        'Clasificación profesional',
-        'Discriminación laboral',
-        'Accidentes de trabajo',
-        'Negociación colectiva',
-        'Derecho sindical',
-        'Inspección de trabajo',
-        'Derecho de la seguridad social',
-      ],
-    },
-    {
-      id: 'penitenciario',
-      title: 'Derecho Penitenciario',
-      number: '04',
-      description:
-        'Contamos con experiencia en expedientes penitenciarios sustanciados en la Audiencia Nacional (Bárcenas, etc).',
-      image: '/images/jpg/Legal_01-111.jpg',
-      services: [
-        'Expedientes penitenciarios sustanciados en la Audiencia Nacional',
-        'Recursos de amparo penitenciario',
-        'Solicitudes de libertad condicional',
-        'Clasificación penitenciaria',
-        'Régimen de visitas',
-        'Permisos penitenciarios',
-        'Recursos contra sanciones disciplinarias',
-        'Asistencia jurídica penitenciaria',
-      ],
-    },
-  ];
+  const areas = Object.values(areasData);
 
   const toggleArea = (areaId: string) => {
     setOpenArea(openArea === areaId ? null : areaId);
+  };
+
+  const navigateToAreaDetail = (areaId: string) => {
+    router.push(`/areas-juridicas/${areaId}`);
   };
 
   return (
@@ -162,8 +90,7 @@ const AreasJuridicas = () => {
                       <Button
                         onClick={(e) => {
                           e.stopPropagation();
-                          const element = document.getElementById('contacto');
-                          element?.scrollIntoView({ behavior: 'smooth' });
+                          navigateToAreaDetail(area.id);
                         }}
                         className="bg-white text-black hover:bg-gray-100 rounded-full px-4 py-2 sm:px-6 sm:py-3 text-xs sm:text-sm font-medium"
                       >
@@ -195,8 +122,7 @@ const AreasJuridicas = () => {
                       <button
                         onClick={(e) => {
                           e.stopPropagation();
-                          const element = document.getElementById('contacto');
-                          element?.scrollIntoView({ behavior: 'smooth' });
+                          navigateToAreaDetail(area.id);
                         }}
                         className="bg-[#1a5f5f] text-white px-6 py-3 font-semibold text-sm hover:bg-[#1a5f5f]/90 transition-colors duration-200"
                       >

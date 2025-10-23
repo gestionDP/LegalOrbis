@@ -1,6 +1,12 @@
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
+import { generateBaseMetadata } from '@/lib/seo/metadata';
+import {
+  generateOrganizationSchema,
+  generateLocalBusinessSchema,
+  generateJsonLdScript,
+} from '@/lib/seo/schema';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -12,40 +18,35 @@ const geistMono = Geist_Mono({
   subsets: ['latin'],
 });
 
-export const metadata: Metadata = {
-  title: 'Legal Orbis Abogados - Despacho de Abogados Especializado',
-  description:
-    'Despacho multidisciplinar de abogados especializados en Derecho Penal, Civil, Laboral, Penitenciario y Mercantil. Experiencia, profesionalidad y compromiso.',
-  keywords:
-    'abogados, despacho jurídico, derecho penal, derecho civil, derecho laboral, derecho penitenciario, derecho mercantil, Madrid',
-  authors: [{ name: 'Legal Orbis Abogados' }],
-  icons: {
-    icon: [{ url: '/icon.svg', type: 'image/svg+xml' }],
-    apple: [{ url: '/LegalOrbis.svg', type: 'image/svg+xml' }],
-  },
-  openGraph: {
-    title: 'Legal Orbis Abogados',
-    description: 'Despacho multidisciplinar de abogados especializados',
-    type: 'website',
-    locale: 'es_ES',
-    images: [
-      {
-        url: '/LegalOrbis.svg',
-        width: 1200,
-        height: 630,
-        alt: 'Legal Orbis Abogados',
-      },
-    ],
-  },
-};
+export const metadata: Metadata = generateBaseMetadata();
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const organizationSchema = generateOrganizationSchema();
+  const localBusinessSchema = generateLocalBusinessSchema();
+
   return (
     <html lang="es">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationSchema),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(localBusinessSchema),
+          }}
+        />
+        <meta name="theme-color" content="#1A3635" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="canonical" href="https://legalorbis.com" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
