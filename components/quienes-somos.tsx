@@ -107,7 +107,7 @@ const QuienesSomos = () => {
                       {valores[valorActivo].descripcion}
                     </p>
                     <div className="mt-3 text-[#1a5f5f] text-sm font-medium">
-                      Haz clic para leer más...
+                      Leer más...
                     </div>
                   </div>
                 </ValorDialog>
