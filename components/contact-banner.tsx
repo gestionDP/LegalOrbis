@@ -3,70 +3,11 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { BottomSheet, BottomSheetContent } from '@/components/ui/bottom-sheet';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
 import AnimatedSection from '@/components/ui/animated-section';
+import ContactForm from '@/components/contact-form-reusable';
 
 const ContactBanner = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [formData, setFormData] = useState({
-    nombre: '',
-    telefono: '',
-    email: '',
-    asunto: '',
-    mensaje: '',
-  });
-
-  const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    try {
-      const response = await fetch('https://formspree.io/f/xovkznor', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
-
-      if (response.ok) {
-        alert(
-          '¡Mensaje enviado correctamente! Nos pondremos en contacto contigo pronto.'
-        );
-        setIsOpen(false);
-        setFormData({
-          nombre: '',
-          telefono: '',
-          email: '',
-          asunto: '',
-          mensaje: '',
-        });
-      } else {
-        alert(
-          'Hubo un error al enviar el mensaje. Por favor, inténtalo de nuevo.'
-        );
-      }
-    } catch (error) {
-      console.error('Error:', error);
-      alert(
-        'Hubo un error al enviar el mensaje. Por favor, inténtalo de nuevo.'
-      );
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
 
   return (
     <>
@@ -119,117 +60,7 @@ const ContactBanner = () => {
                   </Button>
 
                   <BottomSheetContent className="bg-white">
-                    <div className="mb-8 pt-4">
-                      <h2 className="text-2xl font-semibold text-start mb-3 text-gray-900">
-                        Contacta con Nosotros
-                      </h2>
-                      <p className="text-start text-gray-600">
-                        Completa el formulario y nos pondremos en contacto
-                        contigo
-                      </p>
-                    </div>
-
-                    <form onSubmit={handleSubmit} className="space-y-6 ">
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
-                          <label
-                            htmlFor="nombre"
-                            className="block text-sm font-medium text-gray-700 mb-2"
-                          >
-                            Nombre
-                          </label>
-                          <Input
-                            id="nombre"
-                            name="nombre"
-                            type="text"
-                            required
-                            value={formData.nombre}
-                            onChange={handleInputChange}
-                            className="w-full"
-                          />
-                        </div>
-                        <div>
-                          <label
-                            htmlFor="telefono"
-                            className="block text-sm font-medium text-gray-700 mb-2"
-                          >
-                            N° de Teléfono
-                          </label>
-                          <Input
-                            id="telefono"
-                            name="telefono"
-                            type="tel"
-                            required
-                            value={formData.telefono}
-                            onChange={handleInputChange}
-                            className="w-full"
-                          />
-                        </div>
-                      </div>
-
-                      <div>
-                        <label
-                          htmlFor="email"
-                          className="block text-sm font-medium text-gray-700 mb-2"
-                        >
-                          Correo electrónico
-                        </label>
-                        <Input
-                          id="email"
-                          name="email"
-                          type="email"
-                          required
-                          value={formData.email}
-                          onChange={handleInputChange}
-                          className="w-full"
-                        />
-                      </div>
-
-                      <div>
-                        <label
-                          htmlFor="asunto"
-                          className="block text-sm font-medium text-gray-700 mb-2"
-                        >
-                          Asunto
-                        </label>
-                        <Input
-                          id="asunto"
-                          name="asunto"
-                          type="text"
-                          value={formData.asunto}
-                          onChange={handleInputChange}
-                          className="w-full"
-                        />
-                      </div>
-
-                      <div>
-                        <label
-                          htmlFor="mensaje"
-                          className="block text-sm font-medium text-gray-700 mb-2"
-                        >
-                          Mensaje
-                        </label>
-                        <Textarea
-                          id="mensaje"
-                          name="mensaje"
-                          rows={4}
-                          value={formData.mensaje}
-                          onChange={handleInputChange}
-                          className="w-full"
-                        />
-                      </div>
-
-                      <div className="flex justify-center pt-4">
-                        <Button
-                          type="submit"
-                          size="lg"
-                          disabled={isSubmitting}
-                          className="bg-[#1a5f5f] text-white hover:bg-[#1a5f5f]/90 rounded-full px-8 py-4 text-lg disabled:opacity-50"
-                        >
-                          {isSubmitting ? 'ENVIANDO...' : 'ENVIAR MENSAJE'}
-                        </Button>
-                      </div>
-                    </form>
+                    <ContactForm onSuccess={() => setIsOpen(false)} />
                   </BottomSheetContent>
                 </BottomSheet>
               </AnimatedSection>
