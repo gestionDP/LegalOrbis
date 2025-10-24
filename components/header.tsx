@@ -3,36 +3,44 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 import { Button } from '@/components/ui/button';
+import { BottomSheet, BottomSheetContent } from '@/components/ui/bottom-sheet';
+import ContactForm from '@/components/contact-form-reusable';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
+  const pathname = usePathname();
+  const isHomePage = pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 100);
       setIsMobileMenuOpen(false);
 
-      const sections = [
-        'hero',
-        'quienes-somos',
-        'areas-juridicas',
-        'contacto',
-      ];
-      const scrollPosition = window.scrollY + 100;
+      if (isHomePage) {
+        const sections = [
+          'hero',
+          'quienes-somos',
+          'areas-juridicas',
+          'contacto',
+        ];
+        const scrollPosition = window.scrollY + 100;
 
-      for (const section of sections) {
-        const element = document.getElementById(section);
-        if (element) {
-          const { offsetTop, offsetHeight } = element;
-          if (
-            scrollPosition >= offsetTop &&
-            scrollPosition < offsetTop + offsetHeight
-          ) {
-            setActiveSection(section);
-            break;
+        for (const section of sections) {
+          const element = document.getElementById(section);
+          if (element) {
+            const { offsetTop, offsetHeight } = element;
+            if (
+              scrollPosition >= offsetTop &&
+              scrollPosition < offsetTop + offsetHeight
+            ) {
+              setActiveSection(section);
+              break;
+            }
           }
         }
       }
@@ -40,13 +48,15 @@ const Header = () => {
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [isHomePage]);
 
   const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      setIsMobileMenuOpen(false);
+    if (isHomePage) {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+        setIsMobileMenuOpen(false);
+      }
     }
   };
 
@@ -87,39 +97,50 @@ const Header = () => {
           </div>
 
           <div className="flex items-center space-x-4 sm:space-x-6 lg:space-x-8 ml-auto">
-            <div className="hidden lg:flex items-center space-x-8">
-              {navigationItems.map((item) => (
-                <Button
-                  key={item.href}
-                  variant="ghost"
-                  onClick={() => scrollToSection(item.href)}
-                  className={`text-sm font-medium uppercase tracking-wide transition-colors duration-200 rounded-none hover:bg-transparent ${
-                    activeSection === item.href
-                      ? isScrolled
-                        ? 'text-[#1a5f5f] border-b-2 border-[#1a5f5f] pb-1'
-                        : 'text-white border-b-2 border-white pb-1'
-                      : isScrolled
-                      ? 'text-[#1a5f5f] hover:text-[#1a5f5f]/70'
-                      : 'text-white hover:text-gray-300'
-                  }`}
-                >
-                  {item.name}
-                </Button>
-              ))}
-            </div>
+            {isHomePage && (
+              <div className="hidden lg:flex items-center space-x-8">
+                {navigationItems.map((item) => (
+                  <Button
+                    key={item.href}
+                    variant="ghost"
+                    onClick={() => scrollToSection(item.href)}
+                    className={`text-sm font-medium uppercase tracking-wide transition-colors duration-200 rounded-none hover:bg-transparent ${
+                      activeSection === item.href
+                        ? isScrolled
+                          ? 'text-[#1a5f5f] border-b-2 border-[#1a5f5f] pb-1'
+                          : 'text-white border-b-2 border-white pb-1'
+                        : isScrolled
+                        ? 'text-[#1a5f5f] hover:text-[#1a5f5f]/70'
+                        : 'text-white hover:text-gray-300'
+                    }`}
+                  >
+                    {item.name}
+                  </Button>
+                ))}
+              </div>
+            )}
 
             <div className="hidden lg:block">
-              <Button
-                variant="outline"
-                onClick={() => scrollToSection('contacto')}
-                className={`px-6 py-3 font-medium uppercase tracking-wide rounded-full transition-all duration-200 ${
-                  isScrolled
-                    ? 'border-[#1a5f5f] bg-[#1a5f5f] text-white hover:bg-[#1a5f5f]/90 hover:text-white'
-                    : 'border-white bg-white text-[#1a5f5f] hover:bg-gray-100 hover:text-[#1a5f5f]'
-                }`}
+              <BottomSheet
+                open={isContactModalOpen}
+                onOpenChange={setIsContactModalOpen}
               >
-                CONTACTAR
-              </Button>
+                <Button
+                  variant="outline"
+                  onClick={() => setIsContactModalOpen(true)}
+                  className={`px-6 py-3 font-medium uppercase tracking-wide rounded-full transition-all duration-200 ${
+                    isScrolled
+                      ? 'border-[#1a5f5f] bg-[#1a5f5f] text-white hover:bg-[#1a5f5f]/90 hover:text-white'
+                      : 'border-white bg-white text-[#1a5f5f] hover:bg-gray-100 hover:text-[#1a5f5f]'
+                  }`}
+                >
+                  CONTACTAR
+                </Button>
+
+                <BottomSheetContent className="bg-white">
+                  <ContactForm onSuccess={() => setIsContactModalOpen(false)} />
+                </BottomSheetContent>
+              </BottomSheet>
             </div>
 
             <div className="lg:hidden">
@@ -178,34 +199,46 @@ const Header = () => {
             }`}
           >
             <div className="space-y-4">
-              {navigationItems.map((item) => (
-                <button
-                  key={item.href}
-                  onClick={() => scrollToSection(item.href)}
-                  className={`block w-full text-left py-3 px-4 rounded-lg transition-colors duration-200 ${
-                    activeSection === item.href
-                      ? isScrolled
-                        ? 'text-[#1a5f5f] bg-[#1a5f5f]/10'
-                        : 'text-white bg-white/10'
-                      : isScrolled
-                      ? 'text-[#1a5f5f] hover:bg-[#1a5f5f]/10'
-                      : 'text-white hover:bg-white/10'
-                  }`}
-                >
-                  {item.name}
-                </button>
-              ))}
+              {isHomePage &&
+                navigationItems.map((item) => (
+                  <button
+                    key={item.href}
+                    onClick={() => scrollToSection(item.href)}
+                    className={`block w-full text-left py-3 px-4 rounded-lg transition-colors duration-200 ${
+                      activeSection === item.href
+                        ? isScrolled
+                          ? 'text-[#1a5f5f] bg-[#1a5f5f]/10'
+                          : 'text-white bg-white/10'
+                        : isScrolled
+                        ? 'text-[#1a5f5f] hover:bg-[#1a5f5f]/10'
+                        : 'text-white hover:bg-white/10'
+                    }`}
+                  >
+                    {item.name}
+                  </button>
+                ))}
               <div className="pt-4">
-                <Button
-                  onClick={() => scrollToSection('contacto')}
-                  className={`w-full py-3 font-medium uppercase tracking-wide rounded-full transition-all duration-200 ${
-                    isScrolled
-                      ? 'border-[#1a5f5f] bg-[#1a5f5f] text-white hover:bg-[#1a5f5f]/90'
-                      : 'border-white bg-white text-[#1a5f5f] hover:bg-gray-100'
-                  }`}
+                <BottomSheet
+                  open={isContactModalOpen}
+                  onOpenChange={setIsContactModalOpen}
                 >
-                  CONTACTAR
-                </Button>
+                  <Button
+                    onClick={() => setIsContactModalOpen(true)}
+                    className={`w-full py-3 font-medium uppercase tracking-wide rounded-full transition-all duration-200 ${
+                      isScrolled
+                        ? 'border-[#1a5f5f] bg-[#1a5f5f] text-white hover:bg-[#1a5f5f]/90'
+                        : 'border-white bg-white text-[#1a5f5f] hover:bg-gray-100'
+                    }`}
+                  >
+                    CONTACTAR
+                  </Button>
+
+                  <BottomSheetContent className="bg-white">
+                    <ContactForm
+                      onSuccess={() => setIsContactModalOpen(false)}
+                    />
+                  </BottomSheetContent>
+                </BottomSheet>
               </div>
             </div>
           </div>
