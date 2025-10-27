@@ -34,6 +34,13 @@ export const areasData = {
       'Delitos contra la seguridad vial',
       'Delitos contra el medio ambiente',
     ],
+    branches: [
+      'Defensa penal integral',
+      'Asesoramiento en investigaciones',
+      'Recursos penales',
+      'Medidas cautelares',
+      'Acuerdos procesales',
+    ],
   },
   civil: {
     id: 'civil',
@@ -41,7 +48,9 @@ export const areasData = {
     number: '02',
     subtitle: 'DERECHO CIVIL INTEGRAL',
     description:
-      'Asesoramiento en relaciones jurídicas privadas. Herencias, matrimonial, reclamaciones de cantidad y más.',
+      'El Derecho Civil constituye la base sobre la que se asienta todo el sistema jurídico.',
+    longDescription:
+      'El Derecho Civil constituye la base sobre la que se asienta todo el sistema jurídico, al regular las relaciones personales y patrimoniales que conforman la convivencia social. Su amplitud y diversidad hacen de esta rama una de las más exigentes, pues requiere una comprensión técnica profunda y una interpretación precisa de las normas que la integran.\n\nEn Legal Orbis, contamos con un equipo de profesionales altamente cualificados y especializados en las distintas áreas del Derecho Civil, capaces de ofrecer una respuesta eficaz e íntegra ante cualquier controversia que se plantee. Nuestra experiencia acumulada, tanto en la defensa judicial como en la prevención de conflictos, nos permite actuar con rigor, estrategia y una atención personalizada que garantiza soluciones sólidas y duraderas.\n\nEl Derecho Civil está presente en los aspectos más cotidianos de la vida: en una compraventa, en un contrato, en una herencia o en un conflicto familiar. En Legal Orbis trabajamos para que cada una de esas situaciones cuente con el respaldo jurídico que merece, ofreciendo un acompañamiento constante desde el asesoramiento preventivo hasta la defensa procesal. Nuestro despacho interviene con solvencia en todos los ámbitos del Derecho Civil, garantizando una atención personalizada, rigor técnico y soluciones ajustadas a la realidad de cada cliente.',
     metaTitle:
       'Abogados Civiles en Madrid | Legal Orbis - Derecho Civil Integral',
     metaDescription:
@@ -58,16 +67,26 @@ export const areasData = {
     ],
     image: '/images/jpg/Legal_01-41.jpg',
     services: [
+      'Derecho matrimonial y de familia',
       'Herencias y sucesiones',
-      'Derecho matrimonial y familiar',
-      'Reclamaciones de cantidad',
-      'Responsabilidad civil',
-      'Derecho inmobiliario',
       'Contratos civiles',
-      'Derecho de daños',
-      'Derecho de consumo',
-      'Derecho de personas',
-      'Derecho de obligaciones',
+      'Responsabilidad contractual y extracontractual',
+      'Propiedad y derechos reales',
+      'Arrendamientos urbanos y rústicos',
+      'Reclamaciones de cantidad y deudas civiles',
+      'Consumo y contratación con particulares',
+      'Propiedad horizontal y comunidades',
+    ],
+    branches: [
+      'Derecho matrimonial y de familia',
+      'Herencias y sucesiones',
+      'Contratos civiles',
+      'Responsabilidad contractual y extracontractual',
+      'Propiedad y derechos reales',
+      'Arrendamientos urbanos y rústicos',
+      'Reclamaciones de cantidad y deudas civiles',
+      'Consumo y contratación con particulares',
+      'Propiedad horizontal y comunidades',
     ],
   },
   laboral: {
@@ -76,7 +95,9 @@ export const areasData = {
     number: '03',
     subtitle: 'DERECHO LABORAL ESPECIALIZADO',
     description:
-      'Protección de derechos laborales. Despidos, reclamaciones de cantidad, derechos de conciliación y clasificación profesional.',
+      'El Derecho Laboral constituye una de las áreas más relevantes del ordenamiento jurídico.',
+    longDescription:
+      'El Derecho Laboral constituye una de las áreas más relevantes y complejas del ordenamiento jurídico, por cuanto articula el equilibrio entre las relaciones humanas y profesionales que conforman el mundo del trabajo. Su campo de actuación abarca desde la creación de un vínculo laboral hasta la gestión de los conflictos que puedan surgir durante su desarrollo o a la finalización del mismo, implicando un conocimiento profundo de la normativa, de la práctica judicial y de la realidad empresarial.\n\nEn Legal Orbis, nuestra experiencia en esta materia se ha forjado defendiendo a trabajadores frente a algunas de las empresas más relevantes del tejido empresarial español, así como asesorando a compañías consolidadas que depositan su confianza en nosotros para garantizar la seguridad jurídica de sus decisiones. Nuestro trabajo no se limita al momento del conflicto: acompañamos y orientamos a nuestros clientes antes, durante y después de cualquier controversia laboral, con una estrategia rigurosa y una comunicación constante que refuerza la confianza y la transparencia. El equipo laboralista del despacho actúa con solvencia tanto en la vía judicial como en la negociación extrajudicial, combinando el análisis técnico con una comprensión real de las circunstancias personales o empresariales implicadas. Cada caso se aborda desde la experiencia acumulada en la defensa de los derechos laborales y en la búsqueda de soluciones equilibradas, sostenibles y coherentes con los principios de justicia social y eficiencia empresarial.\n\nEl Derecho Laboral está presente en cada etapa de la vida profesional: en la contratación, en la evolución de la relación entre empresa y trabajador, y en los momentos de ruptura o conflicto. Intervenimos en procedimientos de despido, sanciones, reclamaciones salariales, acoso laboral o vulneraciones de derechos fundamentales, pero también en la planificación y prevención, anticipándonos a los problemas antes de que surjan. Nuestra práctica combina la defensa individual de los trabajadores junto con el asesoramiento estratégico a empresas, lo que nos permite actuar desde una perspectiva completa y realista de las relaciones laborales en el contexto actual.',
     metaTitle:
       'Abogados Laboralistas en Madrid | Legal Orbis - Derecho Laboral Especializado',
     metaDescription:
@@ -93,49 +114,116 @@ export const areasData = {
     ],
     image: '/images/jpg/Legal_01-48.jpg',
     services: [
-      'Despidos y extinciones',
-      'Reclamaciones de cantidad',
-      'Derechos de conciliación de vida laboral y personal',
-      'Clasificación profesional',
-      'Discriminación laboral',
-      'Accidentes de trabajo',
-      'Negociación colectiva',
-      'Derecho sindical',
-      'Inspección de trabajo',
-      'Derecho de la seguridad social',
+      'Contratación laboral y modalidades de contrato',
+      'Despidos (disciplinario, objetivo, improcedente y nulo)',
+      'Modificaciones sustanciales y sanciones',
+      'Reclamación de salarios y cantidades',
+      'Prevención de riesgos laborales y accidentes de trabajo',
+      'Acoso laboral y vulneración de derechos fundamentales',
+      'Procedimientos ante el SMAC y la jurisdicción social',
+      'Seguridad Social: altas, bajas e incapacidades',
+      'ERTE, ERE y reestructuraciones empresariales',
+      'Negociación colectiva y convenios',
+    ],
+    branches: [
+      'Contratación laboral y modalidades de contrato',
+      'Despidos (disciplinario, objetivo, improcedente y nulo)',
+      'Modificaciones sustanciales y sanciones',
+      'Reclamación de salarios y cantidades',
+      'Prevención de riesgos laborales y accidentes de trabajo',
+      'Acoso laboral y vulneración de derechos fundamentales',
+      'Procedimientos ante el SMAC y la jurisdicción social',
+      'Seguridad Social: altas, bajas e incapacidades',
+      'ERTE, ERE y reestructuraciones empresariales',
+      'Negociación colectiva y convenios',
     ],
   },
-  penitenciario: {
-    id: 'penitenciario',
-    title: 'Derecho Penitenciario',
+  mercantil: {
+    id: 'mercantil',
+    title: 'Derecho Mercantil',
     number: '04',
-    subtitle: 'DERECHO PENITENCIARIO EXPERTO',
+    subtitle: 'DERECHO MERCANTIL ESPECIALIZADO',
     description:
-      'Contamos con experiencia en expedientes penitenciarios sustanciados en la Audiencia Nacional (Bárcenas, etc).',
+      'En un contexto económico cada vez más global, el Derecho Mercantil adquiere una relevancia esencial.',
+    longDescription:
+      'En un contexto económico cada vez más global, tecnológico y competitivo, el Derecho Mercantil adquiere una relevancia esencial como instrumento para garantizar la seguridad jurídica de las empresas y de quienes participan en la actividad económica. El auge del emprendimiento, la expansión internacional y la transformación digital exigen un conocimiento profundo de esta materia y una gestión jurídica capaz de anticiparse a los desafíos del mercado.\n\nEn Legal Orbis, ponemos a disposición de nuestros clientes un equipo de profesionales con amplia experiencia en asesoramiento mercantil y societario, que acompaña a empresas, emprendedores y directivos en todas las etapas de su actividad. Nuestro enfoque combina rigor jurídico, estrategia empresarial y una atención cercana que permite ofrecer soluciones sólidas y orientadas a resultados efectivos.\n\nEl Derecho Mercantil abarca la vida jurídica de la empresa, desde su constitución hasta la resolución de los conflictos que puedan surgir en su actividad diaria. En Legal Orbis prestamos un asesoramiento integral que incluye la redacción y negociación de contratos, la gestión societaria, las operaciones de reestructuración y la defensa ante litigios mercantiles. Nuestra intervención se orienta tanto a la prevención de riesgos como a la protección de los intereses empresariales, siempre desde una perspectiva técnica, ágil y adaptada a cada cliente.',
     metaTitle:
-      'Abogados Penitenciarios en Madrid | Legal Orbis - Derecho Penitenciario Experto',
+      'Abogados Mercantiles en Madrid | Legal Orbis - Derecho Mercantil Especializado',
     metaDescription:
-      'Abogados especialistas en derecho penitenciario en Madrid. Experiencia en Audiencia Nacional, libertad condicional, recursos penitenciarios y asistencia jurídica.',
+      'Abogados especialistas en derecho mercantil en Madrid. Constitución de sociedades, contratación mercantil, fusiones y adquisiciones. Asesoramiento empresarial experto.',
     metaKeywords: [
-      'abogados penitenciarios Madrid',
-      'derecho penitenciario Madrid',
-      'libertad condicional Madrid',
-      'recursos penitenciarios Madrid',
-      'audiencia nacional Madrid',
-      'asistencia jurídica penitenciaria Madrid',
-      'expedientes penitenciarios Madrid',
-      'clasificación penitenciaria Madrid',
+      'abogados mercantiles Madrid',
+      'derecho mercantil Madrid',
+      'abogados sociedades Madrid',
+      'contratación mercantil Madrid',
+      'fusiones adquisiciones Madrid',
+      'derecho societario Madrid',
+      'asesoramiento empresarial Madrid',
+      'propiedad industrial Madrid',
     ],
     image: '/images/jpg/Legal_01-111.jpg',
     services: [
-      'Expedientes penitenciarios sustanciados en la Audiencia Nacional',
-      'Recursos de amparo penitenciario',
-      'Solicitudes de libertad condicional',
-      'Clasificación penitenciaria',
-      'Régimen de visitas',
-      'Permisos penitenciarios',
-      'Recursos contra sanciones disciplinarias',
-      'Asistencia jurídica penitenciaria',
+      'Constitución y administración de sociedades',
+      'Contratación mercantil nacional e internacional',
+      'Responsabilidad de administradores y socios',
+      'Fusiones, adquisiciones y reestructuraciones',
+      'Propiedad industrial e intelectual',
+      'Competencia desleal y defensa de la competencia',
+      'Procedimientos concursales y reestructuraciones de deuda',
+      'Conflictos societarios y resolución de disputas comerciales',
+    ],
+    branches: [
+      'Constitución y administración de sociedades',
+      'Contratación mercantil nacional e internacional',
+      'Responsabilidad de administradores y socios',
+      'Fusiones, adquisiciones y reestructuraciones',
+      'Propiedad industrial e intelectual',
+      'Competencia desleal y defensa de la competencia',
+      'Procedimientos concursales y reestructuraciones de deuda',
+      'Conflictos societarios y resolución de disputas comerciales',
+    ],
+  },
+  administrativo: {
+    id: 'administrativo',
+    title: 'Derecho Administrativo',
+    number: '05',
+    subtitle: 'DERECHO ADMINISTRATIVO ESPECIALIZADO',
+    description:
+      'En una sociedad cada vez más regulada, el Derecho Administrativo adquiere una importancia decisiva.',
+    longDescription:
+      'En una sociedad cada vez más regulada y dependiente de la actuación de los poderes públicos, el Derecho Administrativo adquiere una importancia decisiva. Las relaciones entre ciudadanos, empresas y Administraciones se han multiplicado, generando un escenario en el que resulta esencial contar con un asesoramiento jurídico especializado que garantice la correcta defensa de los derechos frente a la Administración y el cumplimiento riguroso de las obligaciones que esta impone.\n\nEn Legal Orbis, contamos con un equipo de abogados con sólida experiencia en el ámbito contencioso-administrativo y en la tramitación de procedimientos ante todo tipo de organismos públicos. Nuestro trabajo se caracteriza por un compromiso constante con la protección de los intereses de nuestros clientes, tanto en la fase administrativa como ante los tribunales.\n\nEl Derecho Administrativo interviene en todos aquellos ámbitos en los que la actuación pública incide sobre la esfera privada: licencias, sanciones, procedimientos urbanísticos, contratación pública o responsabilidad patrimonial, entre muchos otros. En Legal Orbis, asesoramos a particulares, empresas y entidades en su relación con la Administración, ofreciendo un acompañamiento integral que abarca desde la prevención hasta la defensa contenciosa. Nuestra experiencia en la gestión y resolución de conflictos con la Administración nos permite garantizar respuestas eficaces y soluciones ajustadas a Derecho, adaptadas a las particularidades de cada caso.',
+    metaTitle:
+      'Abogados Administrativos en Madrid | Legal Orbis - Derecho Administrativo Especializado',
+    metaDescription:
+      'Abogados especialistas en derecho administrativo en Madrid. Procedimientos administrativos, recursos contenciosos, responsabilidad patrimonial. Asesoramiento legal experto.',
+    metaKeywords: [
+      'abogados administrativos Madrid',
+      'derecho administrativo Madrid',
+      'procedimientos administrativos Madrid',
+      'recursos contenciosos Madrid',
+      'responsabilidad patrimonial Madrid',
+      'derecho urbanístico Madrid',
+      'contratación pública Madrid',
+      'sanciones administrativas Madrid',
+    ],
+    image: '/images/jpg/Legal_01-27.jpg',
+    services: [
+      'Procedimientos administrativos y recursos',
+      'Reclamaciones económico-administrativas',
+      'Responsabilidad patrimonial de la Administración',
+      'Sanciones y procedimientos disciplinarios',
+      'Expropiaciones forzosas y valoraciones',
+      'Procedimientos contencioso-administrativos',
+      'Función pública y personal al servicio de la Administración',
+    ],
+    branches: [
+      'Procedimientos administrativos y recursos',
+      'Reclamaciones económico-administrativas',
+      'Responsabilidad patrimonial de la Administración',
+      'Sanciones y procedimientos disciplinarios',
+      'Expropiaciones forzosas y valoraciones',
+      'Procedimientos contencioso-administrativos',
+      'Función pública y personal al servicio de la Administración',
     ],
   },
 };
@@ -147,11 +235,13 @@ export interface AreaData {
   number: string;
   subtitle: string;
   description: string;
+  longDescription?: string;
   metaTitle: string;
   metaDescription: string;
   metaKeywords: string[];
   image: string;
   services: string[];
+  branches?: string[];
 }
 
 export interface Branch {
@@ -456,104 +546,6 @@ export const getAreaBranches = (areaId: string): Branch[] => {
           'Derechos de conciliación',
           'Maternidad y paternidad',
           'Cuidado de familiares',
-        ],
-      },
-    ],
-    penitenciario: [
-      {
-        id: 'ejecucion-penal',
-        branch: 'Ejecución penal',
-        description:
-          'Cumplimiento de condenas, clasificación penitenciaria y régimen de cumplimiento.',
-        details:
-          'Especialización en ejecución penal, incluyendo cumplimiento de condenas, clasificación penitenciaria y régimen de cumplimiento.',
-        services: [
-          'Cumplimiento de condenas',
-          'Clasificación penitenciaria',
-          'Régimen de cumplimiento',
-          'Ejecución de penas',
-          'Suspensión de condenas',
-          'Sustitución de penas',
-        ],
-      },
-      {
-        id: 'libertad-condicional',
-        branch: 'Libertad condicional',
-        description:
-          'Solicitudes de libertad condicional, seguimiento y revocación de medidas.',
-        details:
-          'Asesoramiento en libertad condicional, incluyendo solicitudes, seguimiento y revocación de medidas de libertad condicional.',
-        services: [
-          'Solicitudes de libertad condicional',
-          'Seguimiento',
-          'Revocación de medidas',
-          'Condiciones',
-          'Supervisión',
-          'Reinserción',
-        ],
-      },
-      {
-        id: 'regimen-penitenciario',
-        branch: 'Régimen penitenciario',
-        description:
-          'Derechos y deberes de los internos, visitas, permisos y comunicaciones.',
-        details:
-          'Defensa de los derechos de los internos, incluyendo visitas, permisos, comunicaciones y otros derechos penitenciarios.',
-        services: [
-          'Derechos de los internos',
-          'Visitas',
-          'Permisos',
-          'Comunicaciones',
-          'Trabajo penitenciario',
-          'Educación',
-        ],
-      },
-      {
-        id: 'recursos-penitenciarios',
-        branch: 'Recursos penitenciarios',
-        description:
-          'Recursos contra sanciones disciplinarias y decisiones administrativas.',
-        details:
-          'Defensa especializada en recursos penitenciarios, incluyendo recursos contra sanciones disciplinarias y decisiones administrativas.',
-        services: [
-          'Recursos contra sanciones',
-          'Decisiones administrativas',
-          'Recursos de alzada',
-          'Recursos contenciosos',
-          'Recursos de amparo',
-          'Recursos de revisión',
-        ],
-      },
-      {
-        id: 'audiencia-nacional',
-        branch: 'Audiencia Nacional',
-        description:
-          'Expedientes penitenciarios especiales y casos de alta relevancia.',
-        details:
-          'Experiencia en expedientes penitenciarios sustanciados en la Audiencia Nacional, incluyendo casos de alta relevancia y expedientes especiales.',
-        services: [
-          'Expedientes especiales',
-          'Casos de alta relevancia',
-          'Audiencia Nacional',
-          'Expedientes complejos',
-          'Casos mediáticos',
-          'Expedientes Bárcenas',
-        ],
-      },
-      {
-        id: 'asistencia-juridica',
-        branch: 'Asistencia jurídica',
-        description:
-          'Defensa de derechos fundamentales y recursos de amparo penitenciario.',
-        details:
-          'Defensa especializada en asistencia jurídica penitenciaria, incluyendo defensa de derechos fundamentales y recursos de amparo penitenciario.',
-        services: [
-          'Derechos fundamentales',
-          'Recursos de amparo',
-          'Asistencia jurídica',
-          'Defensa de derechos',
-          'Recursos constitucionales',
-          'Protección de derechos',
         ],
       },
     ],

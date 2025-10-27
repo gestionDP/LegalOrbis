@@ -45,7 +45,7 @@ const AreasJuridicas = () => {
           </AnimatedSection>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {areas.map((area, index) => {
             const isOpen = openArea === area.id;
 
@@ -106,16 +106,16 @@ const AreasJuridicas = () => {
                   >
                     <div className="p-8">
                       <h4 className="text-lg font-semibold text-black mb-4">
-                        Servicios que ofrecemos:
+                        Áreas de actuación:
                       </h4>
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-6">
-                        {area.services.map((service, index) => (
+                        {(area.branches || area.services).map((item, index) => (
                           <div
                             key={index}
                             className="flex items-center text-gray-700 text-sm"
                           >
                             <div className="w-2 h-2 bg-[#1a5f5f] rounded-full mr-3 shrink-0" />
-                            {service}
+                            {item}
                           </div>
                         ))}
                       </div>
