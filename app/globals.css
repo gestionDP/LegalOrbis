@@ -182,4 +182,14 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
+
+  .prose strong {
+    @apply font-semibold text-white;
+    font-weight: 600;
+  }
+
+  .prose-invert strong {
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+  }
 }
