@@ -52,7 +52,7 @@ export const useContactForm = (): UseContactFormReturn => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch('https://formspree.io/f/xovkznor', {
+      const response = await fetch('https://formspree.io/f/manlbdwz', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

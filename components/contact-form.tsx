@@ -61,7 +61,7 @@ const ContactForm = () => {
     {
       icon: Mail,
       title: 'Email',
-      content: 'info@legalorbis.com',
+      content: 'info@legalorbisabogados.es',
       description: 'Respuesta en 24 horas',
     },
     {
