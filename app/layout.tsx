@@ -11,11 +11,15 @@ import {
 const geistSans = Geist({
   variable: '--font-geist-sans',
   subsets: ['latin'],
+  display: 'swap',
+  preload: true,
 });
 
 const geistMono = Geist_Mono({
   variable: '--font-geist-mono',
   subsets: ['latin'],
+  display: 'swap',
+  preload: false,
 });
 
 export const metadata: Metadata = generateBaseMetadata();
@@ -31,6 +35,13 @@ export default function RootLayout({
   return (
     <html lang="es">
       <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -45,7 +56,7 @@ export default function RootLayout({
         />
         <meta name="theme-color" content="#1A3635" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="canonical" href="https://legalorbis.com" />
+        <link rel="canonical" href="https://legalorbisabogados.es" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}

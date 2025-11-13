@@ -22,15 +22,15 @@ const QuienesSomos = () => {
       titulo: 'Profesionalidad',
       descripcion:
         'Nuestro equipo aborda cada caso desde una estrategia personalizada, combinando experiencia, profesionalidad y compromiso, junto con una constante actualización en los nuevos recursos que ofrece el mundo jurídico moderno.',
-        imagen: '/images/jpg/Legal_01-66.jpg',
-      },
+      imagen: '/images/jpg/Legal_01-66.jpg',
+    },
     {
       palabra: 'Compromiso',
       titulo: 'Compromiso',
       descripcion:
         'La transparencia y la confianza mutua con nuestros defendidos son la base de nuestro trabajo y lo que nos ha permitido consolidar relaciones duraderas y crecer junto a nuestros clientes. Cada abogado de Legal Orbis cuenta con unos conocimientos técnico-jurídicos concretos, lo que nos permite ofrecer una opinión plural y complementaria de cada asunto, de modo que en cada reunión intervienen varios especialistas para garantizar un análisis completo y una estrategia adaptada a las particularidades de cada caso.',
-        imagen: '/images/jpg/Legal_01-13.jpg',
-      },
+      imagen: '/images/jpg/Legal_01-13.jpg',
+    },
   ];
 
   return (
@@ -40,9 +40,9 @@ const QuienesSomos = () => {
       style={{ backgroundColor: '#0B0B0B' }}
     >
       <div className="container-max">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start mb-12">
+        <div className="mb-16">
           <AnimatedSection animation="fadeInLeft" delay={0.1} duration={0.5}>
-            <div className="flex items-center">
+            <div className="flex items-center mb-6">
               <ArrowRight className="w-5 h-5 text-white mr-3" />
               <span className="text-sm font-medium uppercase tracking-wide text-gray-300">
                 Quienes somos
@@ -50,70 +50,59 @@ const QuienesSomos = () => {
             </div>
           </AnimatedSection>
 
-          <div className="space-y-6">
-            <AnimatedSection animation="fadeInUp" delay={0.15} duration={0.5}>
-              <h2 className="text-2xl lg:text-4xl font-light text-white leading-tight mb-20">
-                Un equipo multidisciplinar de abogados especializados
-              </h2>
+          <AnimatedSection animation="fadeInUp" delay={0.15} duration={0.5}>
+            <h2 className="text-3xl lg:text-5xl font-light text-white leading-tight mb-12">
+              Un equipo multidisciplinar de abogados especializados
+            </h2>
+          </AnimatedSection>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            <AnimatedSection animation="fadeInLeft" delay={0.2} duration={0.5}>
+              <div className="space-y-6">
+                <h3 className="text-2xl lg:text-3xl font-light text-white mb-4">
+                  {valores[valorActivo].titulo}
+                </h3>
+                <div className="space-y-4 text-base lg:text-lg text-gray-300 leading-relaxed">
+                  <p>{valores[valorActivo].descripcion}</p>
+                  {valorActivo === 2 && (
+                    <p className="text-white font-semibold text-lg lg:text-xl">
+                      En cada reunión intervienen varios especialistas para
+                      garantizar un análisis completo y una estrategia adaptada
+                      a las particularidades de cada caso.
+                    </p>
+                  )}
+                </div>
+                <div className="flex items-center gap-4 pt-4">
+                  {valores.map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setValorActivo(index)}
+                      className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                        index === valorActivo
+                          ? 'bg-white scale-125'
+                          : 'bg-white/30 hover:bg-white/50'
+                      }`}
+                      aria-label={`Ver ${valores[index].titulo}`}
+                    />
+                  ))}
+                </div>
+              </div>
             </AnimatedSection>
 
-            <div className="space-y-3">
-              {valores.map((valor, index) => (
-                <AnimatedSection
-                  key={index}
-                  animation="fadeInUp"
-                  delay={0.2 + index * 0.05}
-                  duration={0.5}
-                >
-                  <div
-                    onClick={() => setValorActivo(index)}
-                    className={`cursor-pointer transition-all duration-200 ${
-                      valorActivo === index
-                        ? 'text-white'
-                        : 'text-gray-400 hover:text-gray-300'
-                    }`}
-                  >
-                    <span className="text-5xl lg:text-6xl font-light">
-                      {valor.palabra}
-                    </span>
-                  </div>
-                </AnimatedSection>
-              ))}
-            </div>
-          </div>
-
-          <AnimatedSection animation="fadeInRight" delay={0.2} duration={0.5}>
-            <div>
-              <div className="relative">
-                <div className="aspect-4/5 overflow-hidden relative">
-                  <Image
-                    src={valores[valorActivo].imagen}
-                    alt={valores[valorActivo].titulo}
-                    fill
-                    sizes="(max-width: 1024px) 100vw, 33vw"
-                    quality={80}
-                    className="object-cover"
-                  />
-                </div>
-
-                <ValorDialog valor={valores[valorActivo]}>
-                  <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-sm p-6 cursor-pointer hover:bg-white transition-colors duration-200">
-                    <div className="flex items-start justify-between mb-4">
-                      <h4 className="text-xl font-semibold text-black">
-                        {valores[valorActivo].titulo}
-                      </h4>
-                    </div>
-                    <p className="text-gray-700 leading-relaxed line-clamp-4">
-                      {valores[valorActivo].descripcion}
-                    </p>
-                    <div className="mt-3 text-[#1a5f5f] text-sm font-medium">
-                      Leer más...
-                    </div>
-                  </div>
-                </ValorDialog>
+            <AnimatedSection animation="fadeInRight" delay={0.3} duration={0.5}>
+              <div className="relative aspect-4/3 overflow-hidden">
+                <Image
+                  src={valores[valorActivo].imagen}
+                  alt={`${valores[valorActivo].titulo} - Equipo de abogados Legal Orbis Madrid`}
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  quality={85}
+                  className="object-cover transition-opacity duration-500"
+                  priority
+                />
               </div>
-            </div>
-          </AnimatedSection>
+            </AnimatedSection>
+          </div>
         </div>
 
         <AnimatedSection animation="fadeInUp" delay={0.3} duration={0.5}>
@@ -135,16 +124,16 @@ const QuienesSomos = () => {
               </div>
               <div className="text-center">
                 <div className="text-4xl lg:text-5xl font-light text-white mb-2">
-                  4
+                  5
                 </div>
                 <div className="text-gray-400 font-medium">Áreas Jurídicas</div>
               </div>
               <div className="text-center">
                 <div className="text-4xl lg:text-5xl font-light text-white mb-2">
-                  100%
+                  +10
                 </div>
                 <div className="text-gray-400 font-medium">
-                  Satisfacción Cliente
+                  Colaboradores especializados
                 </div>
               </div>
             </div>

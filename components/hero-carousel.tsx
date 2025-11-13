@@ -38,7 +38,7 @@ const HeroCarousel = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 5000);
+    }, 6000);
 
     return () => clearInterval(timer);
   }, [slides.length]);
@@ -68,7 +68,7 @@ const HeroCarousel = () => {
             <div className="absolute inset-0">
               <Image
                 src={slide.image}
-                alt={slide.title}
+                alt={`${slide.title} - Abogados especializados en Madrid Legal Orbis`}
                 fill
                 priority={index === 0}
                 quality={85}

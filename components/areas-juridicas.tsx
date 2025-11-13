@@ -63,7 +63,7 @@ const AreasJuridicas = () => {
                   <div className="aspect-[4/3] sm:aspect-[3/2] lg:aspect-[4/3] overflow-hidden relative">
                     <Image
                       src={area.image}
-                      alt={area.title}
+                      alt={`Abogados ${area.title} en Madrid - Despacho Legal Orbis`}
                       fill
                       sizes="(max-width: 768px) 100vw, 50vw"
                       quality={80}
@@ -96,38 +96,6 @@ const AreasJuridicas = () => {
                       >
                         CONOCER MÁS
                       </Button>
-                    </div>
-                  </div>
-
-                  <div
-                    className={`absolute inset-x-0 bottom-0 bg-white transition-all duration-300 ${
-                      isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-                    }`}
-                  >
-                    <div className="p-8">
-                      <h4 className="text-lg font-semibold text-black mb-4">
-                        Áreas de actuación:
-                      </h4>
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-6">
-                        {(area.branches || area.services).map((item, index) => (
-                          <div
-                            key={index}
-                            className="flex items-center text-gray-700 text-sm"
-                          >
-                            <div className="w-2 h-2 bg-[#1a5f5f] rounded-full mr-3 shrink-0" />
-                            {item}
-                          </div>
-                        ))}
-                      </div>
-                      <button
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          navigateToAreaDetail(area.id);
-                        }}
-                        className="bg-[#1a5f5f] text-white px-6 py-3 font-semibold text-sm hover:bg-[#1a5f5f]/90 transition-colors duration-200"
-                      >
-                        CONSULTAR CASO
-                      </button>
                     </div>
                   </div>
                 </div>
