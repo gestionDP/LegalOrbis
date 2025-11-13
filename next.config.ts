@@ -12,12 +12,6 @@ const nextConfig: NextConfig = {
 
   reactStrictMode: true,
 
-  optimizeFonts: true,
-
-  compress: true,
-
-  swcMinify: true,
-
   modularizeImports: {
     'lucide-react': {
       transform: 'lucide-react/dist/esm/icons/{{kebabCase member}}',
