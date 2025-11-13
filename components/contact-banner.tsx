@@ -15,7 +15,7 @@ const ContactBanner = () => {
         <div className="absolute inset-0">
           <img
             src="/images/jpg/Legal_01-3.jpg"
-            alt="Contacto Legal Orbis"
+            alt="Contacta con Legal Orbis - Abogados especializados en Madrid"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-black/50"></div>
@@ -30,7 +30,7 @@ const ContactBanner = () => {
                 duration={0.5}
               >
                 <h2 className="text-4xl lg:text-6xl font-light text-white leading-tight mb-8">
-                  ¿Listo para hacer un impacto?
+                  Cuéntanos tu caso. Empieza a resolver tu problema hoy
                 </h2>
               </AnimatedSection>
 
@@ -40,8 +40,11 @@ const ContactBanner = () => {
                 duration={0.5}
               >
                 <p className="text-xl text-gray-200 leading-relaxed mb-8">
-                  Colabora con Legal Orbis para impulsar cambios significativos
-                  y lograr tus objetivos jurídicos.
+                  Contacta con nosotros y te agendaremos una cita presencial lo
+                  antes posible para analizar tu caso en profundidad y con total
+                  confidencialidad. Según la naturaleza del asunto, varios de
+                  nuestros especialistas podrán participar en la reunión para
+                  alcanzar la mejor estrategia jurídica.
                 </p>
               </AnimatedSection>
 
@@ -56,7 +59,7 @@ const ContactBanner = () => {
                     size="lg"
                     className="bg-white text-black hover:bg-gray-100 rounded-full px-8 py-4"
                   >
-                    ENVIAR CONSULTA
+                    CONTACTA CON LEGAL ORBIS
                   </Button>
 
                   <BottomSheetContent className="bg-white">

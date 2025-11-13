@@ -9,6 +9,8 @@ export interface OrganizationSchema {
   logo: string;
   address: {
     '@type': string;
+    streetAddress?: string;
+    postalCode?: string;
     addressLocality: string;
     addressRegion: string;
     addressCountry: string;
@@ -16,6 +18,9 @@ export interface OrganizationSchema {
   contactPoint: {
     '@type': string;
     contactType: string;
+    email?: string;
+    contactOption?: string;
+    availableLanguage?: string[];
     areaServed: string;
   };
   areaServed: {
@@ -45,6 +50,8 @@ export interface LocalBusinessSchema {
   telephone?: string;
   address: {
     '@type': string;
+    streetAddress?: string;
+    postalCode?: string;
     addressLocality: string;
     addressRegion: string;
     addressCountry: string;
@@ -96,6 +103,19 @@ export interface BreadcrumbSchema {
   }>;
 }
 
+export interface FAQSchema {
+  '@context': string;
+  '@type': string;
+  mainEntity: Array<{
+    '@type': string;
+    name: string;
+    acceptedAnswer: {
+      '@type': string;
+      text: string;
+    };
+  }>;
+}
+
 // Schema Organization principal
 export function generateOrganizationSchema(): OrganizationSchema {
   return {
@@ -103,18 +123,23 @@ export function generateOrganizationSchema(): OrganizationSchema {
     '@type': ['LegalService', 'Attorney', 'Organization'],
     name: 'Legal Orbis Abogados',
     description:
-      'Despacho multidisciplinar de abogados especializados en Derecho Penal, Civil, Laboral, Penitenciario y Mercantil en Madrid.',
-    url: 'https://legalorbis.com',
-    logo: 'https://legalorbis.com/logo-legal-orbis.svg',
+      'Despacho multidisciplinar de abogados especializados en Derecho Penal, Civil, Laboral, Mercantil y Administrativo en Madrid. +15 años de experiencia.',
+    url: 'https://legalorbisabogados.es',
+    logo: 'https://legalorbisabogados.es/logo-legal-orbis.svg',
     address: {
       '@type': 'PostalAddress',
+      streetAddress: 'Calle Serrano 78, 5º Derecha',
+      postalCode: '28006',
       addressLocality: 'Madrid',
-      addressRegion: 'Madrid',
+      addressRegion: 'Comunidad de Madrid',
       addressCountry: 'ES',
     },
     contactPoint: {
       '@type': 'ContactPoint',
       contactType: 'customer service',
+      email: 'info@legalorbisabogados.es',
+      contactOption: 'OnlineOnly',
+      availableLanguage: ['Spanish', 'English'],
       areaServed: 'Madrid',
     },
     areaServed: {
@@ -125,8 +150,8 @@ export function generateOrganizationSchema(): OrganizationSchema {
       'Derecho Penal',
       'Derecho Civil',
       'Derecho Laboral',
-      'Derecho Penitenciario',
       'Derecho Mercantil',
+      'Derecho Administrativo',
     ],
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
@@ -174,19 +199,24 @@ export function generateLocalBusinessSchema(): LocalBusinessSchema {
   return {
     '@type': 'LegalService',
     name: 'Legal Orbis Abogados',
-    description: 'Despacho de abogados especializado en Madrid',
-    url: 'https://legalorbis.com',
+    description:
+      'Despacho de abogados especializado en Madrid - Calle Serrano 78',
+    url: 'https://legalorbisabogados.es',
+    telephone: '+34916841454',
     address: {
       '@type': 'PostalAddress',
+      streetAddress: 'Calle Serrano 78, 5º Derecha',
+      postalCode: '28006',
       addressLocality: 'Madrid',
-      addressRegion: 'Madrid',
+      addressRegion: 'Comunidad de Madrid',
       addressCountry: 'ES',
     },
     geo: {
       '@type': 'GeoCoordinates',
-      latitude: 40.4168,
-      longitude: -3.7038,
+      latitude: 40.4316,
+      longitude: -3.6839,
     },
+    openingHours: ['Mo-Fr 09:00-19:00'],
     areaServed: {
       '@type': 'City',
       name: 'Madrid',
@@ -215,7 +245,7 @@ export function generateLegalServiceSchema({
     provider: {
       '@type': 'Attorney',
       name: 'Legal Orbis Abogados',
-      url: 'https://legalorbis.com',
+      url: 'https://legalorbisabogados.es',
     },
     areaServed: {
       '@type': 'City',
@@ -224,7 +254,7 @@ export function generateLegalServiceSchema({
     serviceType: serviceTypes,
     offers: {
       '@type': 'Offer',
-      description: `Servicios de ${serviceName} en Madrid`,
+      description: `Servicios de ${serviceName} en Madrid. Primera consulta gratuita.`,
     },
   };
 }
@@ -242,7 +272,27 @@ export function generateBreadcrumbSchema({
       '@type': 'ListItem',
       position: index + 1,
       name: item.name,
-      item: `https://legalorbis.com${item.url}`,
+      item: `https://legalorbisabogados.es${item.url}`,
+    })),
+  };
+}
+
+// Schema FAQ
+export function generateFAQSchema({
+  faqs,
+}: {
+  faqs: Array<{ question: string; answer: string }>;
+}): FAQSchema {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((faq) => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.answer,
+      },
     })),
   };
 }
@@ -254,6 +304,7 @@ export function generateJsonLdScript(
     | LocalBusinessSchema
     | LegalServiceSchema
     | BreadcrumbSchema
+    | FAQSchema
 ): string {
   return `<script type="application/ld+json">${JSON.stringify(
     schema,

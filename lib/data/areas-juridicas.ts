@@ -7,19 +7,21 @@ export const areasData = {
     subtitle: 'DEFENSA PENAL ESPECIALIZADA',
     description:
       'Defensa especializada en delitos de todo tipo. Ofrecemos asesoramiento integral y representación legal en procesos penales.',
-    metaTitle:
-      'Abogados Penalistas en Madrid | Legal Orbis - Defensa Penal Especializada',
+    metaTitle: 'Abogado Penalista Madrid | Legal Orbis - Defensa Penal 24h',
     metaDescription:
-      'Abogados penalistas especializados en Madrid. Defensa en delitos contra la vida, patrimonio, violencia de género y delitos económicos. Consulta gratuita.',
+      '⚖️ Abogados penalistas en Madrid con +15 años experiencia. Defensa inmediata en delitos. Primera consulta GRATUITA. Contacta ahora ✉️',
     metaKeywords: [
+      'abogado penalista Madrid',
       'abogados penalistas Madrid',
+      'abogado penal Madrid urgente',
+      'cuanto cuesta abogado penalista Madrid',
+      'mejor abogado penalista Madrid',
       'defensa penal Madrid',
-      'abogados delitos Madrid',
-      'defensa criminal Madrid',
+      'abogado delitos Madrid',
       'abogados violencia género Madrid',
       'delitos económicos Madrid',
-      'abogados delitos informáticos Madrid',
-      'defensa penal especializada Madrid',
+      'abogado penal Madrid centro',
+      'abogados penalistas Madrid Serrano',
     ],
     image: '/images/jpg/Legal_01-62.jpg',
     services: [
@@ -41,6 +43,33 @@ export const areasData = {
       'Medidas cautelares',
       'Acuerdos procesales',
     ],
+    faqs: [
+      {
+        question: '¿Cuánto cuesta un abogado penalista en Madrid?',
+        answer:
+          'En Legal Orbis ofrecemos una primera consulta gratuita para evaluar tu caso. Los honorarios posteriores dependen de la complejidad del asunto, pero siempre trabajamos con total transparencia y te informamos de los costes desde el inicio. Nuestro objetivo es brindarte la mejor defensa al precio más justo.',
+      },
+      {
+        question: '¿Qué debo hacer si me han acusado de un delito?',
+        answer:
+          'Lo primero es contactar inmediatamente con un abogado penalista. En Legal Orbis te asesoramos desde el primer momento, te explicamos tus derechos y diseñamos la estrategia de defensa más adecuada. No declares ni firmes nada sin la presencia de tu abogado.',
+      },
+      {
+        question: '¿Puedo evitar ir a juicio en un caso penal?',
+        answer:
+          'En muchos casos sí. Existen alternativas como la conformidad, el acuerdo con la acusación o la suspensión de condena. En Legal Orbis analizamos todas las opciones para conseguir la mejor solución sin llegar a juicio cuando sea posible.',
+      },
+      {
+        question: '¿Cuánto tiempo puede durar un proceso penal?',
+        answer:
+          'La duración varía según la complejidad del caso, pero puede oscilar entre varios meses y años. En Legal Orbis trabajamos para agilizar al máximo el proceso y mantenerte informado en cada fase del procedimiento.',
+      },
+      {
+        question: '¿Qué diferencia hay entre un delito y una falta?',
+        answer:
+          'Las faltas fueron eliminadas del Código Penal en 2015. Ahora existen delitos leves (antes faltas) y delitos graves. Los delitos leves tienen penas menores y un procedimiento más rápido. Nuestros abogados te explicarán las implicaciones de cada tipo.',
+      },
+    ],
   },
   civil: {
     id: 'civil',
@@ -52,18 +81,21 @@ export const areasData = {
     longDescription:
       'El Derecho Civil constituye la base sobre la que se asienta todo el sistema jurídico, al regular las relaciones personales y patrimoniales que conforman la convivencia social. Su amplitud y diversidad hacen de esta rama una de las más exigentes, pues requiere una comprensión técnica profunda y una interpretación precisa de las normas que la integran.\n\nEn Legal Orbis, contamos con un equipo de profesionales altamente cualificados y especializados en las distintas áreas del Derecho Civil, capaces de ofrecer una respuesta eficaz e íntegra ante cualquier controversia que se plantee. Nuestra experiencia acumulada, tanto en la defensa judicial como en la prevención de conflictos, nos permite actuar con rigor, estrategia y una atención personalizada que garantiza soluciones sólidas y duraderas.\n\nEl Derecho Civil está presente en los aspectos más cotidianos de la vida: en una compraventa, en un contrato, en una herencia o en un conflicto familiar. En Legal Orbis trabajamos para que cada una de esas situaciones cuente con el respaldo jurídico que merece, ofreciendo un acompañamiento constante desde el asesoramiento preventivo hasta la defensa procesal. Nuestro despacho interviene con solvencia en todos los ámbitos del Derecho Civil, garantizando una atención personalizada, rigor técnico y soluciones ajustadas a la realidad de cada cliente.',
     metaTitle:
-      'Abogados Civiles en Madrid | Legal Orbis - Derecho Civil Integral',
+      'Abogado Civilista Madrid | Legal Orbis - Herencias, Divorcios y Contratos',
     metaDescription:
-      'Abogados especialistas en derecho civil en Madrid. Herencias, divorcios, derecho inmobiliario, responsabilidad civil y contratos. Asesoramiento legal experto.',
+      '👨‍⚖️ Abogados civiles en Madrid especialistas en herencias, divorcios y contratos. +15 años experiencia. Primera consulta GRATIS ✉️',
     metaKeywords: [
+      'abogado civilista Madrid',
       'abogados civiles Madrid',
+      'abogado herencias Madrid',
+      'cuanto cuesta abogado herencias Madrid',
+      'abogado divorcio Madrid',
+      'abogados divorcios Madrid precio',
       'derecho civil Madrid',
-      'abogados herencias Madrid',
-      'abogados divorcios Madrid',
-      'derecho inmobiliario Madrid',
+      'abogado inmobiliario Madrid',
       'responsabilidad civil Madrid',
-      'abogados contratos Madrid',
-      'derecho familiar Madrid',
+      'abogado contratos Madrid',
+      'mejor abogado civil Madrid',
     ],
     image: '/images/jpg/Legal_01-41.jpg',
     services: [
@@ -88,6 +120,28 @@ export const areasData = {
       'Consumo y contratación con particulares',
       'Propiedad horizontal y comunidades',
     ],
+    faqs: [
+      {
+        question: '¿Cuánto tarda un proceso de divorcio en Madrid?',
+        answer:
+          'Un divorcio de mutuo acuerdo puede resolverse en 2-4 meses. Si es contencioso, puede durar entre 6 meses y 1 año. En Legal Orbis agilizamos los trámites al máximo para que puedas cerrar esta etapa cuanto antes.',
+      },
+      {
+        question: '¿Cómo se reparte una herencia sin testamento?',
+        answer:
+          'Sin testamento se aplica la ley. Los herederos legales son hijos, cónyuge y en su defecto, ascendientes. En Legal Orbis te asesoramos en todo el proceso de reparto y tramitación de la herencia intestada.',
+      },
+      {
+        question: '¿Puedo reclamar una deuda a un particular?',
+        answer:
+          'Sí. A través de un procedimiento monitorio puedes reclamar deudas de forma rápida. En Legal Orbis gestionamos todo el proceso: desde el requerimiento previo hasta la ejecución si es necesario.',
+      },
+      {
+        question: '¿Qué es la custodia compartida?',
+        answer:
+          'Es un régimen donde ambos progenitores se responsabilizan del cuidado de los hijos por periodos alternos. En Legal Orbis te ayudamos a negociar o litigar el régimen de custodia más favorable para tus hijos.',
+      },
+    ],
   },
   laboral: {
     id: 'laboral',
@@ -99,18 +153,21 @@ export const areasData = {
     longDescription:
       'El Derecho Laboral constituye una de las áreas más relevantes y complejas del ordenamiento jurídico, por cuanto articula el equilibrio entre las relaciones humanas y profesionales que conforman el mundo del trabajo. Su campo de actuación abarca desde la creación de un vínculo laboral hasta la gestión de los conflictos que puedan surgir durante su desarrollo o a la finalización del mismo, implicando un conocimiento profundo de la normativa, de la práctica judicial y de la realidad empresarial.\n\nEn Legal Orbis, nuestra experiencia en esta materia se ha forjado defendiendo a trabajadores frente a algunas de las empresas más relevantes del tejido empresarial español, así como asesorando a compañías consolidadas que depositan su confianza en nosotros para garantizar la seguridad jurídica de sus decisiones. Nuestro trabajo no se limita al momento del conflicto: acompañamos y orientamos a nuestros clientes antes, durante y después de cualquier controversia laboral, con una estrategia rigurosa y una comunicación constante que refuerza la confianza y la transparencia. El equipo laboralista del despacho actúa con solvencia tanto en la vía judicial como en la negociación extrajudicial, combinando el análisis técnico con una comprensión real de las circunstancias personales o empresariales implicadas. Cada caso se aborda desde la experiencia acumulada en la defensa de los derechos laborales y en la búsqueda de soluciones equilibradas, sostenibles y coherentes con los principios de justicia social y eficiencia empresarial.\n\nEl Derecho Laboral está presente en cada etapa de la vida profesional: en la contratación, en la evolución de la relación entre empresa y trabajador, y en los momentos de ruptura o conflicto. Intervenimos en procedimientos de despido, sanciones, reclamaciones salariales, acoso laboral o vulneraciones de derechos fundamentales, pero también en la planificación y prevención, anticipándonos a los problemas antes de que surjan. Nuestra práctica combina la defensa individual de los trabajadores junto con el asesoramiento estratégico a empresas, lo que nos permite actuar desde una perspectiva completa y realista de las relaciones laborales en el contexto actual.',
     metaTitle:
-      'Abogados Laboralistas en Madrid | Legal Orbis - Derecho Laboral Especializado',
+      'Abogado Laboralista Madrid | Legal Orbis - Despidos e Indemnizaciones',
     metaDescription:
-      'Abogados laboralistas en Madrid especializados en despidos, reclamaciones laborales, conciliación familiar y seguridad social. Defensa de derechos del trabajador.',
+      '💼 Abogados laboralistas Madrid expertos en despidos y reclamaciones. +500 casos ganados. Consulta gratuita. Te ayudamos ahora ✉️',
     metaKeywords: [
+      'abogado laboralista Madrid',
       'abogados laboralistas Madrid',
-      'derecho laboral Madrid',
-      'abogados despidos Madrid',
-      'reclamaciones laborales Madrid',
-      'conciliación familiar Madrid',
+      'abogado despido Madrid',
+      'cuanto cuesta abogado laboralista Madrid',
+      'abogado despido improcedente Madrid',
+      'reclamación cantidad laboral Madrid',
+      'abogado accidente trabajo Madrid',
+      'mejor abogado laboralista Madrid',
+      'despido disciplinario Madrid',
+      'finiquito abogado Madrid',
       'seguridad social Madrid',
-      'abogados accidentes trabajo Madrid',
-      'derecho sindical Madrid',
     ],
     image: '/images/jpg/Legal_01-48.jpg',
     services: [
@@ -137,6 +194,28 @@ export const areasData = {
       'ERTE, ERE y reestructuraciones empresariales',
       'Negociación colectiva y convenios',
     ],
+    faqs: [
+      {
+        question: '¿Cuánto me corresponde si me despiden?',
+        answer:
+          'Depende del tipo de despido. Si es improcedente: 33 días por año trabajado. Si es procedente: 20 días. Si es nulo: readmisión + salarios dejados de percibir. En Legal Orbis calculamos tu indemnización y luchamos por tus derechos.',
+      },
+      {
+        question: '¿Puedo reclamar si no me pagan el finiquito?',
+        answer:
+          'Sí, tienes un año para reclamarlo vía judicial. El finiquito incluye días trabajados, vacaciones pendientes y partes proporcionales. En Legal Orbis te ayudamos a reclamar todo lo que te corresponde.',
+      },
+      {
+        question: '¿Qué es un despido improcedente?',
+        answer:
+          'Es cuando la empresa no justifica adecuadamente la causa del despido. En ese caso, debe readmitirte o pagarte una indemnización de 33 días por año. Nuestros abogados analizan tu caso para demostrar la improcedencia.',
+      },
+      {
+        question: '¿Puedo reclamar horas extra no pagadas?',
+        answer:
+          'Sí, tienes un año desde que dejaron de pagarse. Es fundamental tener pruebas: registros horarios, emails, testigos. En Legal Orbis te asesoramos sobre cómo reunir las pruebas necesarias.',
+      },
+    ],
   },
   mercantil: {
     id: 'mercantil',
@@ -148,18 +227,21 @@ export const areasData = {
     longDescription:
       'En un contexto económico cada vez más global, tecnológico y competitivo, el Derecho Mercantil adquiere una relevancia esencial como instrumento para garantizar la seguridad jurídica de las empresas y de quienes participan en la actividad económica. El auge del emprendimiento, la expansión internacional y la transformación digital exigen un conocimiento profundo de esta materia y una gestión jurídica capaz de anticiparse a los desafíos del mercado.\n\nEn Legal Orbis, ponemos a disposición de nuestros clientes un equipo de profesionales con amplia experiencia en asesoramiento mercantil y societario, que acompaña a empresas, emprendedores y directivos en todas las etapas de su actividad. Nuestro enfoque combina rigor jurídico, estrategia empresarial y una atención cercana que permite ofrecer soluciones sólidas y orientadas a resultados efectivos.\n\nEl Derecho Mercantil abarca la vida jurídica de la empresa, desde su constitución hasta la resolución de los conflictos que puedan surgir en su actividad diaria. En Legal Orbis prestamos un asesoramiento integral que incluye la redacción y negociación de contratos, la gestión societaria, las operaciones de reestructuración y la defensa ante litigios mercantiles. Nuestra intervención se orienta tanto a la prevención de riesgos como a la protección de los intereses empresariales, siempre desde una perspectiva técnica, ágil y adaptada a cada cliente.',
     metaTitle:
-      'Abogados Mercantiles en Madrid | Legal Orbis - Derecho Mercantil Especializado',
+      'Abogado Mercantil Madrid | Legal Orbis - Sociedades y Contratos',
     metaDescription:
-      'Abogados especialistas en derecho mercantil en Madrid. Constitución de sociedades, contratación mercantil, fusiones y adquisiciones. Asesoramiento empresarial experto.',
+      '🏢 Abogados mercantiles Madrid para empresas. Constitución sociedades, contratos y litigios. Asesoramiento experto. Contacta ✉️',
     metaKeywords: [
+      'abogado mercantil Madrid',
       'abogados mercantiles Madrid',
+      'abogado sociedades Madrid',
+      'constitución sociedad Madrid',
+      'abogado empresa Madrid',
+      'contrato mercantil Madrid',
       'derecho mercantil Madrid',
-      'abogados sociedades Madrid',
-      'contratación mercantil Madrid',
       'fusiones adquisiciones Madrid',
-      'derecho societario Madrid',
-      'asesoramiento empresarial Madrid',
-      'propiedad industrial Madrid',
+      'asesor legal empresas Madrid',
+      'conflicto societario Madrid',
+      'derecho empresarial Madrid',
     ],
     image: '/images/jpg/Legal_01-111.jpg',
     services: [
@@ -182,6 +264,28 @@ export const areasData = {
       'Procedimientos concursales y reestructuraciones de deuda',
       'Conflictos societarios y resolución de disputas comerciales',
     ],
+    faqs: [
+      {
+        question: '¿Cuánto cuesta constituir una sociedad en Madrid?',
+        answer:
+          'Los costes varían según el tipo de sociedad (SL, SA, etc.) e incluyen notaría, registro y gestoría. En Legal Orbis te asesoramos sobre la estructura más conveniente y gestionamos todo el proceso de constitución de forma eficiente.',
+      },
+      {
+        question: '¿Qué responsabilidad tiene un administrador de empresa?',
+        answer:
+          'Los administradores responden por daños causados por actos contrarios a la ley o estatutos, y por no actuar con diligencia. En Legal Orbis defendemos a administradores y asesoramos para minimizar riesgos.',
+      },
+      {
+        question: '¿Puedo demandar a un socio de mi empresa?',
+        answer:
+          'Sí, cuando existen conflictos societarios, incumplimientos o abuso de mayoría. En Legal Orbis mediamos en conflictos entre socios y litigamos cuando es necesario para proteger tus intereses empresariales.',
+      },
+      {
+        question: '¿Qué hacer si un cliente no paga una factura mercantil?',
+        answer:
+          'Puedes reclamarla vía monitorio o juicio ordinario dependiendo de la cuantía. En Legal Orbis gestionamos reclamaciones de impagos, negociaciones previas y embargos si es necesario.',
+      },
+    ],
   },
   administrativo: {
     id: 'administrativo',
@@ -193,20 +297,23 @@ export const areasData = {
     longDescription:
       'En una sociedad cada vez más regulada y dependiente de la actuación de los poderes públicos, el Derecho Administrativo adquiere una importancia decisiva. Las relaciones entre ciudadanos, empresas y Administraciones se han multiplicado, generando un escenario en el que resulta esencial contar con un asesoramiento jurídico especializado que garantice la correcta defensa de los derechos frente a la Administración y el cumplimiento riguroso de las obligaciones que esta impone.\n\nEn Legal Orbis, contamos con un equipo de abogados con sólida experiencia en el ámbito contencioso-administrativo y en la tramitación de procedimientos ante todo tipo de organismos públicos. Nuestro trabajo se caracteriza por un compromiso constante con la protección de los intereses de nuestros clientes, tanto en la fase administrativa como ante los tribunales.\n\nEl Derecho Administrativo interviene en todos aquellos ámbitos en los que la actuación pública incide sobre la esfera privada: licencias, sanciones, procedimientos urbanísticos, contratación pública o responsabilidad patrimonial, entre muchos otros. En Legal Orbis, asesoramos a particulares, empresas y entidades en su relación con la Administración, ofreciendo un acompañamiento integral que abarca desde la prevención hasta la defensa contenciosa. Nuestra experiencia en la gestión y resolución de conflictos con la Administración nos permite garantizar respuestas eficaces y soluciones ajustadas a Derecho, adaptadas a las particularidades de cada caso.',
     metaTitle:
-      'Abogados Administrativos en Madrid | Legal Orbis - Derecho Administrativo Especializado',
+      'Abogado Administrativo Madrid | Legal Orbis - Sanciones y Recursos',
     metaDescription:
-      'Abogados especialistas en derecho administrativo en Madrid. Procedimientos administrativos, recursos contenciosos, responsabilidad patrimonial. Asesoramiento legal experto.',
+      '⚖️ Abogados administrativos Madrid especialistas en sanciones y recursos. Defensa ante Administraciones. Consulta gratis ✉️',
     metaKeywords: [
+      'abogado administrativo Madrid',
       'abogados administrativos Madrid',
+      'recurso contencioso administrativo Madrid',
+      'sanción administrativa Madrid',
+      'abogado multas Madrid',
+      'recurso sanción administrativa Madrid',
       'derecho administrativo Madrid',
-      'procedimientos administrativos Madrid',
-      'recursos contenciosos Madrid',
       'responsabilidad patrimonial Madrid',
-      'derecho urbanístico Madrid',
-      'contratación pública Madrid',
-      'sanciones administrativas Madrid',
+      'contencioso administrativo Madrid',
+      'abogado licencias Madrid',
+      'procedimiento administrativo Madrid',
     ],
-    image: '/images/jpg/Legal_01-27.jpg',
+    image: '/images/jpg/Legal_01-105.jpg',
     services: [
       'Procedimientos administrativos y recursos',
       'Reclamaciones económico-administrativas',
@@ -225,6 +332,28 @@ export const areasData = {
       'Procedimientos contencioso-administrativos',
       'Función pública y personal al servicio de la Administración',
     ],
+    faqs: [
+      {
+        question: '¿Puedo recurrir una multa administrativa en Madrid?',
+        answer:
+          'Sí, tienes 1 mes desde la notificación para presentar un recurso de reposición o alegaciones. En Legal Orbis analizamos la legalidad de la sanción y preparamos recursos con altas probabilidades de éxito.',
+      },
+      {
+        question: '¿Qué es un recurso contencioso-administrativo?',
+        answer:
+          'Es la vía judicial para impugnar actos de la Administración. Se presenta ante los tribunales cuando se han agotado las vías administrativas. En Legal Orbis te representamos ante los juzgados contencioso-administrativos.',
+      },
+      {
+        question: '¿Cuánto tarda un procedimiento contencioso-administrativo?',
+        answer:
+          'Puede durar entre 1 y 3 años dependiendo de la complejidad y el juzgado. En Legal Orbis trabajamos para acelerar los trámites y conseguir sentencias favorables cuanto antes.',
+      },
+      {
+        question: '¿Puedo reclamar daños causados por la Administración?',
+        answer:
+          'Sí, a través de la responsabilidad patrimonial. Tienes 1 año para reclamar daños efectivos, evaluables económicamente e individualizados. En Legal Orbis valoramos tu caso y gestionamos toda la reclamación.',
+      },
+    ],
   },
 };
 
@@ -242,6 +371,7 @@ export interface AreaData {
   image: string;
   services: string[];
   branches?: string[];
+  faqs?: Array<{ question: string; answer: string }>;
 }
 
 export interface Branch {
