@@ -75,10 +75,7 @@ const AreaDetailContent = ({ area }: AreaDetailContentProps) => {
             {/* Columna derecha con texto + imagen + texto */}
             <div className="space-y-8">
               {/* Primera parte del texto */}
-              <CSSAnimatedSection
-                animation="fadeInDown"
-                delay={0.1}
-              >
+              <CSSAnimatedSection animation="fadeInUp" delay={0.1}>
                 <div className="prose prose-invert text-lg text-gray-300 leading-relaxed space-y-4">
                   {area.longDescription ? (
                     <>
@@ -116,10 +113,7 @@ const AreaDetailContent = ({ area }: AreaDetailContentProps) => {
               {/* Segunda parte del texto (servicios específicos) */}
               {area.longDescription &&
                 area.longDescription.split('\n\n').length > 2 && (
-                  <CSSAnimatedSection
-                    animation="fadeInUp"
-                    delay={0.6}
-                  >
+                  <CSSAnimatedSection animation="fadeInUp" delay={0.6}>
                     <div className="prose prose-invert text-lg text-gray-300 leading-relaxed space-y-4">
                       {area.longDescription
                         .split('\n\n')
