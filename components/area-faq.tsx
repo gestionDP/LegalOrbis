@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
-import AnimatedSection from '@/components/ui/animated-section';
+import CSSAnimatedSection from '@/components/ui/css-animated-section';
 
 interface FAQItem {
   question: string;
@@ -24,7 +24,7 @@ const AreaFAQ = ({ faqs, areaTitle }: AreaFAQProps) => {
   return (
     <section className="section-padding bg-[#0B0B0B]">
       <div className="container-max">
-        <AnimatedSection animation="fadeInUp" delay={0.1} duration={0.5}>
+        <CSSAnimatedSection animation="fadeInUp" delay={0.1}>
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-5xl font-light text-white mb-4">
               Preguntas Frecuentes sobre {areaTitle}
@@ -33,15 +33,14 @@ const AreaFAQ = ({ faqs, areaTitle }: AreaFAQProps) => {
               Resolvemos las dudas más comunes sobre nuestros servicios
             </p>
           </div>
-        </AnimatedSection>
+        </CSSAnimatedSection>
 
         <div className="max-w-4xl mx-auto">
           {faqs.map((faq, index) => (
-            <AnimatedSection
+            <CSSAnimatedSection
               key={index}
               animation="fadeInUp"
               delay={0.15 + index * 0.05}
-              duration={0.5}
             >
               <div className="border-b border-white/10 last:border-0">
                 <button
@@ -67,11 +66,11 @@ const AreaFAQ = ({ faqs, areaTitle }: AreaFAQProps) => {
                   </p>
                 </div>
               </div>
-            </AnimatedSection>
+            </CSSAnimatedSection>
           ))}
         </div>
 
-        <AnimatedSection animation="fadeInUp" delay={0.4} duration={0.5}>
+        <CSSAnimatedSection animation="fadeInUp" delay={0.4}>
           <div className="mt-12 text-center">
             <p className="text-gray-400 mb-6">
               ¿Tienes más preguntas? Estamos aquí para ayudarte
@@ -83,7 +82,7 @@ const AreaFAQ = ({ faqs, areaTitle }: AreaFAQProps) => {
               Contacta con nosotros
             </a>
           </div>
-        </AnimatedSection>
+        </CSSAnimatedSection>
       </div>
     </section>
   );

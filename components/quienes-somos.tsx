@@ -3,7 +3,7 @@
 import { ArrowRight } from 'lucide-react';
 import { useState } from 'react';
 import Image from 'next/image';
-import AnimatedSection from '@/components/ui/animated-section';
+import CSSAnimatedSection from '@/components/ui/css-animated-section';
 import ValorDialog from '@/components/ui/valor-dialog';
 
 const QuienesSomos = () => {
@@ -41,23 +41,23 @@ const QuienesSomos = () => {
     >
       <div className="container-max">
         <div className="mb-16">
-          <AnimatedSection animation="fadeInLeft" delay={0.1} duration={0.5}>
+          <CSSAnimatedSection animation="fadeInLeft" delay={0.1}>
             <div className="flex items-center mb-6">
               <ArrowRight className="w-5 h-5 text-white mr-3" />
               <span className="text-sm font-medium uppercase tracking-wide text-gray-300">
                 Quienes somos
               </span>
             </div>
-          </AnimatedSection>
+          </CSSAnimatedSection>
 
-          <AnimatedSection animation="fadeInUp" delay={0.15} duration={0.5}>
+          <CSSAnimatedSection animation="fadeInUp" delay={0.15}>
             <h2 className="text-3xl lg:text-5xl font-light text-white leading-tight mb-12">
               Un equipo multidisciplinar de abogados especializados
             </h2>
-          </AnimatedSection>
+          </CSSAnimatedSection>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-            <AnimatedSection animation="fadeInLeft" delay={0.2} duration={0.5}>
+            <CSSAnimatedSection animation="fadeInLeft" delay={0.2}>
               <div className="space-y-6">
                 <h3 className="text-2xl lg:text-3xl font-light text-white mb-4">
                   {valores[valorActivo].titulo}
@@ -87,9 +87,9 @@ const QuienesSomos = () => {
                   ))}
                 </div>
               </div>
-            </AnimatedSection>
+            </CSSAnimatedSection>
 
-            <AnimatedSection animation="fadeInRight" delay={0.3} duration={0.5}>
+            <CSSAnimatedSection animation="fadeInRight" delay={0.3}>
               <div className="relative aspect-4/3 overflow-hidden">
                 <Image
                   src={valores[valorActivo].imagen}
@@ -101,11 +101,11 @@ const QuienesSomos = () => {
                   priority
                 />
               </div>
-            </AnimatedSection>
+            </CSSAnimatedSection>
           </div>
         </div>
 
-        <AnimatedSection animation="fadeInUp" delay={0.3} duration={0.5}>
+        <CSSAnimatedSection animation="fadeInUp" delay={0.3}>
           <div className="border-t border-white/10 pt-16">
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="text-center">
@@ -138,7 +138,7 @@ const QuienesSomos = () => {
               </div>
             </div>
           </div>
-        </AnimatedSection>
+        </CSSAnimatedSection>
       </div>
     </section>
   );

@@ -34,13 +34,13 @@ const Footer = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             <div className="space-y-4 border-b md:border-b-0 md:border-r border-white/10 pb-6 md:pb-0 md:pr-8">
-              <h4 className="text-sm uppercase tracking-[0.25em] text-gray-300">
+              <h4 className="text-sm uppercase tracking-[0.25em] text-gray-200">
                 Oficinas
               </h4>
               <div className="space-y-4">
                 <div>
                   <h5 className="text-base font-semibold text-white">Madrid</h5>
-                  <p className="text-sm text-gray-300 leading-relaxed">
+                  <p className="text-sm text-gray-200 leading-relaxed">
                     Calle Serrano 78, 5º Derecha
                     <br />
                     CP 28006, Madrid
@@ -64,15 +64,15 @@ const Footer = () => {
             </div>
 
             <div className="space-y-4 border-b md:border-b-0 md:border-r border-white/10 pb-6 md:pb-0 md:px-8">
-              <h4 className="text-sm uppercase tracking-[0.25em] text-gray-300">
+              <h4 className="text-sm uppercase tracking-[0.25em] text-gray-200">
                 Contacto
               </h4>
-              <div className="space-y-3 text-sm text-gray-300">
+              <div className="space-y-3 text-sm">
                 <div className="flex flex-col gap-1">
                   <span className="text-white font-medium">Correo</span>
                   <a
                     href="mailto:info@legalorbisabogados.es"
-                    className="text-gray-300 hover:text-white transition-colors"
+                    className="text-gray-200 hover:text-white transition-colors"
                   >
                     info@legalorbisabogados.es
                   </a>
@@ -81,14 +81,15 @@ const Footer = () => {
                   <span className="text-white font-medium">Teléfono</span>
                   <a
                     href="tel:+34916841454"
-                    className="text-gray-300 hover:text-white transition-colors"
+                    className="text-gray-200 hover:text-white transition-colors"
                   >
                     +34 916 84 14 54
                   </a>
                 </div>
                 <button
                   onClick={() => scrollToSection('contacto')}
-                  className="text-sm font-medium text-white/80 hover:text-white transition-colors inline-flex items-center gap-2"
+                  className="text-sm font-medium text-white hover:text-gray-200 transition-colors inline-flex items-center gap-2"
+                  aria-label="Ir a sección de contacto"
                 >
                   Contacto →
                 </button>
@@ -96,10 +97,10 @@ const Footer = () => {
             </div>
 
             <div className="space-y-6 md:pl-8">
-              <h4 className="text-sm uppercase tracking-[0.25em] text-gray-300">
+              <h4 className="text-sm uppercase tracking-[0.25em] text-gray-200">
                 Seguir en contacto
               </h4>
-              <ul className="space-y-3 text-sm text-gray-300">
+              <ul className="space-y-3 text-sm text-gray-200">
                 {quickLinks.map((link) => (
                   <li key={link.href}>
                     <button
@@ -118,13 +119,13 @@ const Footer = () => {
 
         <div className="border-t border-white/10">
           <div className="container-max px-4 sm:px-6 lg:px-8 py-6">
-            <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs sm:text-sm text-gray-500">
+            <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs sm:text-sm text-gray-300">
               <div>
                 © {new Date().getFullYear()} Legal Orbis Abogados. Todos los
                 derechos reservados.
               </div>
              
-              <div className="text-gray-600">Legal Orbis</div>
+              <div className="text-gray-400">Legal Orbis</div>
             </div>
           </div>
         </div>

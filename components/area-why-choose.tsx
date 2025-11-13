@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import AnimatedSection from '@/components/ui/animated-section';
+import CSSAnimatedSection from '@/components/ui/css-animated-section';
 
 interface AreaWhyChooseProps {
   areaTitle: string;
@@ -39,30 +39,29 @@ const AreaWhyChoose = ({
       </div>
 
       <div className="container-max relative z-10">
-        <AnimatedSection animation="fadeInUp" delay={0.1} duration={0.5}>
+        <CSSAnimatedSection animation="fadeInUp" delay={0.1}>
           <div className="mb-12">
             <h2 className="text-3xl lg:text-5xl font-light text-white mb-8 text-center">
               ¿Por qué elegir Legal Orbis para {areaTitle}?
             </h2>
           </div>
-        </AnimatedSection>
+        </CSSAnimatedSection>
 
         <div className="max-w-4xl mx-auto space-y-6">
           {remainingParagraphs.map((paragraph, index) => (
-            <AnimatedSection
+            <CSSAnimatedSection
               key={index}
               animation="fadeInUp"
               delay={0.15 + index * 0.1}
-              duration={0.5}
             >
               <p className="text-lg text-gray-200 leading-relaxed">
                 {paragraph}
               </p>
-            </AnimatedSection>
+            </CSSAnimatedSection>
           ))}
         </div>
 
-        <AnimatedSection animation="fadeInUp" delay={0.8} duration={0.5}>
+        <CSSAnimatedSection animation="fadeInUp" delay={0.8}>
           <div className="mt-12 text-center">
             <p className="text-gray-300 text-lg mb-6">
               ¿Necesitas un abogado especializado en {areaTitle}?
@@ -74,7 +73,7 @@ const AreaWhyChoose = ({
               Contacta con nosotros
             </a>
           </div>
-        </AnimatedSection>
+        </CSSAnimatedSection>
       </div>
     </section>
   );
