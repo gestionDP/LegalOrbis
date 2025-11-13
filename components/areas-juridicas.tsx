@@ -5,7 +5,7 @@ import { ArrowRight, ChevronDown } from 'lucide-react';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { Button } from '@/components/ui/button';
-import AnimatedSection from '@/components/ui/animated-section';
+import CSSAnimatedSection from '@/components/ui/css-animated-section';
 import { areasData } from '@/lib/data/areas-juridicas';
 
 const AreasJuridicas = () => {
@@ -30,19 +30,19 @@ const AreasJuridicas = () => {
     >
       <div className="container-max">
         <div className="mb-16">
-          <AnimatedSection animation="fadeInLeft" delay={0.1}>
+          <CSSAnimatedSection animation="fadeInLeft" delay={0.1}>
             <div className="flex items-center mb-8">
               <ArrowRight className="w-5 h-5 text-white mr-3" />
               <span className="text-sm font-medium uppercase tracking-wide text-gray-300">
                 Nuestras áreas
               </span>
             </div>
-          </AnimatedSection>
-          <AnimatedSection animation="fadeInUp" delay={0.2}>
+          </CSSAnimatedSection>
+          <CSSAnimatedSection animation="fadeInUp" delay={0.2}>
             <h2 className="text-4xl lg:text-6xl font-light text-white leading-tight">
               Ofrecemos una gama de servicios jurídicos estratégicos
             </h2>
-          </AnimatedSection>
+          </CSSAnimatedSection>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -50,11 +50,10 @@ const AreasJuridicas = () => {
             const isOpen = openArea === area.id;
 
             return (
-              <AnimatedSection
+              <CSSAnimatedSection
                 key={area.id}
                 animation="fadeInScale"
                 delay={0.2 + index * 0.05}
-                duration={0.5}
               >
                 <div
                   className="relative group cursor-pointer overflow-hidden"
@@ -99,7 +98,7 @@ const AreasJuridicas = () => {
                     </div>
                   </div>
                 </div>
-              </AnimatedSection>
+              </CSSAnimatedSection>
             );
           })}
         </div>

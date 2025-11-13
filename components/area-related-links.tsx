@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
-import AnimatedSection from '@/components/ui/animated-section';
+import CSSAnimatedSection from '@/components/ui/css-animated-section';
 
 interface RelatedArea {
   id: string;
@@ -43,7 +43,7 @@ const AreaRelatedLinks = ({
       </div>
 
       <div className="container-max relative z-10">
-        <AnimatedSection animation="fadeInUp" delay={0.1} duration={0.5}>
+        <CSSAnimatedSection animation="fadeInUp" delay={0.1}>
           <div className="mb-12">
             <div className="flex items-center mb-4">
               <ArrowRight className="w-5 h-5 text-white mr-3" />
@@ -55,15 +55,14 @@ const AreaRelatedLinks = ({
               También te pueden interesar
             </h2>
           </div>
-        </AnimatedSection>
+        </CSSAnimatedSection>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {filteredAreas.map((area, index) => (
-            <AnimatedSection
+            <CSSAnimatedSection
               key={area.id}
               animation="fadeInScale"
               delay={0.15 + index * 0.1}
-              duration={0.5}
             >
               <Link
                 href={`/areas-juridicas/${area.id}`}
@@ -82,7 +81,7 @@ const AreaRelatedLinks = ({
                   </div>
                 </div>
               </Link>
-            </AnimatedSection>
+            </CSSAnimatedSection>
           ))}
         </div>
       </div>

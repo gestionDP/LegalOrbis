@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import AnimatedSection from '@/components/ui/animated-section';
+import CSSAnimatedSection from '@/components/ui/css-animated-section';
 
 interface AreaContentSplitProps {
   area: {
@@ -36,7 +36,7 @@ const AreaContentSplit = ({ area }: AreaContentSplitProps) => {
       <div className="container-max relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Texto a la izquierda */}
-          <AnimatedSection animation="fadeInLeft" delay={0.1} duration={0.8}>
+          <CSSAnimatedSection animation="fadeInLeft" delay={0.1}>
             <div className="space-y-6">
               <h2 className="text-3xl lg:text-4xl font-light text-white leading-tight">
                 {area.title}
@@ -45,10 +45,10 @@ const AreaContentSplit = ({ area }: AreaContentSplitProps) => {
                 <p>{firstParagraph}</p>
               </div>
             </div>
-          </AnimatedSection>
+          </CSSAnimatedSection>
 
           {/* Imagen a la derecha */}
-          <AnimatedSection animation="fadeInRight" delay={0.3} duration={0.8}>
+          <CSSAnimatedSection animation="fadeInRight" delay={0.3}>
             <div className="relative aspect-4/3 overflow-hidden rounded-lg group">
               <Image
                 src={area.image}
@@ -61,7 +61,7 @@ const AreaContentSplit = ({ area }: AreaContentSplitProps) => {
               />
               <div className="absolute inset-0 bg-linear-to-t from-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </div>
-          </AnimatedSection>
+          </CSSAnimatedSection>
         </div>
       </div>
     </section>

@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Image from 'next/image';
-import AnimatedSection from '@/components/ui/animated-section';
+import CSSAnimatedSection from '@/components/ui/css-animated-section';
 
 const HeroCarousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -81,7 +81,7 @@ const HeroCarousel = () => {
             <div className="relative h-full flex items-center">
               <div className="container-max px-4 sm:px-6 lg:px-8">
                 <div className="text-center">
-                  <AnimatedSection animation="fadeInUp" autoAnimate>
+                  <CSSAnimatedSection animation="fadeInUp">
                     <h1 className="text-4xl sm:text-5xl lg:text-6xl font-light text-white mb-6 leading-tight">
                       {slide.title}
                     </h1>
@@ -91,7 +91,7 @@ const HeroCarousel = () => {
                     <p className="text-lg sm:text-xl text-gray-200 mb-10 max-w-3xl mx-auto leading-relaxed">
                       {slide.description}
                     </p>
-                  </AnimatedSection>
+                  </CSSAnimatedSection>
                 </div>
               </div>
             </div>

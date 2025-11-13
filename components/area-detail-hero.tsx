@@ -1,7 +1,7 @@
 'use client';
 
 import { ArrowRight } from 'lucide-react';
-import AnimatedSection from '@/components/ui/animated-section';
+import CSSAnimatedSection from '@/components/ui/css-animated-section';
 
 interface AreaDetailHeroProps {
   area: {
@@ -22,30 +22,30 @@ const AreaDetailHero = ({ area }: AreaDetailHeroProps) => {
       <div className="container-max px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           <div>
-            <AnimatedSection animation="fadeInLeft" delay={0.1}>
+            <CSSAnimatedSection animation="fadeInLeft" delay={0.1}>
               <div className="flex items-center mb-8">
                 <ArrowRight className="w-5 h-5 text-white mr-3" />
                 <span className="text-sm font-medium uppercase tracking-wide text-gray-300">
                   {area.subtitle}
                 </span>
               </div>
-            </AnimatedSection>
+            </CSSAnimatedSection>
 
-            <AnimatedSection animation="fadeInUp" delay={0.2}>
+            <CSSAnimatedSection animation="fadeInUp" delay={0.2}>
               <h1 className="text-3xl lg:text-5xl xl:text-6xl font-light text-white leading-tight mb-8">
                 {area.title}
               </h1>
-            </AnimatedSection>
+            </CSSAnimatedSection>
 
-            <AnimatedSection animation="fadeInUp" delay={0.3}>
+            <CSSAnimatedSection animation="fadeInUp" delay={0.3}>
               <p className="text-base lg:text-lg text-gray-300 leading-relaxed">
                 {area.description}
               </p>
-            </AnimatedSection>
+            </CSSAnimatedSection>
           </div>
 
           <div className="relative flex justify-center lg:justify-end">
-            <AnimatedSection animation="fadeInScale" delay={0.4} duration={0.8}>
+            <CSSAnimatedSection animation="fadeInScale" delay={0.4}>
               <div className="relative">
                 <div
                   className="text-[150px] lg:text-[200px] xl:text-[250px] font-light text-white/10 select-none"
@@ -69,7 +69,7 @@ const AreaDetailHero = ({ area }: AreaDetailHeroProps) => {
                   }}
                 />
               </div>
-            </AnimatedSection>
+            </CSSAnimatedSection>
           </div>
         </div>
       </div>

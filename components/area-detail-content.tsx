@@ -1,6 +1,6 @@
 'use client';
 
-import AnimatedSection from '@/components/ui/animated-section';
+import CSSAnimatedSection from '@/components/ui/css-animated-section';
 
 interface AreaDetailContentProps {
   area: {
@@ -29,13 +29,13 @@ const AreaDetailContent = ({ area }: AreaDetailContentProps) => {
         {/* Mobile: Layout normal */}
         <div className="lg:hidden">
           <div className="space-y-8">
-            <AnimatedSection animation="fadeInLeft" delay={0.1} duration={0.8}>
+            <CSSAnimatedSection animation="fadeInLeft" delay={0.1}>
               <h2 className="text-3xl text-white leading-tight mb-6">
                 {area.title}
               </h2>
-            </AnimatedSection>
+            </CSSAnimatedSection>
 
-            <AnimatedSection animation="fadeInUp" delay={0.3} duration={0.8}>
+            <CSSAnimatedSection animation="fadeInUp" delay={0.3}>
               <div className="prose prose-invert text-lg text-gray-300 leading-relaxed space-y-4">
                 {area.longDescription ? (
                   area.longDescription
@@ -45,9 +45,9 @@ const AreaDetailContent = ({ area }: AreaDetailContentProps) => {
                   <p>{area.description}</p>
                 )}
               </div>
-            </AnimatedSection>
+            </CSSAnimatedSection>
 
-            <AnimatedSection animation="fadeInScale" delay={0.5} duration={1}>
+            <CSSAnimatedSection animation="fadeInScale" delay={0.5}>
               <div className="relative group">
                 <div className="aspect-[4/3] overflow-hidden rounded-lg transform transition-transform duration-500 group-hover:scale-105">
                   <img
@@ -62,7 +62,7 @@ const AreaDetailContent = ({ area }: AreaDetailContentProps) => {
                 <div className="absolute -top-4 -right-4 w-8 h-8 bg-[#1a5f5f] rounded-full opacity-20 animate-ping" />
                 <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-white/20 rounded-full opacity-30 animate-pulse" />
               </div>
-            </AnimatedSection>
+            </CSSAnimatedSection>
           </div>
         </div>
 
@@ -75,10 +75,9 @@ const AreaDetailContent = ({ area }: AreaDetailContentProps) => {
             {/* Columna derecha con texto + imagen + texto */}
             <div className="space-y-8">
               {/* Primera parte del texto */}
-              <AnimatedSection
+              <CSSAnimatedSection
                 animation="fadeInDown"
                 delay={0.1}
-                duration={0.8}
               >
                 <div className="prose prose-invert text-lg text-gray-300 leading-relaxed space-y-4">
                   {area.longDescription ? (
@@ -94,10 +93,10 @@ const AreaDetailContent = ({ area }: AreaDetailContentProps) => {
                     <p>{area.description}</p>
                   )}
                 </div>
-              </AnimatedSection>
+              </CSSAnimatedSection>
 
               {/* Imagen en el medio */}
-              <AnimatedSection animation="fadeInScale" delay={0.4} duration={1}>
+              <CSSAnimatedSection animation="fadeInScale" delay={0.4}>
                 <div className="relative group">
                   <div className="aspect-[4/3] overflow-hidden rounded-lg transform transition-transform duration-500 group-hover:scale-105">
                     <img
@@ -112,15 +111,14 @@ const AreaDetailContent = ({ area }: AreaDetailContentProps) => {
                   <div className="absolute -top-4 -right-4 w-8 h-8 bg-[#1a5f5f] rounded-full opacity-20 animate-ping" />
                   <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-white/20 rounded-full opacity-30 animate-pulse" />
                 </div>
-              </AnimatedSection>
+              </CSSAnimatedSection>
 
               {/* Segunda parte del texto (servicios específicos) */}
               {area.longDescription &&
                 area.longDescription.split('\n\n').length > 2 && (
-                  <AnimatedSection
+                  <CSSAnimatedSection
                     animation="fadeInUp"
                     delay={0.6}
-                    duration={0.8}
                   >
                     <div className="prose prose-invert text-lg text-gray-300 leading-relaxed space-y-4">
                       {area.longDescription
@@ -130,7 +128,7 @@ const AreaDetailContent = ({ area }: AreaDetailContentProps) => {
                           <p key={index}>{paragraph}</p>
                         ))}
                     </div>
-                  </AnimatedSection>
+                  </CSSAnimatedSection>
                 )}
             </div>
           </div>

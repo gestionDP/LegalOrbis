@@ -148,6 +148,8 @@ const Header = () => {
                 variant="ghost"
                 size="icon"
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                aria-label={isMobileMenuOpen ? 'Cerrar menú' : 'Abrir menú'}
+                aria-expanded={isMobileMenuOpen}
                 className={`transition-colors ${
                   isScrolled ? 'text-[#1a5f5f]' : 'text-white'
                 }`}

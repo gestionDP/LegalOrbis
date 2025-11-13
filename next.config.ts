@@ -12,6 +12,14 @@ const nextConfig: NextConfig = {
 
   reactStrictMode: true,
 
+  // Optimización de producción
+  productionBrowserSourceMaps: false,
+
+  // Compiler options
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
+  },
+
   modularizeImports: {
     'lucide-react': {
       transform: 'lucide-react/dist/esm/icons/{{kebabCase member}}',
@@ -19,7 +27,12 @@ const nextConfig: NextConfig = {
   },
 
   experimental: {
-    optimizePackageImports: ['lucide-react', 'framer-motion'],
+    optimizePackageImports: [
+      'lucide-react',
+      'framer-motion',
+      '@radix-ui/react-accordion',
+      '@radix-ui/react-dialog',
+    ],
   },
 
   async headers() {

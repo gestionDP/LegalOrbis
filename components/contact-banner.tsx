@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { BottomSheet, BottomSheetContent } from '@/components/ui/bottom-sheet';
-import AnimatedSection from '@/components/ui/animated-section';
+import CSSAnimatedSection from '@/components/ui/css-animated-section';
 import ContactForm from '@/components/contact-form-reusable';
 
 const ContactBanner = () => {
@@ -24,21 +24,13 @@ const ContactBanner = () => {
         <div className="relative z-10 h-full flex items-center">
           <div className="container-max px-4 sm:px-6 lg:px-8 w-full">
             <div className="max-w-2xl ml-auto">
-              <AnimatedSection
-                animation="fadeInRight"
-                delay={0.1}
-                duration={0.5}
-              >
+              <CSSAnimatedSection animation="fadeInRight" delay={0.1}>
                 <h2 className="text-4xl lg:text-6xl font-light text-white leading-tight mb-8">
                   Cuéntanos tu caso. Empieza a resolver tu problema hoy
                 </h2>
-              </AnimatedSection>
+              </CSSAnimatedSection>
 
-              <AnimatedSection
-                animation="fadeInRight"
-                delay={0.15}
-                duration={0.5}
-              >
+              <CSSAnimatedSection animation="fadeInRight" delay={0.2}>
                 <p className="text-xl text-gray-200 leading-relaxed mb-8">
                   Contacta con nosotros y te agendaremos una cita presencial lo
                   antes posible para analizar tu caso en profundidad y con total
@@ -46,13 +38,9 @@ const ContactBanner = () => {
                   nuestros especialistas podrán participar en la reunión para
                   alcanzar la mejor estrategia jurídica.
                 </p>
-              </AnimatedSection>
+              </CSSAnimatedSection>
 
-              <AnimatedSection
-                animation="fadeInScale"
-                delay={0.2}
-                duration={0.5}
-              >
+              <CSSAnimatedSection animation="fadeInScale" delay={0.3}>
                 <BottomSheet open={isOpen} onOpenChange={setIsOpen}>
                   <Button
                     onClick={() => setIsOpen(true)}
@@ -66,7 +54,7 @@ const ContactBanner = () => {
                     <ContactForm onSuccess={() => setIsOpen(false)} />
                   </BottomSheetContent>
                 </BottomSheet>
-              </AnimatedSection>
+              </CSSAnimatedSection>
             </div>
           </div>
         </div>

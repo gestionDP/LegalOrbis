@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
-import AnimatedSection from '@/components/ui/animated-section';
+import CSSAnimatedSection from '@/components/ui/css-animated-section';
 import { getAreaBranches, type Branch } from '@/lib/data/areas-juridicas';
 
 interface AreaDetailBranchesProps {
@@ -41,7 +41,7 @@ const AreaDetailBranches = ({ area }: AreaDetailBranchesProps) => {
 
       <div className="container-max px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-start mb-16">
-          <AnimatedSection animation="fadeInLeft" delay={0.1} duration={0.8}>
+          <CSSAnimatedSection animation="fadeInLeft" delay={0.1}>
             <div className="flex items-center mb-6">
               <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center mr-3">
                 <span className="text-white text-lg">⚖️</span>
@@ -50,25 +50,24 @@ const AreaDetailBranches = ({ area }: AreaDetailBranchesProps) => {
                 {isSimpleBranches ? 'Áreas de actuación' : 'Especialización'}
               </span>
             </div>
-          </AnimatedSection>
+          </CSSAnimatedSection>
 
-          <AnimatedSection animation="fadeInUp" delay={0.3} duration={0.8}>
+          <CSSAnimatedSection animation="fadeInUp" delay={0.3}>
             <h2 className="text-3xl lg:text-4xl font-light text-white leading-tight">
               {isSimpleBranches
                 ? 'Áreas de actuación'
                 : `Ramas del ${area.title}`}
             </h2>
-          </AnimatedSection>
+          </CSSAnimatedSection>
         </div>
 
         {isSimpleBranches ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {(branches as string[]).map((branch, index) => (
-              <AnimatedSection
+              <CSSAnimatedSection
                 key={index}
                 animation="fadeInScale"
                 delay={0.5 + index * 0.05}
-                duration={0.6}
               >
                 <div className="flex items-center p-4 bg-white/5 rounded-lg border border-white/10 hover:border-white/20 hover:bg-white/10 transition-all duration-300 group">
                   <svg
@@ -88,7 +87,7 @@ const AreaDetailBranches = ({ area }: AreaDetailBranchesProps) => {
                     {branch}
                   </span>
                 </div>
-              </AnimatedSection>
+              </CSSAnimatedSection>
             ))}
           </div>
         ) : (
@@ -110,11 +109,10 @@ const AreaDetailBranches = ({ area }: AreaDetailBranchesProps) => {
               const isOpen = openBranch === branchId;
 
               return (
-                <AnimatedSection
+                <CSSAnimatedSection
                   key={branchId}
                   animation="fadeInScale"
                   delay={0.5 + index * 0.1}
-                  duration={0.6}
                 >
                   <div className="border-b border-white/20 pb-6 group hover:border-white/40 transition-colors duration-300">
                     <div
@@ -151,22 +149,20 @@ const AreaDetailBranches = ({ area }: AreaDetailBranchesProps) => {
                         }`}
                       >
                         <div className="ml-10 space-y-4">
-                          <AnimatedSection
+                          <CSSAnimatedSection
                             animation="fadeInUp"
                             delay={0.1}
-                            duration={0.6}
                           >
                             <p className="text-gray-300 leading-relaxed">
                               {branchData.details}
                             </p>
-                          </AnimatedSection>
+                          </CSSAnimatedSection>
 
                           {branchData.services &&
                             branchData.services.length > 0 && (
-                              <AnimatedSection
+                              <CSSAnimatedSection
                                 animation="fadeInUp"
                                 delay={0.2}
-                                duration={0.6}
                               >
                                 <div>
                                   <h4 className="text-sm font-medium text-white mb-3 flex items-center">
@@ -196,13 +192,13 @@ const AreaDetailBranches = ({ area }: AreaDetailBranchesProps) => {
                                     )}
                                   </div>
                                 </div>
-                              </AnimatedSection>
+                              </CSSAnimatedSection>
                             )}
                         </div>
                       </div>
                     )}
                   </div>
-                </AnimatedSection>
+                </CSSAnimatedSection>
               );
             })}
           </div>
