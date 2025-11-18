@@ -10,17 +10,40 @@ interface AreaDetailBranchesProps {
     id: string;
     title: string;
     branches?: string[];
+    services?: string[];
   };
 }
 
 const AreaDetailBranches = ({ area }: AreaDetailBranchesProps) => {
   const [openBranch, setOpenBranch] = useState<string | null>(null);
-  const branches = area.branches || getAreaBranches(area.id);
-  const isSimpleBranches =
-    Array.isArray(area.branches) && typeof branches[0] === 'string';
+
+  // Priorizar services sobre branches
+  const displayItems =
+    area.services || area.branches || getAreaBranches(area.id);
+  const isSimpleItems =
+    Array.isArray(displayItems) && typeof displayItems[0] === 'string';
+
+  // Determinar si los items tienen formato "Título: detalles"
+  const hasDetailsFormat =
+    isSimpleItems &&
+    displayItems.some(
+      (item: any) => typeof item === 'string' && item.includes(':')
+    );
 
   const toggleBranch = (branchId: string) => {
     setOpenBranch(openBranch === branchId ? null : branchId);
+  };
+
+  // Función para separar título y detalles
+  const parseItem = (item: string) => {
+    if (item.includes(':')) {
+      const [title, ...detailsParts] = item.split(':');
+      return {
+        title: title.trim(),
+        details: detailsParts.join(':').trim(),
+      };
+    }
+    return { title: item, details: '' };
   };
 
   return (
@@ -47,23 +70,76 @@ const AreaDetailBranches = ({ area }: AreaDetailBranchesProps) => {
                 <span className="text-white text-lg">⚖️</span>
               </div>
               <span className="text-sm font-medium uppercase tracking-wide text-gray-300">
-                {isSimpleBranches ? 'Áreas de actuación' : 'Especialización'}
+                {area.id === 'penal' && area.services
+                  ? 'Defensa especializada'
+                  : isSimpleItems
+                  ? 'Áreas de actuación'
+                  : 'Especialización'}
               </span>
             </div>
           </CSSAnimatedSection>
 
           <CSSAnimatedSection animation="fadeInUp" delay={0.3}>
             <h2 className="text-3xl lg:text-4xl font-light text-white leading-tight">
-              {isSimpleBranches
+              {area.id === 'penal' && area.services
+                ? 'Delitos que defendemos'
+                : isSimpleItems
                 ? 'Áreas de actuación'
                 : `Ramas del ${area.title}`}
             </h2>
           </CSSAnimatedSection>
         </div>
 
-        {isSimpleBranches ? (
+        {hasDetailsFormat ? (
+          // Renderizar items con desplegables (formato "Título: detalles")
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+            {(displayItems as string[]).map((item, index) => {
+              const { title, details } = parseItem(item);
+              const itemId = `item-${index}`;
+              const isOpen = openBranch === itemId;
+
+              return (
+                <CSSAnimatedSection
+                  key={index}
+                  animation="fadeInUp"
+                  delay={0.3 + index * 0.05}
+                >
+                  <div className="bg-white/5 rounded-lg border border-white/10 overflow-hidden hover:border-white/20 transition-all duration-300">
+                    <button
+                      onClick={() => toggleBranch(itemId)}
+                      className="w-full px-6 py-4 flex items-center justify-between text-left hover:bg-white/5 transition-colors duration-300"
+                    >
+                      <div className="flex items-center flex-1">
+                        <div className="w-2 h-2 bg-white rounded-full mr-4 shrink-0 animate-pulse" />
+                        <span className="text-white font-medium">{title}</span>
+                      </div>
+                      <ChevronDown
+                        className={`w-5 h-5 text-white transition-transform duration-300 shrink-0 ${
+                          isOpen ? 'rotate-180' : ''
+                        }`}
+                      />
+                    </button>
+
+                    <div
+                      className={`overflow-hidden transition-all duration-500 ease-in-out ${
+                        isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                      }`}
+                    >
+                      <div className="px-6 pb-4 pt-2">
+                        <p className="text-gray-300 leading-relaxed text-sm">
+                          {details}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </CSSAnimatedSection>
+              );
+            })}
+          </div>
+        ) : isSimpleItems ? (
+          // Renderizar items simples sin desplegables
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {(branches as string[]).map((branch, index) => (
+            {(displayItems as string[]).map((item, index) => (
               <CSSAnimatedSection
                 key={index}
                 animation="fadeInScale"
@@ -84,15 +160,16 @@ const AreaDetailBranches = ({ area }: AreaDetailBranchesProps) => {
                     />
                   </svg>
                   <span className="text-white text-sm group-hover:text-gray-200 transition-colors duration-300">
-                    {branch}
+                    {item}
                   </span>
                 </div>
               </CSSAnimatedSection>
             ))}
           </div>
         ) : (
+          // Renderizar branches complejos (con objetos Branch)
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {branches.map((branch, index) => {
+            {(displayItems as Branch[]).map((branch, index) => {
               const branchData =
                 typeof branch === 'string'
                   ? {
@@ -149,10 +226,7 @@ const AreaDetailBranches = ({ area }: AreaDetailBranchesProps) => {
                         }`}
                       >
                         <div className="ml-10 space-y-4">
-                          <CSSAnimatedSection
-                            animation="fadeInUp"
-                            delay={0.1}
-                          >
+                          <CSSAnimatedSection animation="fadeInUp" delay={0.1}>
                             <p className="text-gray-300 leading-relaxed">
                               {branchData.details}
                             </p>

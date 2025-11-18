@@ -47,7 +47,7 @@ const AreaWhyChoose = ({
           </div>
         </CSSAnimatedSection>
 
-        <div className="max-w-4xl mx-auto space-y-6">
+        <div className=" mx-auto space-y-6">
           {remainingParagraphs.map((paragraph, index) => (
             <CSSAnimatedSection
               key={index}
