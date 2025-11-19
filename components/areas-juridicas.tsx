@@ -45,7 +45,7 @@ const AreasJuridicas = () => {
           </CSSAnimatedSection>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
           {areas.map((area, index) => {
             const isOpen = openArea === area.id;
 
@@ -56,22 +56,21 @@ const AreasJuridicas = () => {
                 delay={0.2 + index * 0.05}
               >
                 <div
-                  className="relative group cursor-pointer overflow-hidden"
+                  className="relative group cursor-pointer overflow-hidden rounded-3xl min-h-[420px] h-full"
                   onClick={() => toggleArea(area.id)}
                 >
-                  <div className="aspect-[4/3] sm:aspect-[3/2] lg:aspect-[4/3] overflow-hidden relative">
+                  <div className="absolute inset-0">
                     <Image
                       src={area.image}
                       alt={`Abogados ${area.title} en Madrid - Despacho Legal Orbis`}
                       fill
-                      sizes="(max-width: 768px) 100vw, 50vw"
                       quality={80}
                       className="object-cover transition-transform duration-300 group-hover:scale-105"
                     />
-                    <div className="absolute inset-0 bg-black/60"></div>
+                    <div className="absolute inset-0 bg-black/60" />
                   </div>
 
-                  <div className="absolute inset-0 p-4 sm:p-6 lg:p-8 flex flex-col justify-between">
+                  <div className="relative z-10 h-full p-4 sm:p-6 lg:p-8 flex flex-col justify-between gap-6">
                     <div>
                       <div className="text-white text-sm sm:text-md mb-4 sm:mb-6">
                         {area.number}
