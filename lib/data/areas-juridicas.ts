@@ -26,7 +26,7 @@ export const areasData = {
       'abogados penalistas Madrid Serrano',
       'derecho penitenciario Madrid',
     ],
-    image: '/images/jpg/Legal_01-12.jpg',
+    image: '/images/jpg/Legal_01-112.jpg',
     services: [
       'Delitos económicos y de empresa: estafas, apropiaciones indebidas, administración desleal, insolvencias punibles, delitos societarios, falsedad documental, fraudes complejos',
       'Delitos fiscales: fraude fiscal, delito contra la Hacienda Pública y responsabilidad penal de administradores',
