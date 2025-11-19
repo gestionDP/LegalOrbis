@@ -54,16 +54,11 @@ const Footer = () => {
                     </a>
                   </p>
                 </div>
-                <button
-                  onClick={() => scrollToSection('areas-juridicas')}
-                  className="text-sm font-medium text-white/80 hover:text-white transition-colors inline-flex items-center gap-2"
-                >
-                  Todas las áreas →
-                </button>
+              
               </div>
             </div>
 
-            <div className="space-y-4 border-b md:border-b-0 md:border-r border-white/10 pb-6 md:pb-0 md:px-8">
+            <div className="space-y-4 border-b md:border-b-0  border-white/10 pb-6 md:pb-0 md:px-8">
               <h4 className="text-sm uppercase tracking-[0.25em] text-gray-200">
                 Contacto
               </h4>
@@ -96,24 +91,7 @@ const Footer = () => {
               </div>
             </div>
 
-            <div className="space-y-6 md:pl-8">
-              <h4 className="text-sm uppercase tracking-[0.25em] text-gray-200">
-                Seguir en contacto
-              </h4>
-              <ul className="space-y-3 text-sm text-gray-200">
-                {quickLinks.map((link) => (
-                  <li key={link.href}>
-                    <button
-                      onClick={() => scrollToSection(link.href)}
-                      className="hover:text-white transition-colors inline-flex items-center gap-2"
-                    >
-                      {link.name} →
-                    </button>
-                  </li>
-                ))}
-              </ul>
-           
-            </div>
+         
           </div>
         </div>
 

@@ -50,29 +50,30 @@ export const areasData = {
     ],
     faqs: [
       {
-        question: '¿Cuánto cuesta un abogado penalista en Madrid?',
+        question: '¿En qué puede ayudarme un abogado penalista?',
         answer:
-          'En Legal Orbis ofrecemos una primera consulta gratuita para evaluar tu caso. Los honorarios posteriores dependen de la complejidad del asunto, pero siempre trabajamos con total transparencia y te informamos de los costes desde el inicio. Nuestro objetivo es brindarte la mejor defensa al precio más justo.',
+          'Un abogado penalista te asesora y defiende si estás investigado, acusado o detenido por cualquier delito. También interviene cuando eres víctima para ayudarte a denunciar, personarte en la causa o reclamar una indemnización.',
       },
       {
-        question: '¿Qué debo hacer si me han acusado de un delito?',
+        question: '¿Qué hago si me han citado como investigado en un Juzgado?',
         answer:
-          'Lo primero es contactar inmediatamente con un abogado penalista. En Legal Orbis te asesoramos desde el primer momento, te explicamos tus derechos y diseñamos la estrategia de defensa más adecuada. No declares ni firmes nada sin la presencia de tu abogado.',
+          'Debes acudir siempre con tu abogado. Antes de declarar revisamos tu caso, analizamos el atestado y preparamos contigo las respuestas. En ocasiones es preferible no declarar hasta examinar todo el procedimiento.',
       },
       {
-        question: '¿Puedo evitar ir a juicio en un caso penal?',
+        question: '¿Cuándo es recomendable presentar una denuncia?',
         answer:
-          'En muchos casos sí. Existen alternativas como la conformidad, el acuerdo con la acusación o la suspensión de condena. En Legal Orbis analizamos todas las opciones para conseguir la mejor solución sin llegar a juicio cuando sea posible.',
+          'Cuando has sido víctima de un delito o tienes indicios sólidos de que se ha cometido. Estudiamos los hechos y la documentación para elegir la vía más eficaz (comisaría, juzgado o querella) y evitar errores estratégicos.',
       },
       {
-        question: '¿Cuánto tiempo puede durar un proceso penal?',
+        question:
+          '¿Qué ocurre si me imputan un delito económico (estafa, apropiación indebida, administración desleal...)?',
         answer:
-          'La duración varía según la complejidad del caso, pero puede oscilar entre varios meses y años. En Legal Orbis trabajamos para agilizar al máximo el proceso y mantenerte informado en cada fase del procedimiento.',
+          'Analizamos cada documento, operación y comunicación para acreditar si existió engaño o perjuicio real. Nuestro equipo especializado en penal económico prepara la acusación o defensa esclareciendo la operativa y diferenciando entre conflicto civil y delito.',
       },
       {
-        question: '¿Qué diferencia hay entre un delito y una falta?',
+        question: '¿Puedo obtener permisos de salida estando en prisión?',
         answer:
-          'Las faltas fueron eliminadas del Código Penal en 2015. Ahora existen delitos leves (antes faltas) y delitos graves. Los delitos leves tienen penas menores y un procedimiento más rápido. Nuestros abogados te explicarán las implicaciones de cada tipo.',
+          'Depende de tu clasificación, evolución y cumplimiento de objetivos. Tu abogado debe intervenir activamente solicitando permisos, progresiones de grado y recursos ante Instituciones Penitenciarias o el Juzgado de Vigilancia.',
       },
     ],
   },
@@ -127,24 +128,34 @@ export const areasData = {
     ],
     faqs: [
       {
-        question: '¿Cuánto tarda un proceso de divorcio en Madrid?',
+        question:
+          '¿Puedo seguir adelante con un divorcio aunque mi pareja no esté de acuerdo?',
         answer:
-          'Un divorcio de mutuo acuerdo puede resolverse en 2-4 meses. Si es contencioso, puede durar entre 6 meses y 1 año. En Legal Orbis agilizamos los trámites al máximo para que puedas cerrar esta etapa cuanto antes.',
+          'Sí. Basta con que uno de los cónyuges solicite el divorcio para que el Juzgado tramite el procedimiento. Si no hay acuerdo, presentamos demanda contenciosa y el juez fijará las medidas económicas y familiares.',
       },
       {
-        question: '¿Cómo se reparte una herencia sin testamento?',
+        question:
+          '¿Qué puedo hacer si quiero modificar mi convenio regulador o las medidas de custodia, visitas o pensión?',
         answer:
-          'Sin testamento se aplica la ley. Los herederos legales son hijos, cónyuge y en su defecto, ascendientes. En Legal Orbis te asesoramos en todo el proceso de reparto y tramitación de la herencia intestada.',
+          'Cuando cambian las circunstancias (ingresos, domicilio, necesidades de los hijos) podemos pedir una modificación de medidas. Evaluamos el cambio y preparamos la demanda para actualizar las medidas a la nueva realidad.',
       },
       {
-        question: '¿Puedo reclamar una deuda a un particular?',
+        question:
+          '¿Qué puedo hacer si la herencia está bloqueada porque un heredero no colabora?',
         answer:
-          'Sí. A través de un procedimiento monitorio puedes reclamar deudas de forma rápida. En Legal Orbis gestionamos todo el proceso: desde el requerimiento previo hasta la ejecución si es necesario.',
+          'Podemos requerirle formalmente y, si persiste, iniciar un procedimiento para que un notario o un contador-partidor designado por el Juzgado realice la partición. Así la herencia avanza sin depender de una sola persona.',
       },
       {
-        question: '¿Qué es la custodia compartida?',
+        question:
+          '¿Cuánto tiempo tengo para reclamar un incumplimiento de contrato?',
         answer:
-          'Es un régimen donde ambos progenitores se responsabilizan del cuidado de los hijos por periodos alternos. En Legal Orbis te ayudamos a negociar o litigar el régimen de custodia más favorable para tus hijos.',
+          'En la mayoría de contratos civiles el plazo es de cinco años desde el incumplimiento o desde que pudiste conocerlo. Revisamos el contrato, las posibles interrupciones de la prescripción y, si conviene, planteamos una Oferta Vinculante Confidencial.',
+      },
+      {
+        question:
+          '¿Qué debo hacer si he sufrido un daño por culpa de otra persona o empresa?',
+        answer:
+          'Hay que acreditar el daño, la culpa o negligencia y la relación entre ambos. Reunimos la documentación, valoramos la indemnización y presentamos la reclamación por responsabilidad civil extracontractual.',
       },
     ],
   },
@@ -154,7 +165,7 @@ export const areasData = {
     number: '03',
     subtitle: 'DERECHO LABORAL ESPECIALIZADO',
     description:
-      'El Derecho Laboral constituye una de las áreas más relevantes del ordenamiento jurídico.',
+      'Cuando surge un conflicto laboral, ya sea como trabajador o empresa, lo esencial es contar con abogados que comprendan su situación, le acompañen con cercanía y le ofrezcan el asesoramiento experto necesario para proteger sus derechos y evitar riesgos.',
     longDescription:
       'El Derecho Laboral constituye una de las áreas más relevantes y complejas del ordenamiento jurídico, por cuanto articula el equilibrio entre las relaciones humanas y profesionales que conforman el mundo del trabajo. Su campo de actuación abarca desde la creación de un vínculo laboral hasta la gestión de los conflictos que puedan surgir durante su desarrollo o a la finalización del mismo, implicando un conocimiento profundo de la normativa, de la práctica judicial y de la realidad empresarial.\n\nEn Legal Orbis, nuestra experiencia en esta materia se ha forjado defendiendo a trabajadores frente a algunas de las empresas más relevantes del tejido empresarial español, así como asesorando a compañías consolidadas que depositan su confianza en nosotros para garantizar la seguridad jurídica de sus decisiones. Nuestro trabajo no se limita al momento del conflicto: acompañamos y orientamos a nuestros clientes antes, durante y después de cualquier controversia laboral, con una estrategia rigurosa y una comunicación constante que refuerza la confianza y la transparencia. El equipo laboralista del despacho actúa con solvencia tanto en la vía judicial como en la negociación extrajudicial, combinando el análisis técnico con una comprensión real de las circunstancias personales o empresariales implicadas. Cada caso se aborda desde la experiencia acumulada en la defensa de los derechos laborales y en la búsqueda de soluciones equilibradas, sostenibles y coherentes con los principios de justicia social y eficiencia empresarial.\n\nEl Derecho Laboral está presente en cada etapa de la vida profesional: en la contratación, en la evolución de la relación entre empresa y trabajador, y en los momentos de ruptura o conflicto. Intervenimos en procedimientos de despido, sanciones, reclamaciones salariales, acoso laboral o vulneraciones de derechos fundamentales, pero también en la planificación y prevención, anticipándonos a los problemas antes de que surjan. Nuestra práctica combina la defensa individual de los trabajadores junto con el asesoramiento estratégico a empresas, lo que nos permite actuar desde una perspectiva completa y realista de las relaciones laborales en el contexto actual.',
     metaTitle:
@@ -201,24 +212,26 @@ export const areasData = {
     ],
     faqs: [
       {
-        question: '¿Cuánto me corresponde si me despiden?',
+        question: '¿Cuánto tiempo tengo para impugnar un despido?',
         answer:
-          'Depende del tipo de despido. Si es improcedente: 33 días por año trabajado. Si es procedente: 20 días. Si es nulo: readmisión + salarios dejados de percibir. En Legal Orbis calculamos tu indemnización y luchamos por tus derechos.',
+          'El plazo es de 20 días hábiles desde la fecha del despido. Aun así, revisamos si existen irregularidades graves o fraude que permitan reaccionar incluso fuera de plazo en supuestos muy concretos.',
       },
       {
-        question: '¿Puedo reclamar si no me pagan el finiquito?',
+        question: '¿La empresa puede despedirme estando de baja médica?',
         answer:
-          'Sí, tienes un año para reclamarlo vía judicial. El finiquito incluye días trabajados, vacaciones pendientes y partes proporcionales. En Legal Orbis te ayudamos a reclamar todo lo que te corresponde.',
+          'Puede hacerlo, pero el despido no puede basarse en tu enfermedad. Si es así, puede declararse nulo (readmisión + salarios) o improcedente con la indemnización correspondiente. Analizamos tu carta y circunstancias para definir la mejor estrategia.',
       },
       {
-        question: '¿Qué es un despido improcedente?',
+        question:
+          'Como empresa, ¿qué debo tener en cuenta si quiero despedir a un trabajador?',
         answer:
-          'Es cuando la empresa no justifica adecuadamente la causa del despido. En ese caso, debe readmitirte o pagarte una indemnización de 33 días por año. Nuestros abogados analizan tu caso para demostrar la improcedencia.',
+          'Es imprescindible justificar y documentar la causa. Revisamos el contrato, funciones, comunicaciones y antecedentes para elegir la vía adecuada, redactar la carta de despido y negociar condiciones minimizando riesgos de nulidad o improcedencia.',
       },
       {
-        question: '¿Puedo reclamar horas extra no pagadas?',
+        question:
+          'Como empresa, ¿qué pasa si la situación económica ha empeorado y necesito reducir plantilla?',
         answer:
-          'Sí, tienes un año desde que dejaron de pagarse. Es fundamental tener pruebas: registros horarios, emails, testigos. En Legal Orbis te asesoramos sobre cómo reunir las pruebas necesarias.',
+          'En empresas pequeñas pueden plantearse despidos objetivos individuales si la causa económica es real y documentada. En empresas medianas o grandes puede requerirse un ERE con período de consultas. Te guiamos en la documentación, la elección de la vía y la prevención de reclamaciones.',
       },
     ],
   },
@@ -271,24 +284,28 @@ export const areasData = {
     ],
     faqs: [
       {
-        question: '¿Cuánto cuesta constituir una sociedad en Madrid?',
+        question:
+          '¿Es obligatorio inscribir todos los cambios de mi empresa en el Registro Mercantil?',
         answer:
-          'Los costes varían según el tipo de sociedad (SL, SA, etc.) e incluyen notaría, registro y gestoría. En Legal Orbis te asesoramos sobre la estructura más conveniente y gestionamos todo el proceso de constitución de forma eficiente.',
+          'Sí. Modificaciones como cambios de administrador, capital, domicilio o estatutos deben inscribirse para que sean oponibles a terceros. Nos encargamos de preparar la documentación y tramitar la inscripción.',
       },
       {
-        question: '¿Qué responsabilidad tiene un administrador de empresa?',
+        question:
+          '¿Qué puedo hacer si hay conflictos entre los socios de la empresa?',
         answer:
-          'Los administradores responden por daños causados por actos contrarios a la ley o estatutos, y por no actuar con diligencia. En Legal Orbis defendemos a administradores y asesoramos para minimizar riesgos.',
+          'Revisamos el pacto de socios o los estatutos para activar mecanismos como mediación, separación, exclusión o arbitraje. Participamos en las negociaciones y, si es necesario, ejercitamos acciones judiciales para proteger el interés social.',
       },
       {
-        question: '¿Puedo demandar a un socio de mi empresa?',
+        question:
+          '¿Qué hago si una empresa incumple lo pactado en un contrato comercial?',
         answer:
-          'Sí, cuando existen conflictos societarios, incumplimientos o abuso de mayoría. En Legal Orbis mediamos en conflictos entre socios y litigamos cuando es necesario para proteger tus intereses empresariales.',
+          'Analizamos el contrato y enviamos un requerimiento formal. Si no hay solución, reclamamos judicialmente el cumplimiento, la resolución del contrato o una indemnización por daños y lucro cesante.',
       },
       {
-        question: '¿Qué hacer si un cliente no paga una factura mercantil?',
+        question:
+          '¿Qué puedo hacer si en la Junta de aprobación de cuentas no estoy conforme o detecto alguna irregularidad?',
         answer:
-          'Puedes reclamarla vía monitorio o juicio ordinario dependiendo de la cuantía. En Legal Orbis gestionamos reclamaciones de impagos, negociaciones previas y embargos si es necesario.',
+          'Podemos representarte en la Junta, dejar constancia de tu oposición y posteriormente impugnar los acuerdos, solicitar revisión de la contabilidad o promover una auditoría externa si las cuentas no reflejan la realidad.',
       },
     ],
   },
@@ -339,24 +356,28 @@ export const areasData = {
     ],
     faqs: [
       {
-        question: '¿Puedo recurrir una multa administrativa en Madrid?',
+        question:
+          '¿Qué puedo hacer si mi empresa recibe una sanción administrativa y considero que es injusta?',
         answer:
-          'Sí, tienes 1 mes desde la notificación para presentar un recurso de reposición o alegaciones. En Legal Orbis analizamos la legalidad de la sanción y preparamos recursos con altas probabilidades de éxito.',
+          'Las sanciones pueden recurrirse y no son firmes de inmediato. Analizamos la resolución, los plazos y la legalidad del procedimiento para detectar errores y presentar alegaciones o recursos que permitan anularla.',
       },
       {
-        question: '¿Qué es un recurso contencioso-administrativo?',
+        question:
+          '¿Qué hago si la Administración tarda demasiado en resolver un expediente que me afecta a mí o a mi empresa?',
         answer:
-          'Es la vía judicial para impugnar actos de la Administración. Se presenta ante los tribunales cuando se han agotado las vías administrativas. En Legal Orbis te representamos ante los juzgados contencioso-administrativos.',
+          'Estudiamos si el silencio administrativo es positivo o negativo para ejercer tus derechos, interponer reclamaciones formales o acudir directamente a la vía contencioso-administrativa y desbloquear el expediente.',
       },
       {
-        question: '¿Cuánto tarda un procedimiento contencioso-administrativo?',
+        question:
+          '¿Puede mi empresa reclamar a la Administración por daños causados por su actuación?',
         answer:
-          'Puede durar entre 1 y 3 años dependiendo de la complejidad y el juzgado. En Legal Orbis trabajamos para acelerar los trámites y conseguir sentencias favorables cuanto antes.',
+          'Sí. Si un funcionamiento incorrecto o tardío causa un perjuicio económico, reclamamos responsabilidad patrimonial acreditando el daño y su relación con la actuación administrativa. Si no hay respuesta, acudimos a la vía judicial.',
       },
       {
-        question: '¿Puedo reclamar daños causados por la Administración?',
+        question:
+          '¿Qué puedo hacer si como autónomo la Seguridad Social me reclama deudas o me da de alta en un régimen que no corresponde?',
         answer:
-          'Sí, a través de la responsabilidad patrimonial. Tienes 1 año para reclamar daños efectivos, evaluables económicamente e individualizados. En Legal Orbis valoramos tu caso y gestionamos toda la reclamación.',
+          'Impugnamos la liquidación o solicitamos la rectificación demostrando la actividad real y el régimen correcto. Revisamos la documentación y defendemos que la deuda no procede o que el encuadramiento debe modificarse.',
       },
     ],
   },

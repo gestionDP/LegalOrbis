@@ -11,11 +11,11 @@ const QuienesSomos = () => {
 
   const valores = [
     {
-      palabra: 'Transparencia',
-      titulo: 'Transparencia',
+      palabra: 'Compromiso',
+      titulo: 'Compromiso',
       descripcion:
-        'Somos un despacho formado por un equipo multidisciplinar de abogados especializados en las principales ramas del Derecho —Penal, Penitenciario, Civil, Laboral y Mercantil—, lo que nos permite ofrecer una respuesta integral y rigurosa ante cualquier situación jurídica.',
-      imagen: '/images/jpg/Legal_01-64.jpg',
+        'La transparencia y la confianza mutua con nuestros defendidos son la base de nuestro trabajo y lo que nos ha permitido consolidar relaciones duraderas y crecer junto a nuestros clientes. Cada abogado de Legal Orbis cuenta con unos conocimientos técnico-jurídicos concretos, lo que nos permite ofrecer una opinión plural y complementaria de cada asunto, de modo que en cada reunión intervienen varios especialistas para garantizar un análisis completo y una estrategia adaptada a las particularidades de cada caso.',
+      imagen: '/images/jpg/Legal_01-13.jpg',
     },
     {
       palabra: 'Profesionalidad',
@@ -25,14 +25,13 @@ const QuienesSomos = () => {
       imagen: '/images/jpg/Legal_01-66.jpg',
     },
     {
-      palabra: 'Compromiso',
-      titulo: 'Compromiso',
+      palabra: 'Transparencia',
+      titulo: 'Transparencia',
       descripcion:
-        'La transparencia y la confianza mutua con nuestros defendidos son la base de nuestro trabajo y lo que nos ha permitido consolidar relaciones duraderas y crecer junto a nuestros clientes. Cada abogado de Legal Orbis cuenta con unos conocimientos técnico-jurídicos concretos, lo que nos permite ofrecer una opinión plural y complementaria de cada asunto, de modo que en cada reunión intervienen varios especialistas para garantizar un análisis completo y una estrategia adaptada a las particularidades de cada caso.',
-      imagen: '/images/jpg/Legal_01-13.jpg',
+        'Somos un despacho formado por un equipo multidisciplinar de abogados especializados en las principales ramas del Derecho —Penal, Penitenciario, Civil, Laboral y Mercantil—, lo que nos permite ofrecer una respuesta integral y rigurosa ante cualquier situación jurídica.',
+      imagen: '/images/jpg/Legal_01-64.jpg',
     },
   ];
-
   return (
     <section
       id="quienes-somos"
@@ -64,7 +63,7 @@ const QuienesSomos = () => {
                 </h3>
                 <div className="space-y-4 text-base lg:text-lg text-gray-300 leading-relaxed">
                   <p>{valores[valorActivo].descripcion}</p>
-                  {valorActivo === 2 && (
+                  {valorActivo === 0 && (
                     <p className="text-white font-semibold text-lg lg:text-xl">
                       En cada reunión intervienen varios especialistas para
                       garantizar un análisis completo y una estrategia adaptada
@@ -97,7 +96,7 @@ const QuienesSomos = () => {
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   quality={85}
-                  className="object-cover transition-opacity duration-500"
+                  className="object-cover transition-opacity duration-500 rounded-2xl"
                   priority
                 />
               </div>

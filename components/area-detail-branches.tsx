@@ -22,11 +22,15 @@ const AreaDetailBranches = ({ area }: AreaDetailBranchesProps) => {
     area.services || area.branches || getAreaBranches(area.id);
   const isSimpleItems =
     Array.isArray(displayItems) && typeof displayItems[0] === 'string';
+  const forceSimpleList = area.id === 'laboral';
 
   // Determinar si los items tienen formato "Título: detalles"
   const hasDetailsFormat =
+    !forceSimpleList &&
     isSimpleItems &&
     (displayItems as string[]).some((item: string) => item.includes(':'));
+  const shouldRenderSimpleList =
+    isSimpleItems && (!hasDetailsFormat || forceSimpleList);
 
   const toggleBranch = (branchId: string) => {
     setOpenBranch(openBranch === branchId ? null : branchId);
@@ -134,7 +138,7 @@ const AreaDetailBranches = ({ area }: AreaDetailBranchesProps) => {
               );
             })}
           </div>
-        ) : isSimpleItems ? (
+        ) : shouldRenderSimpleList ? (
           // Renderizar items simples sin desplegables
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {(displayItems as string[]).map((item, index) => (

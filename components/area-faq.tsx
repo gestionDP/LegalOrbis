@@ -3,6 +3,9 @@
 import { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
 import CSSAnimatedSection from '@/components/ui/css-animated-section';
+import { BottomSheet, BottomSheetContent } from '@/components/ui/bottom-sheet';
+import { Button } from '@/components/ui/button';
+import ContactForm from '@/components/contact-form-reusable';
 
 interface FAQItem {
   question: string;
@@ -16,6 +19,7 @@ interface AreaFAQProps {
 
 const AreaFAQ = ({ faqs, areaTitle }: AreaFAQProps) => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const [isContactOpen, setIsContactOpen] = useState(false);
 
   const toggleFAQ = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -75,12 +79,21 @@ const AreaFAQ = ({ faqs, areaTitle }: AreaFAQProps) => {
             <p className="text-gray-400 mb-6">
               ¿Tienes más preguntas? Estamos aquí para ayudarte
             </p>
-            <a
-              href="#contacto"
-              className="inline-block bg-white text-black px-8 py-4 rounded-full font-medium hover:bg-gray-100 transition-colors"
-            >
-              Contacta con nosotros
-            </a>
+            <BottomSheet open={isContactOpen} onOpenChange={setIsContactOpen}>
+              <Button
+                onClick={() => setIsContactOpen(true)}
+                className="bg-white text-black px-8 py-4 rounded-full font-medium hover:bg-gray-100 transition-colors"
+              >
+                Contacta con nosotros
+              </Button>
+              <BottomSheetContent className="bg-white">
+                <ContactForm
+                  showTitle={false}
+                  onSuccess={() => setIsContactOpen(false)}
+                  className="py-6"
+                />
+              </BottomSheetContent>
+            </BottomSheet>
           </div>
         </CSSAnimatedSection>
       </div>
