@@ -26,9 +26,7 @@ const AreaDetailBranches = ({ area }: AreaDetailBranchesProps) => {
   // Determinar si los items tienen formato "Título: detalles"
   const hasDetailsFormat =
     isSimpleItems &&
-    displayItems.some(
-      (item: any) => typeof item === 'string' && item.includes(':')
-    );
+    (displayItems as string[]).some((item: string) => item.includes(':'));
 
   const toggleBranch = (branchId: string) => {
     setOpenBranch(openBranch === branchId ? null : branchId);

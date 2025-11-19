@@ -18,9 +18,10 @@ import {
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
-  const area = areasData[params.slug as keyof typeof areasData];
+  const { slug } = await params;
+  const area = areasData[slug as keyof typeof areasData];
 
   if (!area) {
     return {
@@ -38,12 +39,13 @@ export async function generateMetadata({
   });
 }
 
-export default function AreaJuridicaDetail({
+export default async function AreaJuridicaDetail({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  const area = areasData[params.slug as keyof typeof areasData];
+  const { slug } = await params;
+  const area = areasData[slug as keyof typeof areasData];
 
   if (!area) {
     return (
