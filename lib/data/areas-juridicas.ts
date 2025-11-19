@@ -2,16 +2,16 @@
 export const areasData = {
   penal: {
     id: 'penal',
-    title: 'Derecho Penal',
+    title: 'Derecho Penal y Penitenciario',
     number: '01',
-    subtitle: 'DEFENSA PENAL ESPECIALIZADA',
+    subtitle: 'CUANDO ESTÁ EN JUEGO LA LIBERTAD',
     description:
-      'Defensa especializada en delitos de todo tipo. Ofrecemos asesoramiento integral y representación legal en procesos penales.',
+      'Cuando está en juego la libertad, la tranquilidad de su familia o su patrimonio personal, necesita abogados que sepan lo que hacen.',
     longDescription:
-      'El Derecho Penal constituye una de las ramas más exigentes y delicadas del ordenamiento jurídico, pues en ella se dirimen cuestiones que afectan directamente a la libertad, el honor y los derechos fundamentales de las personas. Cada proceso penal plantea retos únicos que requieren experiencia, rigor técnico y una estrategia de defensa sólida desde el primer momento.\n\nEn Legal Orbis contamos con un equipo de abogados penalistas especializados en la defensa integral de todo tipo de delitos. Nuestra trayectoria profesional avala nuestra capacidad para actuar con rapidez y eficacia tanto en fase de instrucción como en juicio oral, garantizando en todo momento la protección de los derechos de nuestros clientes y la búsqueda de la mejor solución posible ante cada situación.\n\nDesde la primera consulta, acompañamos al cliente con transparencia y dedicación, explicando cada paso del proceso y diseñando una estrategia adaptada a las circunstancias concretas del caso. La defensa penal exige no solo conocimiento profundo de la ley, sino también capacidad de análisis, negociación y presencia en sede judicial. En Legal Orbis actuamos con la máxima diligencia en todos los procedimientos, desde delitos leves hasta causas complejas de mayor gravedad.',
+      'En Legal Orbis, el Derecho Penal y Penitenciario es el corazón de nuestra actividad y la especialidad que ha marcado la trayectoria del despacho desde sus inicios. Nuestro equipo está formado por abogados penalistas especializados con más de 20 años de experiencia en los tribunales, acompañando a nuestros clientes en situaciones de máxima presión, incertidumbre y gravedad jurídica.\n\nA lo largo de los años hemos asumido procedimientos penales en toda España como acusación y defensa en asuntos que exigen rapidez estratégica y un conocimiento profundo del funcionamiento práctico del proceso penal. Nuestro despacho cuenta con una destacada trayectoria en delitos económicos y de empresa (estafas, apropiaciones indebidas, insolvencias punibles, delitos societarios y fraudes complejos), delitos fiscales, blanqueo de capitales, así como en delitos contra la libertad e indemnidad sexual, delitos informáticos y delitos de narcotráfico de especial complejidad.\n\nNuestra experiencia no se limita a la fase de instrucción o al juicio. También somos especialistas en Derecho Penitenciario, habiendo asesorado y representado a condenados en causas de gran repercusión mediática (incluyendo procedimientos penitenciarios directamente vinculados a la trama Gürtel) y logrando clasificaciones, progresiones de grado anticipadas y beneficios penitenciarios en casos especialmente delicados. Del mismo modo, nuestra actuación en la jurisdicción penal ha permitido obtener absoluciones en causas por narcotráfico ante la Audiencia Nacional, donde la precisión jurídica y la solidez de la estrategia defensiva resultan determinantes.\n\nSi se enfrenta a una investigación penal, a un juicio o a un procedimiento penitenciario, en Legal Orbis encontrará un equipo que no solo domina la Ley, sino que entiende la dimensión personal, reputacional y profesional que implica cada caso.',
     metaTitle: 'Abogado Penalista Madrid | Legal Orbis - Defensa Penal 24h',
     metaDescription:
-      '⚖️ Abogados penalistas en Madrid con +15 años experiencia. Defensa inmediata en delitos. Primera consulta GRATUITA. Contacta ahora ✉️',
+      '⚖️ Abogados penalistas en Madrid con +20 años experiencia. Defensa inmediata en delitos. Primera consulta GRATUITA. Contacta ahora ✉️',
     metaKeywords: [
       'abogado penalista Madrid',
       'abogados penalistas Madrid',
@@ -24,19 +24,22 @@ export const areasData = {
       'delitos económicos Madrid',
       'abogado penal Madrid centro',
       'abogados penalistas Madrid Serrano',
+      'derecho penitenciario Madrid',
     ],
-    image: '/images/jpg/Legal_01-62.jpg',
+    image: '/images/jpg/Legal_01-112.jpg',
     services: [
-      'Delitos contra la vida',
-      'Delitos contra la libertad sexual',
-      'Delitos contra el patrimonio',
-      'Delitos contra la salud pública',
-      'Delitos económicos y societarios',
-      'Delitos contra la administración pública',
-      'Delitos informáticos',
-      'Violencia de género',
-      'Delitos contra la seguridad vial',
-      'Delitos contra el medio ambiente',
+      'Delitos económicos y de empresa: estafas, apropiaciones indebidas, administración desleal, insolvencias punibles, delitos societarios, falsedad documental, fraudes complejos',
+      'Delitos fiscales: fraude fiscal, delito contra la Hacienda Pública y responsabilidad penal de administradores',
+      'Blanqueo de capitales y corrupción organizada: corrupción deportiva, corrupción en los negocios, organización criminal, fraude a casas de apuestas',
+      'Delitos contra la libertad sexual: agresiones sexuales, abusos, delitos contra menores, pornografía infantil y difusión de imágenes íntimas',
+      'Delitos de narcotráfico: cultivo, transporte, importación de sustancias, redes internacionales (Audiencia Nacional)',
+      'Delitos contra la vida e integridad: homicidio, asesinato, lesiones, violencia doméstica',
+      'Delitos informáticos: estafas online, phishing, hacking, accesos ilegítimos, usurpación de identidad digital',
+      'Delitos contra la intimidad y el honor: injurias, calumnias, revelación de secretos',
+      'Delitos patrimoniales: robos, hurtos, extorsión, coacciones, amenazas, daños',
+      'Seguridad vial: alcoholemia, conducción sin permiso, delitos de tráfico',
+      'Delitos contra la Administración pública y justicia: desobediencia, denuncia falsa, falso testimonio',
+      'Derecho penitenciario: progresiones de grado, permisos, vigilancia penitenciaria',
     ],
     branches: [
       'Defensa penal integral',
@@ -171,7 +174,7 @@ export const areasData = {
       'finiquito abogado Madrid',
       'seguridad social Madrid',
     ],
-    image: '/images/jpg/Legal_01-48.jpg',
+    image: '/images/jpg/Legal_01-33.jpg',
     services: [
       'Contratación laboral y modalidades de contrato',
       'Despidos (disciplinario, objetivo, improcedente y nulo)',
@@ -245,7 +248,7 @@ export const areasData = {
       'conflicto societario Madrid',
       'derecho empresarial Madrid',
     ],
-    image: '/images/jpg/Legal_01-111.jpg',
+    image: '/images/jpg/Legal_01-34.jpg',
     services: [
       'Constitución y administración de sociedades',
       'Contratación mercantil nacional e internacional',

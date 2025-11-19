@@ -7,11 +7,12 @@ import CSSAnimatedSection from '@/components/ui/css-animated-section';
 
 const HeroCarousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isMounted, setIsMounted] = useState(false);
 
   const slides = [
     {
       id: 1,
-      image: '/images/jpg/Legal_01-27.jpg',
+      image: '/images/jpg/Legal_01-30.jpg',
       title: 'Un equipo a la vanguardia del Derecho',
       subtitle: 'Experiencia, profesionalidad y compromiso',
       description:
@@ -27,7 +28,7 @@ const HeroCarousel = () => {
     },
     {
       id: 3,
-      image: '/images/jpg/Legal_01-117.jpg',
+      image: '/images/jpg/Legal_01-48.jpg',
       title: 'Transparencia y confianza mutua',
       subtitle: 'La base de nuestro trabajo',
       description:
@@ -36,12 +37,18 @@ const HeroCarousel = () => {
   ];
 
   useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!isMounted) return;
+
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
     }, 6000);
 
     return () => clearInterval(timer);
-  }, [slides.length]);
+  }, [slides.length, isMounted]);
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
