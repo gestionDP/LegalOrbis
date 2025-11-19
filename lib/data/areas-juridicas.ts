@@ -52,28 +52,28 @@ export const areasData = {
       {
         question: '¿En qué puede ayudarme un abogado penalista?',
         answer:
-          'Un abogado penalista te asesora y defiende si estás investigado, acusado o detenido por cualquier delito. También interviene cuando eres víctima para ayudarte a denunciar, personarte en la causa o reclamar una indemnización.',
+          'Un abogado penalista se encarga de asesorarte y defenderte si estás investigado, acusado o detenido por cualquier delito. También interviene cuando eres víctima y necesitas denunciar, personarte como defensa o reclamar una indemnización.',
       },
       {
         question: '¿Qué hago si me han citado como investigado en un Juzgado?',
         answer:
-          'Debes acudir siempre con tu abogado. Antes de declarar revisamos tu caso, analizamos el atestado y preparamos contigo las respuestas. En ocasiones es preferible no declarar hasta examinar todo el procedimiento.',
+          'Lo más importante es acudir asistido por tu abogado. Antes de declarar, es extremadamente importante revisar tu caso, revisar el atestado policial si lo hubiese y preparar contigo todas las respuestas. En ocasiones, incluso es recomendable no declarar en un primer momento hasta examinar completamente el procedimiento.',
       },
       {
         question: '¿Cuándo es recomendable presentar una denuncia?',
         answer:
-          'Cuando has sido víctima de un delito o tienes indicios sólidos de que se ha cometido. Estudiamos los hechos y la documentación para elegir la vía más eficaz (comisaría, juzgado o querella) y evitar errores estratégicos.',
+          'Es recomendable hacerlo cuando has sido víctima de un delito o cuando tienes indicios claros de que se ha cometido. La denuncia permite que Policía, Fiscalía o el propio Juzgado inicien una investigación. Según el tipo de caso, puede presentarse en comisaría, en el juzgado o, si es una situación más compleja, mediante una querella criminal. Es necesario estudiar todos los hechos y la documentación antes de denunciar para elegir la vía más eficaz y evitar errores que puedan perjudicarte después.',
       },
       {
         question:
           '¿Qué ocurre si me imputan un delito económico (estafa, apropiación indebida, administración desleal...)?',
         answer:
-          'Analizamos cada documento, operación y comunicación para acreditar si existió engaño o perjuicio real. Nuestro equipo especializado en penal económico prepara la acusación o defensa esclareciendo la operativa y diferenciando entre conflicto civil y delito.',
+          'Los delitos económicos suelen apoyarse en documentos, movimientos bancarios y decisiones empresariales, por lo que requieren un análisis técnico y muy detallado. En estos casos estudiamos el origen de la operación, las comunicaciones entre las partes, la existencia o no de engaño, y si realmente hubo un perjuicio económico acreditable. Contamos con abogados especializados en penal económico que revisan cada documento, reconstruyen la operativa y preparan una acusación sólida o una defensa buscando demostrar la inexistencia de intención, aclarar las circunstancias reales del negocio y evitar que un conflicto civil o mercantil se trate como un delito.',
       },
       {
         question: '¿Puedo obtener permisos de salida estando en prisión?',
         answer:
-          'Depende de tu clasificación, evolución y cumplimiento de objetivos. Tu abogado debe intervenir activamente solicitando permisos, progresiones de grado y recursos ante Instituciones Penitenciarias o el Juzgado de Vigilancia.',
+          'Depende de tu clasificación, evolución, programas de tratamiento y cumplimiento de objetivos. Es necesaria la intervención activa y continua de tu abogado para solicitar permisos, progresiones de grado, recursos contra decisiones de Instituciones Penitenciarias y revisiones ante el Juzgado de Vigilancia Penitenciaria.',
       },
     ],
   },
@@ -131,31 +131,31 @@ export const areasData = {
         question:
           '¿Puedo seguir adelante con un divorcio aunque mi pareja no esté de acuerdo?',
         answer:
-          'Sí. Basta con que uno de los cónyuges solicite el divorcio para que el Juzgado tramite el procedimiento. Si no hay acuerdo, presentamos demanda contenciosa y el juez fijará las medidas económicas y familiares.',
+          'Sí. En España no es necesario el consentimiento de ambos para divorciarse. Basta con que uno de los cónyuges lo solicite para que el Juzgado tramite el procedimiento. Si no hay mutuo acuerdo, se presenta una demanda contenciosa en la que el juez decidirá sobre las medidas económicas y familiares (custodia, visitas, pensiones, uso de la vivienda, etc.). Los especialistas en derecho matrimonial de Legal Orbis te acompañarán desde el principio, asesorándote en cada decisión, preparando la estrategia más adecuada para tu situación y velando por tus intereses durante todo el proceso de divorcio.',
       },
       {
         question:
           '¿Qué puedo hacer si quiero modificar mi convenio regulador o las medidas de custodia, visitas o pensión?',
         answer:
-          'Cuando cambian las circunstancias (ingresos, domicilio, necesidades de los hijos) podemos pedir una modificación de medidas. Evaluamos el cambio y preparamos la demanda para actualizar las medidas a la nueva realidad.',
+          'Cuando han cambiado las circunstancias desde que se aprobó el convenio o la sentencia (por ejemplo, variación de ingresos, cambio de domicilio, nuevas necesidades de los hijos...), es posible pedir una modificación de medidas. Analizamos tu situación, comprobamos si el cambio es relevante y estable, y preparamos la demanda para que el Juzgado actualice las medidas a la realidad actual.',
       },
       {
         question:
           '¿Qué puedo hacer si la herencia está bloqueada porque un heredero no colabora?',
         answer:
-          'Podemos requerirle formalmente y, si persiste, iniciar un procedimiento para que un notario o un contador-partidor designado por el Juzgado realice la partición. Así la herencia avanza sin depender de una sola persona.',
+          'Cuando uno de los herederos se niega a participar o retrasa la firma, la herencia no queda paralizada indefinidamente. La Ley permite requerirle formalmente para que se pronuncie, pudiendo iniciar un procedimiento para que un notario o un contador-partidor designado por el Juzgado realice la partición. De esta forma, la herencia avanza sin depender de la voluntad de una sola persona. Lo esencial es que tu abogado haga valer tu voluntad y tus derechos en todo el reparto.',
       },
       {
         question:
           '¿Cuánto tiempo tengo para reclamar un incumplimiento de contrato?',
         answer:
-          'En la mayoría de contratos civiles el plazo es de cinco años desde el incumplimiento o desde que pudiste conocerlo. Revisamos el contrato, las posibles interrupciones de la prescripción y, si conviene, planteamos una Oferta Vinculante Confidencial.',
+          'En la mayoría de los contratos civiles el plazo para reclamar es de cinco años desde que se produjo el incumplimiento o desde que el afectado pudo conocerlo. Es necesario revisar detalladamente el contrato, analizar si existen interrupciones de la prescripción y valorar si conviene hacer una Oferta Vinculante Confidencial conforme a la LO 1/2025.',
       },
       {
         question:
           '¿Qué debo hacer si he sufrido un daño por culpa de otra persona o empresa?',
         answer:
-          'Hay que acreditar el daño, la culpa o negligencia y la relación entre ambos. Reunimos la documentación, valoramos la indemnización y presentamos la reclamación por responsabilidad civil extracontractual.',
+          'Cuando existe un daño causado por un tercero (por ejemplo, un accidente, un producto defectuoso o una negligencia médica) puedes reclamar una indemnización por responsabilidad civil extracontractual. Para ello es necesario acreditar el daño, la culpa o negligencia y la relación entre ambos: reuniendo toda la documentación, podremos valorar la indemnización que te corresponde e interponer una demanda con todas las garantías.',
       },
     ],
   },
@@ -214,24 +214,24 @@ export const areasData = {
       {
         question: '¿Cuánto tiempo tengo para impugnar un despido?',
         answer:
-          'El plazo es de 20 días hábiles desde la fecha del despido. Aun así, revisamos si existen irregularidades graves o fraude que permitan reaccionar incluso fuera de plazo en supuestos muy concretos.',
+          'El plazo es de 20 días hábiles desde la fecha del despido. No obstante, en Legal Orbis hemos conseguido la declaración de improcedencia en casos muy concretos incluso fuera de ese plazo, cuando existían irregularidades graves en la comunicación del despido o fraude de Ley en la extinción contractual. Cada situación es distinta: contacta con nuestros abogados laboralistas para analizar tu caso cuanto antes.',
       },
       {
         question: '¿La empresa puede despedirme estando de baja médica?',
         answer:
-          'Puede hacerlo, pero el despido no puede basarse en tu enfermedad. Si es así, puede declararse nulo (readmisión + salarios) o improcedente con la indemnización correspondiente. Analizamos tu carta y circunstancias para definir la mejor estrategia.',
+          'Estar de baja no impide que la empresa te despida, pero el despido no puede basarse en tu enfermedad. Si ocurre, puede declararse nulo, lo que supone que debes ser readmitido y que la empresa te abone los salarios dejados de percibir, además de una posible indemnización por vulneración de derechos fundamentales. En otros casos puede considerarse improcedente, con la indemnización correspondiente. Aquí analizaremos tu carta de despido y las circunstancias para determinar qué opción es más favorable.',
       },
       {
         question:
           'Como empresa, ¿qué debo tener en cuenta si quiero despedir a un trabajador?',
         answer:
-          'Es imprescindible justificar y documentar la causa. Revisamos el contrato, funciones, comunicaciones y antecedentes para elegir la vía adecuada, redactar la carta de despido y negociar condiciones minimizando riesgos de nulidad o improcedencia.',
+          'El despido debe estar justificado y bien documentado. Es fundamental revisar el tipo de contrato, las funciones, las comunicaciones previas y el historial laboral para evitar riesgos de nulidad o improcedencia. La empresa debe estar asesorada sobre la vía más adecuada, contando con un abogado que elabore la carta de despido y negocie con el trabajador las condiciones de su extinción.',
       },
       {
         question:
           'Como empresa, ¿qué pasa si la situación económica ha empeorado y necesito reducir plantilla?',
         answer:
-          'En empresas pequeñas pueden plantearse despidos objetivos individuales si la causa económica es real y documentada. En empresas medianas o grandes puede requerirse un ERE con período de consultas. Te guiamos en la documentación, la elección de la vía y la prevención de reclamaciones.',
+          'En empresas pequeñas, es posible acudir a despidos objetivos individuales, incluso respecto de trabajadores cuyo rendimiento o actitud esté generando conflictos, siempre que exista una causa económica real y documentada. En empresas medianas o grandes, si el ajuste afecta a un número relevante de trabajadores, puede ser necesario plantear un ERE (despido colectivo), que exige justificar la causa y abrir un período de consultas con los representantes de los trabajadores antes de adoptar la decisión final. Te asesoramos sobre qué vía es la más adecuada, qué documentación necesitas y cómo reducir riesgos de nulidad o reclamaciones posteriores.',
       },
     ],
   },
@@ -287,25 +287,25 @@ export const areasData = {
         question:
           '¿Es obligatorio inscribir todos los cambios de mi empresa en el Registro Mercantil?',
         answer:
-          'Sí. Modificaciones como cambios de administrador, capital, domicilio o estatutos deben inscribirse para que sean oponibles a terceros. Nos encargamos de preparar la documentación y tramitar la inscripción.',
+          'Sí. Modificaciones como cambios de administrador, ampliaciones o reducciones de capital, traslado de domicilio, nombramiento de auditores o reformas de estatutos deben inscribirse para ser oponibles a terceros.',
       },
       {
         question:
           '¿Qué puedo hacer si hay conflictos entre los socios de la empresa?',
         answer:
-          'Revisamos el pacto de socios o los estatutos para activar mecanismos como mediación, separación, exclusión o arbitraje. Participamos en las negociaciones y, si es necesario, ejercitamos acciones judiciales para proteger el interés social.',
+          'Los desacuerdos entre socios son habituales y pueden incluso paralizar la actividad. Es fundamental que tus abogados revisen el pacto de socios o los estatutos para ver qué mecanismos existen (mediación, separación de socios, exclusión, venta de participaciones, arbitraje). Aquí intervenimos en todas las negociaciones o, si es necesario, ejercitamos acciones judiciales para proteger el interés de la sociedad y evitar que el conflicto afecte al negocio.',
       },
       {
         question:
           '¿Qué hago si una empresa incumple lo pactado en un contrato comercial?',
         answer:
-          'Analizamos el contrato y enviamos un requerimiento formal. Si no hay solución, reclamamos judicialmente el cumplimiento, la resolución del contrato o una indemnización por daños y lucro cesante.',
+          'Ante un impago, retraso o incumplimiento, lo primero es revisar el contrato y enviar un requerimiento formal para dejar constancia. Si no se soluciona, se puede reclamar judicialmente el cumplimiento, la resolución del contrato o una indemnización por daños y lucro cesante.',
       },
       {
         question:
           '¿Qué puedo hacer si en la Junta de aprobación de cuentas no estoy conforme o detecto alguna irregularidad?',
         answer:
-          'Podemos representarte en la Junta, dejar constancia de tu oposición y posteriormente impugnar los acuerdos, solicitar revisión de la contabilidad o promover una auditoría externa si las cuentas no reflejan la realidad.',
+          'No es necesario que asistas personalmente a la Junta: podemos representarte y votar por ti. Si las cuentas no reflejan la realidad de la empresa o aprecias irregularidades, basta con que nos otorgues la representación para que dejemos constancia de tu oposición en el acta. Esto permitirá posteriormente impugnar los acuerdos sociales ante el Juzgado, solicitar una revisión de la contabilidad o promover una auditoría externa.',
       },
     ],
   },
@@ -359,25 +359,25 @@ export const areasData = {
         question:
           '¿Qué puedo hacer si mi empresa recibe una sanción administrativa y considero que es injusta?',
         answer:
-          'Las sanciones pueden recurrirse y no son firmes de inmediato. Analizamos la resolución, los plazos y la legalidad del procedimiento para detectar errores y presentar alegaciones o recursos que permitan anularla.',
+          'Las sanciones administrativas pueden recurrirse y no son firmes de inmediato. Es importante analizar la resolución, comprobar si se han respetado los plazos, si la inspección actuó correctamente y si existe una base legal suficiente. Muchas sanciones pueden anularse por falta de motivación, errores en el procedimiento o ausencia de pruebas.',
       },
       {
         question:
           '¿Qué hago si la Administración tarda demasiado en resolver un expediente que me afecta a mí o a mi empresa?',
         answer:
-          'Estudiamos si el silencio administrativo es positivo o negativo para ejercer tus derechos, interponer reclamaciones formales o acudir directamente a la vía contencioso-administrativa y desbloquear el expediente.',
+          'El silencio administrativo puede generar derechos a tu favor o permitir que recurras directamente, todo depende del procedimiento para determinar si el silencio es positivo o negativo, y así poder interponer una reclamación formal o un recurso para desbloquear el expediente. Esto es especialmente relevante en materia de licencias, ayudas públicas, urbanismo o actividades reguladas.',
       },
       {
         question:
           '¿Puede mi empresa reclamar a la Administración por daños causados por su actuación?',
         answer:
-          'Sí. Si un funcionamiento incorrecto o tardío causa un perjuicio económico, reclamamos responsabilidad patrimonial acreditando el daño y su relación con la actuación administrativa. Si no hay respuesta, acudimos a la vía judicial.',
+          'Sí. Si una actuación administrativa (o su inactividad) causa un perjuicio económico a ti o a tu empresa, es posible reclamar indemnización por responsabilidad patrimonial. Para ello es necesario acreditar que existió un daño real y que se produjo por un funcionamiento incorrecto, tardío o ineficaz de la Administración. Si la Administración no responde o desestima la solicitud, acudiremos a la vía judicial contencioso-administrativa para la correcta reparación del daño.',
       },
       {
         question:
           '¿Qué puedo hacer si como autónomo la Seguridad Social me reclama deudas o me da de alta en un régimen que no corresponde?',
         answer:
-          'Impugnamos la liquidación o solicitamos la rectificación demostrando la actividad real y el régimen correcto. Revisamos la documentación y defendemos que la deuda no procede o que el encuadramiento debe modificarse.',
+          'Es habitual que la Seguridad Social emita liquidaciones o altas de oficio que no siempre se ajustan a la actividad real del autónomo. Si no estás conforme, podemos impugnar la reclamación, solicitar la rectificación del régimen en el que te han encuadrado o acreditar que la deuda no procede.',
       },
     ],
   },
