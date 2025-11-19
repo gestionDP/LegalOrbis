@@ -97,7 +97,7 @@ const QuienesSomos = () => {
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   quality={85}
-                  className="object-cover transition-opacity duration-500"
+                  className="object-cover transition-opacity duration-500 rounded-2xl"
                   priority
                 />
               </div>
