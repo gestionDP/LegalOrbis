@@ -57,6 +57,33 @@ export default function RootLayout({
         <meta name="theme-color" content="#1A3635" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="canonical" href="https://legalorbisabogados.es" />
+
+        <link
+          rel="icon"
+          type="image/svg+xml"
+          href="https://legalorbisabogados.es/icon.svg"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="https://legalorbisabogados.es/images/png/LegalOrbis.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="https://legalorbisabogados.es/images/png/LegalOrbis.png"
+        />
+        <link
+          rel="shortcut icon"
+          href="https://legalorbisabogados.es/icon.svg"
+        />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="https://legalorbisabogados.es/images/png/LegalOrbis.png"
+        />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
