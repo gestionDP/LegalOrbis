@@ -71,8 +71,29 @@ export function generateBaseMetadata(): Metadata {
       images: [siteConfig.ogImage],
     },
     icons: {
-      icon: [{ url: '/icon.svg', type: 'image/svg+xml' }],
-      apple: [{ url: '/LegalOrbis.svg', type: 'image/svg+xml' }],
+      icon: [
+        { url: '/icon.svg', type: 'image/svg+xml' },
+        { url: '/icon.svg', type: 'image/svg+xml', sizes: 'any' },
+        {
+          url: '/images/png/LegalOrbis.png',
+          type: 'image/png',
+          sizes: '32x32',
+        },
+        {
+          url: '/images/png/LegalOrbis.png',
+          type: 'image/png',
+          sizes: '16x16',
+        },
+      ],
+      apple: [
+        {
+          url: '/images/png/LegalOrbis.png',
+          type: 'image/png',
+          sizes: '180x180',
+        },
+        { url: '/LegalOrbis.svg', type: 'image/svg+xml' },
+      ],
+      shortcut: '/icon.svg',
     },
     verification: {
       google: '',
