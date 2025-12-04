@@ -58,10 +58,11 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="canonical" href="https://legalorbisabogados.es" />
 
+        {/* Favicon principal (archivo solicitado en /public/LegalOrbis.svg) */}
         <link
           rel="icon"
           type="image/svg+xml"
-          href="https://legalorbisabogados.es/icon.svg"
+          href="https://legalorbisabogados.es/LegalOrbis.svg"
         />
         <link
           rel="icon"
@@ -77,7 +78,7 @@ export default function RootLayout({
         />
         <link
           rel="shortcut icon"
-          href="https://legalorbisabogados.es/icon.svg"
+          href="https://legalorbisabogados.es/LegalOrbis.svg"
         />
         <link
           rel="apple-touch-icon"
