@@ -72,8 +72,16 @@ export function generateBaseMetadata(): Metadata {
     },
     icons: {
       icon: [
-        { url: '/icon.svg', type: 'image/svg+xml' },
-        { url: '/icon.svg', type: 'image/svg+xml', sizes: 'any' },
+        {
+          url: '/LegalOrbis.svg',
+          type: 'image/svg+xml',
+          sizes: 'any',
+        },
+        {
+          url: '/images/png/LegalOrbis.png',
+          type: 'image/png',
+          sizes: '48x48',
+        },
         {
           url: '/images/png/LegalOrbis.png',
           type: 'image/png',
@@ -91,9 +99,8 @@ export function generateBaseMetadata(): Metadata {
           type: 'image/png',
           sizes: '180x180',
         },
-        { url: '/LegalOrbis.svg', type: 'image/svg+xml' },
       ],
-      shortcut: '/icon.svg',
+      shortcut: '/LegalOrbis.svg',
     },
     verification: {
       google: '',
