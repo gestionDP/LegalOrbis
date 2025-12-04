@@ -72,35 +72,33 @@ export function generateBaseMetadata(): Metadata {
     },
     icons: {
       icon: [
+        // favicon.ico es lo primero que busca Google
+        { url: '/favicon.ico' },
+        {
+          url: '/favicon-32x32.png',
+          type: 'image/png',
+          sizes: '32x32',
+        },
+        {
+          url: '/favicon-16x16.png',
+          type: 'image/png',
+          sizes: '16x16',
+        },
+        // SVG como fallback moderno
         {
           url: '/LegalOrbis.svg',
           type: 'image/svg+xml',
           sizes: 'any',
         },
-        {
-          url: '/images/png/LegalOrbis.png',
-          type: 'image/png',
-          sizes: '48x48',
-        },
-        {
-          url: '/images/png/LegalOrbis.png',
-          type: 'image/png',
-          sizes: '32x32',
-        },
-        {
-          url: '/images/png/LegalOrbis.png',
-          type: 'image/png',
-          sizes: '16x16',
-        },
       ],
       apple: [
         {
-          url: '/images/png/LegalOrbis.png',
+          url: '/apple-touch-icon.png',
           type: 'image/png',
           sizes: '180x180',
         },
       ],
-      shortcut: '/LegalOrbis.svg',
+      shortcut: '/favicon.ico',
     },
     verification: {
       google: '',
