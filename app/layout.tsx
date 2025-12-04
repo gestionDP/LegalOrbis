@@ -58,33 +58,23 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="canonical" href="https://legalorbisabogados.es" />
 
-        {/* Favicon principal (archivo solicitado en /public/LegalOrbis.svg) */}
-        <link
-          rel="icon"
-          type="image/svg+xml"
-          href="https://legalorbisabogados.es/LegalOrbis.svg"
-        />
+        {/* Favicon - Configuración estándar para Google y navegadores */}
+        <link rel="icon" href="/favicon.ico" />
         <link
           rel="icon"
           type="image/png"
           sizes="32x32"
-          href="https://legalorbisabogados.es/images/png/LegalOrbis.png"
+          href="/favicon-32x32.png"
         />
         <link
           rel="icon"
           type="image/png"
           sizes="16x16"
-          href="https://legalorbisabogados.es/images/png/LegalOrbis.png"
+          href="/favicon-16x16.png"
         />
-        <link
-          rel="shortcut icon"
-          href="https://legalorbisabogados.es/LegalOrbis.svg"
-        />
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="https://legalorbisabogados.es/images/png/LegalOrbis.png"
-        />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        {/* SVG como fallback moderno */}
+        <link rel="icon" type="image/svg+xml" href="/LegalOrbis.svg" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
