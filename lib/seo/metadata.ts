@@ -38,6 +38,7 @@ export const siteConfig = {
 // Función para generar metadata base
 export function generateBaseMetadata(): Metadata {
   return {
+    metadataBase: new URL(siteConfig.url),
     title: {
       default: siteConfig.name,
       template: `%s | ${siteConfig.name}`,
