@@ -56,36 +56,7 @@ export default function RootLayout({
         />
         <meta name="theme-color" content="#1A3635" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-        {/* Favicon - Configuración estándar para Google y navegadores */}
-        {/* favicon.ico en la raíz es lo primero que busca Google */}
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        {/* SVG para navegadores modernos */}
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        {/* PNGs en múltiples tamaños - Google requiere mínimo 48x48 para resultados de búsqueda */}
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="48x48"
-          href="/favicon-48x48.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="32x32"
-          href="/favicon-32x32.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
-          href="/favicon-16x16.png"
-        />
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="/apple-touch-icon.png"
-        />
+        {/* Favicons se generan automáticamente desde metadata.icons */}
         <link rel="manifest" href="/site.webmanifest" />
       </head>
       <body

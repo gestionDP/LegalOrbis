@@ -105,7 +105,6 @@ export function generateBaseMetadata(): Metadata {
           sizes: '180x180',
         },
       ],
-      shortcut: '/favicon.ico',
     },
     alternates: {
       canonical: siteConfig.url,

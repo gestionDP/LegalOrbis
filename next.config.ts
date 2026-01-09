@@ -144,9 +144,10 @@ const nextConfig: NextConfig = {
 
   trailingSlash: false,
 
-  // Redirección explícita de no-www a www para SEO
+  // Redirecciones para SEO y corrección de URLs problemáticas
   async redirects() {
     return [
+      // Redirigir HTTP a HTTPS y no-www a www
       {
         source: '/:path*',
         has: [
@@ -156,6 +157,23 @@ const nextConfig: NextConfig = {
           },
         ],
         destination: 'https://www.legalorbisabogados.es/:path*',
+        permanent: true,
+      },
+      // Redirigir URLs con caracteres inválidos a home
+      {
+        source: '/$',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/&',
+        destination: '/',
+        permanent: true,
+      },
+      // Redirigir /areas-juridicas a home (las áreas específicas están en /areas-juridicas/[slug])
+      {
+        source: '/areas-juridicas',
+        destination: '/#areas-juridicas',
         permanent: true,
       },
     ];

@@ -67,7 +67,7 @@ export default async function AreaJuridicaDetail({
   const breadcrumbSchema = generateBreadcrumbSchema({
     items: [
       { name: 'Inicio', url: '/' },
-      { name: 'Áreas Jurídicas', url: '/areas-juridicas' },
+      { name: 'Áreas Jurídicas', url: '/#areas-juridicas' },
       { name: area.title, url: `/areas-juridicas/${area.id}` },
     ],
   });
