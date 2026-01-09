@@ -43,6 +43,7 @@ export interface OrganizationSchema {
 }
 
 export interface LocalBusinessSchema {
+  '@context': string;
   '@type': string;
   name: string;
   description: string;
@@ -197,6 +198,7 @@ export function generateOrganizationSchema(): OrganizationSchema {
 // Schema LocalBusiness
 export function generateLocalBusinessSchema(): LocalBusinessSchema {
   return {
+    '@context': 'https://schema.org',
     '@type': 'LegalService',
     name: 'Legal Orbis Abogados',
     description:

@@ -73,20 +73,29 @@ export function generateBaseMetadata(): Metadata {
     },
     icons: {
       icon: [
-        // favicon.ico es lo primero que busca Google (debe estar en la raíz)
-        { url: '/favicon.ico', sizes: 'any' },
-        // SVG para navegadores modernos
-        {
-          url: '/favicon.svg',
-          type: 'image/svg+xml',
-          sizes: 'any',
-        },
+        // Favicons v2 para cache-busting - ORDEN CRÍTICO: PNG primero, luego ICO
+        // Priorizar PNG sobre SVG/ICO para Google SERP
         // 48x48 es el tamaño mínimo requerido por Google para resultados de búsqueda
+        {
+          url: '/favicon-48x48-v2.png',
+          type: 'image/png',
+          sizes: '48x48',
+        },
+        // 192x192 es tamaño óptimo para Google SERP
+        {
+          url: '/favicon-192x192-v2.png',
+          type: 'image/png',
+          sizes: '192x192',
+        },
+        // favicon.ico v2 como fallback
+        { url: '/favicon-v2.ico', sizes: 'any' },
+        // Mantener versiones anteriores por compatibilidad (fallback)
         {
           url: '/favicon-48x48.png',
           type: 'image/png',
           sizes: '48x48',
         },
+        { url: '/favicon.ico', sizes: 'any' },
         {
           url: '/favicon-32x32.png',
           type: 'image/png',
@@ -96,6 +105,12 @@ export function generateBaseMetadata(): Metadata {
           url: '/favicon-16x16.png',
           type: 'image/png',
           sizes: '16x16',
+        },
+        // SVG al final (temporalmente menos prioridad para forzar PNG en Google)
+        {
+          url: '/favicon.svg',
+          type: 'image/svg+xml',
+          sizes: 'any',
         },
       ],
       apple: [

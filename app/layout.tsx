@@ -55,7 +55,7 @@ export default function RootLayout({
           }}
         />
         <meta name="theme-color" content="#1A3635" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        {/* viewport se genera automáticamente desde metadata, no añadir manualmente */}
         {/* Favicons se generan automáticamente desde metadata.icons */}
         <link rel="manifest" href="/site.webmanifest" />
       </head>
