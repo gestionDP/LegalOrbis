@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 import { areasData } from '@/lib/data/areas-juridicas';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://legalorbisabogados.es';
+  const baseUrl = 'https://www.legalorbisabogados.es';
 
   // Página principal
   const homePage = {

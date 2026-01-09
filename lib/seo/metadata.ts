@@ -5,7 +5,7 @@ export const siteConfig = {
   name: 'Legal Orbis Abogados',
   description:
     'Despacho multidisciplinar de abogados especializados en Derecho Penal, Civil, Laboral, Penitenciario y Mercantil en Madrid. Experiencia, profesionalidad y compromiso.',
-  url: 'https://legalorbisabogados.es',
+  url: 'https://www.legalorbisabogados.es',
   ogImage: '/LegalOrbis.svg',
   keywords: [
     'abogados Madrid',
@@ -80,11 +80,11 @@ export function generateBaseMetadata(): Metadata {
           type: 'image/svg+xml',
           sizes: 'any',
         },
-        // 96x96 es el tamaño preferido por Google para resultados de búsqueda
+        // 48x48 es el tamaño mínimo requerido por Google para resultados de búsqueda
         {
-          url: '/favicon-96x96.png',
+          url: '/favicon-48x48.png',
           type: 'image/png',
-          sizes: '96x96',
+          sizes: '48x48',
         },
         {
           url: '/favicon-32x32.png',

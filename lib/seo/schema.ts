@@ -124,8 +124,8 @@ export function generateOrganizationSchema(): OrganizationSchema {
     name: 'Legal Orbis Abogados',
     description:
       'Despacho multidisciplinar de abogados especializados en Derecho Penal, Civil, Laboral, Mercantil y Administrativo en Madrid. +15 años de experiencia.',
-    url: 'https://legalorbisabogados.es',
-    logo: 'https://legalorbisabogados.es/logo-legal-orbis.svg',
+    url: 'https://www.legalorbisabogados.es',
+    logo: 'https://www.legalorbisabogados.es/logo-legal-orbis.svg',
     address: {
       '@type': 'PostalAddress',
       streetAddress: 'Calle Serrano 78, 5º Derecha',
@@ -201,7 +201,7 @@ export function generateLocalBusinessSchema(): LocalBusinessSchema {
     name: 'Legal Orbis Abogados',
     description:
       'Despacho de abogados especializado en Madrid - Calle Serrano 78',
-    url: 'https://legalorbisabogados.es',
+    url: 'https://www.legalorbisabogados.es',
     telephone: '+34916841454',
     address: {
       '@type': 'PostalAddress',
@@ -245,7 +245,7 @@ export function generateLegalServiceSchema({
     provider: {
       '@type': 'Attorney',
       name: 'Legal Orbis Abogados',
-      url: 'https://legalorbisabogados.es',
+      url: 'https://www.legalorbisabogados.es',
     },
     areaServed: {
       '@type': 'City',
@@ -272,7 +272,7 @@ export function generateBreadcrumbSchema({
       '@type': 'ListItem',
       position: index + 1,
       name: item.name,
-      item: `https://legalorbisabogados.es${item.url}`,
+      item: `https://www.legalorbisabogados.es${item.url}`,
     })),
   };
 }
