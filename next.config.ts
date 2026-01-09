@@ -139,6 +139,33 @@ const nextConfig: NextConfig = {
           },
         ],
       },
+      {
+        source: '/favicon-v2.ico',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=300, must-revalidate',
+          },
+        ],
+      },
+      {
+        source: '/favicon-48x48-v2.png',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=300, must-revalidate',
+          },
+        ],
+      },
+      {
+        source: '/favicon-192x192-v2.png',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=300, must-revalidate',
+          },
+        ],
+      },
     ];
   },
 
@@ -147,7 +174,20 @@ const nextConfig: NextConfig = {
   // Redirecciones para SEO y corrección de URLs problemáticas
   async redirects() {
     return [
-      // Redirigir HTTP a HTTPS y no-www a www
+      // Redirigir HTTP a HTTPS para todos los hosts
+      {
+        source: '/:path*',
+        has: [
+          {
+            type: 'header',
+            key: 'x-forwarded-proto',
+            value: 'http',
+          },
+        ],
+        destination: 'https://www.legalorbisabogados.es/:path*',
+        permanent: true,
+      },
+      // Redirigir no-www a www (solo si es HTTPS)
       {
         source: '/:path*',
         has: [

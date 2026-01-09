@@ -71,7 +71,58 @@ async function generateFavicons() {
       console.log('✓ favicon.ico generado (PNG 32x32 como fallback)');
     }
 
-    console.log('\n✅ Todos los favicons han sido generados exitosamente!');
+    // Generar versiones v2 para cache-busting
+    console.log('\nGenerando favicons v2 para cache-busting...');
+
+    // Generar favicon-v2.ico
+    try {
+      const icoV2Buffer = await toIco([png16, png32, png48]);
+      await fs.promises.writeFile(
+        path.join(publicDir, 'favicon-v2.ico'),
+        icoV2Buffer
+      );
+      console.log('✓ favicon-v2.ico generado');
+    } catch (icoError) {
+      console.warn(
+        '⚠️  No se pudo generar ICO v2 verdadero, usando PNG como fallback'
+      );
+      await fs.promises.writeFile(
+        path.join(publicDir, 'favicon-v2.ico'),
+        png32
+      );
+      console.log('✓ favicon-v2.ico generado (PNG 32x32 como fallback)');
+    }
+
+    // Generar favicon-48x48-v2.png (tamaño crítico para Google)
+    await sharp(svgPath)
+      .resize(48, 48)
+      .png()
+      .toBuffer()
+      .then(async (buffer) => {
+        await fs.promises.writeFile(
+          path.join(publicDir, 'favicon-48x48-v2.png'),
+          buffer
+        );
+        console.log('✓ favicon-48x48-v2.png generado');
+      });
+
+    // Generar favicon-96x96-v2.png (tamaño preferido por Google)
+    await sharp(svgPath)
+      .resize(96, 96)
+      .png()
+      .toFile(path.join(publicDir, 'favicon-96x96-v2.png'));
+    console.log('✓ favicon-96x96-v2.png generado');
+
+    // Generar favicon-192x192-v2.png (tamaño óptimo para Google SERP)
+    await sharp(svgPath)
+      .resize(192, 192)
+      .png()
+      .toFile(path.join(publicDir, 'favicon-192x192-v2.png'));
+    console.log('✓ favicon-192x192-v2.png generado');
+
+    console.log(
+      '\n✅ Todos los favicons (incluyendo v2) han sido generados exitosamente!'
+    );
   } catch (error) {
     console.error('❌ Error al generar favicons:', error);
     process.exit(1);
