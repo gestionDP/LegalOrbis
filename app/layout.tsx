@@ -62,12 +62,12 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" sizes="any" />
         {/* SVG para navegadores modernos */}
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        {/* PNGs en múltiples tamaños - Google prefiere 96x96 para resultados de búsqueda */}
+        {/* PNGs en múltiples tamaños - Google requiere mínimo 48x48 para resultados de búsqueda */}
         <link
           rel="icon"
           type="image/png"
-          sizes="96x96"
-          href="/favicon-96x96.png"
+          sizes="48x48"
+          href="/favicon-48x48.png"
         />
         <link
           rel="icon"
