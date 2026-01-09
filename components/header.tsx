@@ -120,7 +120,24 @@ const Header = () => {
               </div>
             )}
 
-            <div className="hidden lg:block">
+            <div className="hidden lg:flex items-center space-x-6">
+              <div className="flex flex-col items-end">
+                <a
+                  href="tel:+34916841454"
+                  className={`text-sm font-semibold transition-colors duration-200 ${
+                    isScrolled ? 'text-[#1a5f5f]' : 'text-white'
+                  } hover:opacity-80`}
+                >
+                  +34 916 84 14 54
+                </a>
+                <span
+                  className={`text-xs transition-colors duration-200 ${
+                    isScrolled ? 'text-[#1a5f5f]/80' : 'text-white/80'
+                  }`}
+                >
+                  Primera consulta gratuita
+                </span>
+              </div>
               <BottomSheet
                 open={isContactModalOpen}
                 onOpenChange={setIsContactModalOpen}
@@ -219,7 +236,24 @@ const Header = () => {
                     {item.name}
                   </button>
                 ))}
-              <div className="pt-4">
+              <div className="pt-4 space-y-3">
+                <a
+                  href="tel:+34916841454"
+                  className={`block w-full py-3 px-4 rounded-lg text-center font-semibold transition-all duration-200 ${
+                    isScrolled
+                      ? 'bg-[#1a5f5f] text-white hover:bg-[#1a5f5f]/90'
+                      : 'bg-white text-[#1a5f5f] hover:bg-gray-100'
+                  }`}
+                >
+                  +34 916 84 14 54
+                </a>
+                <p
+                  className={`text-center text-xs ${
+                    isScrolled ? 'text-[#1a5f5f]/80' : 'text-white/80'
+                  }`}
+                >
+                  Primera consulta gratuita
+                </p>
                 <BottomSheet
                   open={isContactModalOpen}
                   onOpenChange={setIsContactModalOpen}

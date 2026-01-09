@@ -72,8 +72,14 @@ export function generateBaseMetadata(): Metadata {
     },
     icons: {
       icon: [
-        // favicon.ico es lo primero que busca Google
-        { url: '/favicon.ico' },
+        // SVG primero para navegadores modernos y Google
+        {
+          url: '/favicon.svg',
+          type: 'image/svg+xml',
+          sizes: 'any',
+        },
+        // favicon.ico para compatibilidad
+        { url: '/favicon.ico', sizes: 'any' },
         {
           url: '/favicon-32x32.png',
           type: 'image/png',
@@ -83,12 +89,6 @@ export function generateBaseMetadata(): Metadata {
           url: '/favicon-16x16.png',
           type: 'image/png',
           sizes: '16x16',
-        },
-        // SVG como fallback moderno
-        {
-          url: '/LegalOrbis.svg',
-          type: 'image/svg+xml',
-          sizes: 'any',
         },
       ],
       apple: [

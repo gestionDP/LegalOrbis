@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#B0E0E6;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#87CEEB;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4682B4;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <!-- Círculo de fondo con gradiente -->
+  <circle cx="50" cy="50" r="50" fill="url(#bgGradient)"/>
+  <!-- Letra L oscura (izquierda) -->
+  <text x="38" y="58" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="900" fill="#000000" text-anchor="middle" dominant-baseline="central">L</text>
+  <!-- Letra O blanca (derecha, superpuesta sobre la L) -->
+  <text x="62" y="58" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="900" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central">O</text>
+</svg>
+
+
