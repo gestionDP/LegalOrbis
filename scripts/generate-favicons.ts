@@ -28,6 +28,13 @@ async function generateFavicons() {
       .toFile(path.join(publicDir, 'favicon-32x32.png'));
     console.log('✓ favicon-32x32.png generado');
 
+    // Generar favicon-96x96.png (tamaño preferido por Google para resultados de búsqueda)
+    await sharp(svgPath)
+      .resize(96, 96)
+      .png()
+      .toFile(path.join(publicDir, 'favicon-96x96.png'));
+    console.log('✓ favicon-96x96.png generado');
+
     // Generar apple-touch-icon.png (180x180)
     await sharp(svgPath)
       .resize(180, 180)
@@ -36,16 +43,6 @@ async function generateFavicons() {
     console.log('✓ apple-touch-icon.png generado');
 
     // Generar favicon.ico (multisize: 16x16, 32x32)
-    const sizes = [16, 32];
-    const icoImages = await Promise.all(
-      sizes.map((size) =>
-        sharp(svgPath)
-          .resize(size, size)
-          .png()
-          .toBuffer()
-      )
-    );
-
     // sharp no soporta ICO directamente, así que generamos un PNG de 32x32 como favicon.ico
     // Nota: Para un verdadero .ico necesitarías una librería adicional como 'to-ico'
     await sharp(svgPath)

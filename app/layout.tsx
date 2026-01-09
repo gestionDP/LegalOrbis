@@ -59,9 +59,17 @@ export default function RootLayout({
         <link rel="canonical" href="https://legalorbisabogados.es" />
 
         {/* Favicon - Configuración estándar para Google y navegadores */}
-        {/* SVG primero para navegadores modernos y Google */}
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        {/* favicon.ico en la raíz es lo primero que busca Google */}
         <link rel="icon" href="/favicon.ico" sizes="any" />
+        {/* SVG para navegadores modernos */}
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        {/* PNGs en múltiples tamaños - Google prefiere 96x96 para resultados de búsqueda */}
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="96x96"
+          href="/favicon-96x96.png"
+        />
         <link
           rel="icon"
           type="image/png"
