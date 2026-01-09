@@ -72,14 +72,20 @@ export function generateBaseMetadata(): Metadata {
     },
     icons: {
       icon: [
-        // SVG primero para navegadores modernos y Google
+        // favicon.ico es lo primero que busca Google (debe estar en la raíz)
+        { url: '/favicon.ico', sizes: 'any' },
+        // SVG para navegadores modernos
         {
           url: '/favicon.svg',
           type: 'image/svg+xml',
           sizes: 'any',
         },
-        // favicon.ico para compatibilidad
-        { url: '/favicon.ico', sizes: 'any' },
+        // 96x96 es el tamaño preferido por Google para resultados de búsqueda
+        {
+          url: '/favicon-96x96.png',
+          type: 'image/png',
+          sizes: '96x96',
+        },
         {
           url: '/favicon-32x32.png',
           type: 'image/png',
