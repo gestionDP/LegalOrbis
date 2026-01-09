@@ -106,6 +106,9 @@ export function generateBaseMetadata(): Metadata {
       ],
       shortcut: '/favicon.ico',
     },
+    alternates: {
+      canonical: siteConfig.url,
+    },
     verification: {
       google: '',
     },

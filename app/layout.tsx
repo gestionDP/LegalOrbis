@@ -56,7 +56,6 @@ export default function RootLayout({
         />
         <meta name="theme-color" content="#1A3635" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="canonical" href="https://legalorbisabogados.es" />
 
         {/* Favicon - Configuración estándar para Google y navegadores */}
         {/* favicon.ico en la raíz es lo primero que busca Google */}
@@ -82,7 +81,11 @@ export default function RootLayout({
           sizes="16x16"
           href="/favicon-16x16.png"
         />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/apple-touch-icon.png"
+        />
         <link rel="manifest" href="/site.webmanifest" />
       </head>
       <body

@@ -143,6 +143,25 @@ const nextConfig: NextConfig = {
   },
 
   trailingSlash: false,
+
+  // Redirecciones para evitar errores de indexación
+  async redirects() {
+    return [
+      // Redirigir www a no-www (si aplica)
+      // Descomentar si necesitas redirigir www
+      // {
+      //   source: '/:path*',
+      //   has: [
+      //     {
+      //       type: 'host',
+      //       value: 'www.legalorbisabogados.es',
+      //     },
+      //   ],
+      //   destination: 'https://legalorbisabogados.es/:path*',
+      //   permanent: true,
+      // },
+    ];
+  },
 };
 
 export default nextConfig;
