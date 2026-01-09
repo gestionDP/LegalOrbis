@@ -73,8 +73,9 @@ export function generateBaseMetadata(): Metadata {
     },
     icons: {
       icon: [
-        // Favicons v2 para cache-busting - ORDEN CRÍTICO: PNG primero, luego ICO
-        // Priorizar PNG sobre SVG/ICO para Google SERP
+        // Favicons v2 SOLO - Plan agresivo para forzar actualización en Google
+        // TEMPORALMENTE: Quitar SVG y v1 para minimizar opciones y forzar que Google use v2
+        // Después de 1-2 semanas, volver a añadir SVG y versiones v1 como fallback
         // 48x48 es el tamaño mínimo requerido por Google para resultados de búsqueda
         {
           url: '/favicon-48x48-v2.png',
@@ -89,29 +90,8 @@ export function generateBaseMetadata(): Metadata {
         },
         // favicon.ico v2 como fallback
         { url: '/favicon-v2.ico', sizes: 'any' },
-        // Mantener versiones anteriores por compatibilidad (fallback)
-        {
-          url: '/favicon-48x48.png',
-          type: 'image/png',
-          sizes: '48x48',
-        },
-        { url: '/favicon.ico', sizes: 'any' },
-        {
-          url: '/favicon-32x32.png',
-          type: 'image/png',
-          sizes: '32x32',
-        },
-        {
-          url: '/favicon-16x16.png',
-          type: 'image/png',
-          sizes: '16x16',
-        },
-        // SVG al final (temporalmente menos prioridad para forzar PNG en Google)
-        {
-          url: '/favicon.svg',
-          type: 'image/svg+xml',
-          sizes: 'any',
-        },
+        // NOTA: SVG y v1 temporalmente deshabilitados para forzar v2
+        // Volver a añadir después de que Google muestre el favicon correcto
       ],
       apple: [
         {
