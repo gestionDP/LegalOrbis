@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import { notFound } from 'next/navigation';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
 import AreaDetailHero from '@/components/area-detail-hero';
@@ -27,6 +28,10 @@ export async function generateMetadata({
     return {
       title: 'Área jurídica no encontrada | Legal Orbis',
       description: 'La página solicitada no existe.',
+      robots: {
+        index: false,
+        follow: false,
+      },
     };
   }
 
@@ -47,16 +52,9 @@ export default async function AreaJuridicaDetail({
   const { slug } = await params;
   const area = areasData[slug as keyof typeof areasData];
 
+  // Usar notFound() de Next.js para generar un 404 correcto
   if (!area) {
-    return (
-      <main className="min-h-screen">
-        <Header />
-        <div className="min-h-screen bg-[#1A3635] flex items-center justify-center">
-          <h1 className="text-white text-2xl">Área jurídica no encontrada</h1>
-        </div>
-        <Footer />
-      </main>
-    );
+    notFound();
   }
 
   // Generar datos estructurados
