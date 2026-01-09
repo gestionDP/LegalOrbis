@@ -143,6 +143,23 @@ const nextConfig: NextConfig = {
   },
 
   trailingSlash: false,
+
+  // Redirección explícita de no-www a www para SEO
+  async redirects() {
+    return [
+      {
+        source: '/:path*',
+        has: [
+          {
+            type: 'host',
+            value: 'legalorbisabogados.es',
+          },
+        ],
+        destination: 'https://www.legalorbisabogados.es/:path*',
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;
