@@ -90,6 +90,8 @@ export function generateBaseMetadata(): Metadata {
         },
         // favicon.ico v2 como fallback
         { url: '/favicon-v2.ico', sizes: 'any' },
+        // favicon.ico estándar como fallback adicional (Next.js lo busca automáticamente)
+        { url: '/favicon.ico', sizes: 'any' },
         // NOTA: SVG y v1 temporalmente deshabilitados para forzar v2
         // Volver a añadir después de que Google muestre el favicon correcto
       ],
