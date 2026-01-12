@@ -12,3 +12,5 @@ export const metadata: Metadata = generatePageMetadata({
 export default function AreasJuridicasPage() {
   redirect('/');
 }
+
+
