@@ -3,11 +3,6 @@
   "trailingSlash": false,
   "redirects": [
     {
-      "source": "/favicon.ico",
-      "destination": "/favicon-v2.ico",
-      "permanent": true
-    },
-    {
       "source": "/favicon-16x16.png",
       "destination": "/favicon-48x48-v2.png",
       "permanent": true
