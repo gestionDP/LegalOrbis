@@ -9,6 +9,8 @@ export default function robots(): MetadataRoute.Robots {
       // Permitir acceso a recursos estáticos necesarios para renderizado (incluye favicons)
       allow: [
         '/_next/static/',
+        // Permitir imágenes optimizadas de Next.js para que Google pueda rastrearlas
+        '/_next/image',
         // Favicons v2 (principales) - permitir explícitamente
         '/favicon-v2.ico',
         '/favicon-48x48-v2.png',
@@ -18,6 +20,8 @@ export default function robots(): MetadataRoute.Robots {
         '/favicon.svg',
         '/favicon-*.png',
         '/apple-touch-icon.png',
+        // Permitir imágenes originales
+        '/images/',
       ],
       // Bloquear rutas privadas e internas del servidor
       disallow: [
@@ -25,7 +29,6 @@ export default function robots(): MetadataRoute.Robots {
         '/admin/',
         '/private/',
         '/_next/server/',
-        '/_next/image',
       ],
     },
     sitemap: `${baseUrl}/sitemap.xml`,
