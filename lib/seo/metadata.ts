@@ -73,22 +73,15 @@ export function generateBaseMetadata(): Metadata {
     },
     icons: {
       icon: [
-        // 192x192 es tamaño óptimo para Google SERP - poner primero para máxima prioridad
-        {
-          url: '/favicon-192x192-v2.png',
-          type: 'image/png',
-          sizes: '192x192',
-        },
-        // 48x48 es el tamaño mínimo requerido por Google para resultados de búsqueda
-        {
-          url: '/favicon-48x48-v2.png',
-          type: 'image/png',
-          sizes: '48x48',
-        },
-        // favicon.ico estándar (Next.js lo busca automáticamente) - importante para compatibilidad
+        // TEMPORALMENTE: Solo favicon.ico para forzar que Google lo use (no v2)
+        // Después de que Google muestre el favicon.ico correcto, volver a añadir los PNG v2
         { url: '/favicon.ico', sizes: 'any' },
         // favicon.ico v2 como fallback adicional
         { url: '/favicon-v2.ico', sizes: 'any' },
+        // NOTA: PNG v2 temporalmente deshabilitados para forzar uso de favicon.ico
+        // Volver a añadir después de que Google muestre el favicon correcto:
+        // - /favicon-192x192-v2.png (192x192)
+        // - /favicon-48x48-v2.png (48x48)
       ],
       apple: [
         {
