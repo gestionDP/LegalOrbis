@@ -1,38 +1,7 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
-  "redirects": [
-    {
-      "source": "/favicon-16x16.png",
-      "destination": "/favicon-48x48-v2.png",
-      "permanent": true
-    },
-    {
-      "source": "/favicon-32x32.png",
-      "destination": "/favicon-48x48-v2.png",
-      "permanent": true
-    },
-    {
-      "source": "/favicon-48x48.png",
-      "destination": "/favicon-48x48-v2.png",
-      "permanent": true
-    },
-    {
-      "source": "/favicon-96x96.png",
-      "destination": "/favicon-192x192-v2.png",
-      "permanent": true
-    },
-    {
-      "source": "/favicon-192x192.png",
-      "destination": "/favicon-192x192-v2.png",
-      "permanent": true
-    },
-    {
-      "source": "/favicon.svg",
-      "destination": "/favicon-48x48-v2.png",
-      "permanent": true
-    }
-  ],
+  "redirects": [],
   "headers": [
     {
       "source": "/apple-touch-icon.png",
@@ -44,38 +13,29 @@
       ]
     },
     {
-      "source": "/favicon-v2.ico",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=300, must-revalidate"
-        }
-      ]
-    },
-    {
-      "source": "/favicon-48x48-v2.png",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=300, must-revalidate"
-        }
-      ]
-    },
-    {
-      "source": "/favicon-192x192-v2.png",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=300, must-revalidate"
-        }
-      ]
-    },
-    {
       "source": "/favicon.ico",
       "headers": [
         {
           "key": "Cache-Control",
-          "value": "public, max-age=300, must-revalidate"
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/favicon.svg",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/favicon-:size.png",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
         }
       ]
     }
