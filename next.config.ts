@@ -140,29 +140,11 @@ const nextConfig: NextConfig = {
         ],
       },
       {
-        source: '/favicon-v2.ico',
+        source: '/favicon.svg',
         headers: [
           {
             key: 'Cache-Control',
-            value: 'public, max-age=300, must-revalidate',
-          },
-        ],
-      },
-      {
-        source: '/favicon-48x48-v2.png',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=300, must-revalidate',
-          },
-        ],
-      },
-      {
-        source: '/favicon-192x192-v2.png',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=300, must-revalidate',
+            value: 'public, max-age=31536000, immutable',
           },
         ],
       },
