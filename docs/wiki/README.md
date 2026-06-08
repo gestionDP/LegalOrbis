@@ -1,0 +1,35 @@
+# LegalOrbis - Wiki Documentation
+
+This directory contains the exported DeepWiki documentation for this repository.
+
+## Pages
+
+- [Overview](overview.md)
+  - [Getting Started](getting-started.md)
+  - [Project Structure](project-structure.md)
+- [Application Pages & Routing](application-pages-and-routing.md)
+  - [Home Page](home-page.md)
+  - [Legal Area Detail Pages](legal-area-detail-pages.md)
+  - [404 Not Found Page](404-not-found-page.md)
+- [Component Library](component-library.md)
+  - [Layout & Navigation Components](layout-and-navigation-components.md)
+  - [Home Page Section Components](home-page-section-components.md)
+  - [Legal Area Detail Components](legal-area-detail-components.md)
+  - [Contact Form Components](contact-form-components.md)
+  - [UI Primitives](ui-primitives.md)
+- [Data & Content Layer](data-and-content-layer.md)
+  - [Legal Areas Data Model](legal-areas-data-model.md)
+  - [Utility Functions](utility-functions.md)
+- [SEO & Structured Data](seo-and-structured-data.md)
+  - [Metadata Generation](metadata-generation.md)
+  - [JSON-LD Structured Data Schemas](json-ld-structured-data-schemas.md)
+  - [Robots & Sitemap](robots-and-sitemap.md)
+- [Styling & Theming](styling-and-theming.md)
+  - [Global Styles & CSS Variables](global-styles-and-css-variables.md)
+  - [Tailwind Configuration & Animation](tailwind-configuration-and-animation.md)
+- [Infrastructure & Deployment](infrastructure-and-deployment.md)
+  - [Next.js Configuration](nextjs-configuration.md)
+  - [Vercel Deployment Configuration](vercel-deployment-configuration.md)
+  - [Favicon & Asset Generation](favicon-and-asset-generation.md)
+  - [CI/CD & Dependency Management](cicd-and-dependency-management.md)
+- [Glossary](glossary.md)
